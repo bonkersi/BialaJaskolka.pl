@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Lewa kolumna - figura Jezusa */
+.image-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.image-container img {
+    max-height: 90vh;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.9;
+}
+
+/* Główna zawartość */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+/* Menu na górze */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+    margin-bottom: 30px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: gold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    padding: 5px 0;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: gold;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Logo po prawej stronie */
+.logo {
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Główna treść */
+main {
+    padding: 20px 0;
+}
+
+h1 {
+    color: gold;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .image-container {
+        width: 150px;
+    }
+    
+    .content {
+        margin-left: 150px;
+    }
+    
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .logo {
+        margin-top: 15px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+    }
+    
+    nav ul li {
+        margin: 5px 15px 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        width: 100px;
+    }
+    
+    .content {
+        margin-left: 100px;
+        padding: 10px;
+    }
+    
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+}
