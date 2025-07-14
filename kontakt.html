@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Strona z figurą Jezusa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="images/jezus.png" alt="Złota figura Jezusa">
+        </div>
+        
+        <div class="content">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Strona główna</a></li>
+                        <li><a href="aktualnosci.html">Aktualności</a></li>
+                        <li><a href="wsparcie.html">Wsparcie</a></li>
+                        <li><a class="active" href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <img src="images/logo.png" alt="Logo" class="logo">
+            </header>
+            
+            <main>
+                <h1>Skontaktuj się z nami</h1>
+                
+                <div class="contact-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Imię i nazwisko:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefon (opcjonalnie):</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Temat:</label>
+                            <select id="subject" name="subject">
+                                <option value="general">Zapytanie ogólne</option>
+                                <option value="support">Wsparcie</option>
+                                <option value="volunteer">Wolontariat</option>
+                                <option value="other">Inne</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Wiadomość:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Wyślij wiadomość</button>
+                    </form>
+                    
+                    <div class="contact-info">
+                        <h3>Dane kontaktowe</h3>
+                        <p><i class="icon">📧</i> <strong>Email:</strong> kontakt@przyklad.pl</p>
+                        <p><i class="icon">📞</i> <strong>Telefon:</strong> +48 123 456 789</p>
+                        <p><i class="icon">🏠</i> <strong>Adres:</strong> ul. Przykładowa 123, 00-000 Warszawa</p>
+                        
+                        <h3>Godziny otwarcia</h3>
+                        <p>Pon-Pt: 8:00-16:00</p>
+                        <p>Sob: 9:00-13:00</p>
+                        
+                        <div class="social-media">
+                            <a href="#" class="social-link">Facebook</a>
+                            <a href="#" class="social-link">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
