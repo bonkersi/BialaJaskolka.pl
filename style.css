@@ -1,4 +1,4 @@
-/* Główne style */
+/* ===== RESET I GŁÓWNE STYLE ===== */
 * {
     margin: 0;
     padding: 0;
@@ -13,12 +13,13 @@ body {
     line-height: 1.6;
 }
 
+/* ===== LAYOUT ===== */
 .container {
     display: flex;
     min-height: 100vh;
 }
 
-/* Lewa kolumna - figura Jezusa */
+/* Lewa kolumna z figurą Jezusa (stała szerokość) */
 .image-container {
     position: fixed;
     left: 0;
@@ -39,7 +40,7 @@ body {
     opacity: 0.9;
 }
 
-/* Główna zawartość */
+/* Główna zawartość (reszta ekranu) */
 .content {
     margin-left: 250px;
     padding: 20px;
@@ -48,7 +49,7 @@ body {
     z-index: 2;
 }
 
-/* Nagłówek i menu */
+/* ===== HEADER I MENU ===== */
 header {
     display: flex;
     justify-content: space-between;
@@ -58,6 +59,7 @@ header {
     margin-bottom: 30px;
 }
 
+/* Nawigacja główna */
 nav ul {
     display: flex;
     list-style: none;
@@ -76,6 +78,7 @@ nav ul li a {
     position: relative;
 }
 
+/* Efekt hover i aktywnej strony */
 nav ul li a:hover {
     color: #fff;
 }
@@ -96,11 +99,6 @@ nav ul li a.active::after {
     width: 100%;
 }
 
-nav ul li a.active {
-    color: #fff;
-    font-weight: bold;
-}
-
 /* Logo */
 .logo {
     height: 50px;
@@ -111,7 +109,7 @@ nav ul li a.active {
     transform: scale(1.05);
 }
 
-/* Sekcje wspólne */
+/* ===== TYPOGRAFIA ===== */
 h1, h2, h3 {
     color: gold;
     margin-bottom: 20px;
@@ -133,11 +131,7 @@ h3 {
     margin-bottom: 15px;
 }
 
-p {
-    margin-bottom: 15px;
-}
-
-/* Sekcja Aktualności */
+/* ===== SEKCJA AKTUALNOŚCI ===== */
 .news-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -159,28 +153,7 @@ p {
     border-color: gold;
 }
 
-.news-item time {
-    display: block;
-    color: #aaa;
-    margin-bottom: 12px;
-    font-size: 0.9rem;
-}
-
-.read-more {
-    display: inline-block;
-    margin-top: 15px;
-    color: gold;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.read-more:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-/* Sekcja Wsparcie */
+/* ===== SEKCJA WSPARCIE ===== */
 .support-options {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -196,64 +169,7 @@ p {
     transition: all 0.3s;
 }
 
-.option:hover {
-    border-color: gold;
-}
-
-.bank-account {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 15px;
-    border-radius: 5px;
-    margin: 15px 0;
-}
-
-.account-number {
-    font-family: monospace;
-    font-size: 1.2rem;
-    color: gold;
-    margin: 10px 0;
-}
-
-.volunteer-list,
-.support-list {
-    margin: 15px 0 15px 20px;
-}
-
-.volunteer-list li,
-.support-list li {
-    margin-bottom: 8px;
-}
-
-.donate-btn,
-.volunteer-btn {
-    display: inline-block;
-    background: gold;
-    color: #000;
-    border: none;
-    padding: 12px 25px;
-    margin-top: 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: all 0.3s;
-    width: 100%;
-    text-align: center;
-}
-
-.donate-btn:hover,
-.volunteer-btn:hover {
-    background: #ffd700;
-    transform: translateY(-2px);
-}
-
-/* Sekcja Kontakt */
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-top: 30px;
-}
-
+/* ===== SEKCJA KONTAKT ===== */
 .contact-form {
     background: rgba(255, 255, 255, 0.05);
     padding: 30px;
@@ -261,149 +177,45 @@ p {
     border: 1px solid #333;
 }
 
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    color: gold;
-    font-weight: bold;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    background: #111;
-    border: 1px solid #333;
-    color: white;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.form-group textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
+/* Przyciski (wspólne style) */
+.donate-btn,
+.volunteer-btn,
 .submit-btn {
     background: gold;
     color: #000;
     border: none;
-    padding: 15px 30px;
+    padding: 12px 25px;
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 1rem;
     transition: all 0.3s;
-    width: 100%;
 }
 
-.submit-btn:hover {
-    background: #ffd700;
-    transform: translateY(-2px);
-}
-
-.contact-info {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 30px;
-    border-radius: 8px;
-    border: 1px solid #333;
-}
-
-.contact-info p {
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.icon {
-    margin-right: 10px;
-    font-size: 1.2rem;
-}
-
-.social-media {
-    display: flex;
-    gap: 15px;
-    margin-top: 25px;
-}
-
-.social-link {
-    color: gold;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.social-link:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-/* Responsywność */
-@media (max-width: 1024px) {
-    .contact-container {
-        grid-template-columns: 1fr;
-    }
-}
-
+/* ===== RESPONSYWNOŚĆ ===== */
 @media (max-width: 768px) {
+    /* Dostosowanie dla tabletów */
     .image-container {
         width: 150px;
     }
-    
+
     .content {
         margin-left: 150px;
-        padding: 15px;
     }
-    
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
+
+    /* Menu w jednej linii z zawijaniem */
     nav ul {
         flex-wrap: wrap;
-        margin-bottom: 15px;
-    }
-    
-    nav ul li {
-        margin: 5px 15px 5px 0;
-    }
-    
-    .logo {
-        margin-top: 15px;
-    }
-    
-    .news-container,
-    .support-options {
-        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 480px) {
+    /* Style dla telefonów */
     .image-container {
         width: 100px;
     }
-    
+
     .content {
         margin-left: 100px;
         padding: 10px;
-    }
-    
-    h1 {
-        font-size: 1.8rem;
-    }
-    
-    h2 {
-        font-size: 1.5rem;
-    }
-    
-    .option,
-    .contact-form,
-    .contact-info {
-        padding: 20px;
     }
 }
