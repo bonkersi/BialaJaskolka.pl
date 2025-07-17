@@ -456,7 +456,9 @@ p {
 @media (max-width: 768px) {
     .container {
         position: relative;
-        background: url('images/jezus.png') center center/contain no-repeat;
+        background: 
+            linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+            url('images/jezus.png') center center/70% no-repeat;
         background-attachment: fixed;
     }
 
@@ -466,8 +468,8 @@ p {
 
     .content {
         margin-left: 0;
-        padding: 15px;
-        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        background-color: transparent;
         min-height: 100vh;
     }
 
@@ -475,8 +477,9 @@ p {
         background: #000;
     }
     
-    h1, h2, h3, p {
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    h1, h2, h3, h4, h5, h6, p, li, a, span {
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+        color: #fff !important;
     }
 
     .logo-desktop {
@@ -510,8 +513,12 @@ p {
 }
 
 @media (max-width: 576px) {
+    .container {
+        background-size: 90% auto;
+    }
+    
     .content {
-        padding: 10px;
+        padding: 15px;
     }
 
     .logo {
