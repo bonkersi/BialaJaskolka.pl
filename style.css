@@ -538,3 +538,107 @@ p {
         grid-template-columns: 1fr;
     }
 }
+/* ===== DODATKOWE STYLE DLA GDPR ===== */
+
+/* Footer */
+.footer {
+    margin-top: 50px;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #a0a0a0;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+/* Checkbox RODO */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #d0d0d0;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    width: auto;
+}
+
+/* Cookie Banner Overrides */
+.cc-window {
+    font-family: 'Arial', sans-serif !important;
+}
+
+.cc-link {
+    color: #fff !important;
+    text-decoration: underline !important;
+}
+
+/* Responsywność stopki */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+/* ===== STYLE DLA POLITYK ===== */
+.privacy-policy, .cookies-policy {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.privacy-policy section, .cookies-policy section {
+    margin-bottom: 40px;
+}
+
+.effective-date {
+    color: #888;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.cookies-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.cookies-table th, .cookies-table td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+}
+
+.cookies-table th {
+    background-color: rgba(255,255,255,0.05);
+}
+
+@media (max-width: 768px) {
+    .cookies-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
