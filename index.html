@@ -3,36 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona z figurą Jezusa</title>
+    <title>Biała Jaskółka - Profesjonalne Usługi Budowlane</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <!-- Lewa kolumna - figura Jezusa -->
         <div class="image-container">
-            <img src="images/jezus.png" alt="Złota figura Jezusa">
+            <img src="images/jezus.png" alt="Złota figura">
         </div>
         
-        <!-- Główna zawartość -->
         <div class="content">
-            <!-- Menu na górze -->
             <header>
+                <div class="logo-mobile">
+                    <img src="images/logo.png" alt="Logo Biała Jaskółka" class="logo">
+                </div>
                 <nav>
-                    <ul>
-                        <li><a href="index.html">Strona główna</a></li>
+                    <button class="hamburger" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-list">
+                        <li><a class="active" href="index.html">Strona główna</a></li>
                         <li><a href="aktualnosci.html">Aktualności</a></li>
-                        <li><a href="wsparcie.html">Wsparcie</a></li>
+                        <li><a href="oferta.html">Oferta</a></li>
                         <li><a href="kontakt.html">Kontakt</a></li>
                     </ul>
                 </nav>
-                <!-- Logo po prawej stronie -->
-                <img src="images/logo.png" alt="Logo" class="logo">
+                <div class="logo-desktop">
+                    <img src="images/logo.png" alt="Logo Biała Jaskółka" class="logo">
+                </div>
             </header>
             
-            <!-- Główna treść -->
             <main>
-                <h1>Witaj na naszej stronie</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <section class="hero">
+                    <h1>Biała Jaskółka - Budujemy Twoją Przyszłość</h1>
+                    <p class="lead">25 lat doświadczenia w kompleksowych realizacjach budowlanych</p>
+                </section>
+                
+                <section class="about-us">
+                    <h2>O Naszej Firmie</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>Jesteśmy firmą budowlaną z wieloletnim doświadczeniem, specjalizującą się w budowie domów jednorodzinnych, remontach i modernizacjach. Nasza pasja to tworzenie solidnych konstrukcji, które służą pokoleniom.</p>
+                            <p>Działamy głównie na terenie województwa mazowieckiego, realizując zarówno małe, jak i duże projekty budowlane.</p>
+                        </div>
+                        <div class="about-image">
+                            <img src="images/budowa.jpg" alt="Realizacja budowlana">
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="why-us">
+                    <h2>Dlaczego My?</h2>
+                    <div class="advantages">
+                        <div class="advantage">
+                            <i class="fas fa-history"></i>
+                            <h3>Doświadczenie</h3>
+                            <p>Ponad 25 lat na rynku budowlanym</p>
+                        </div>
+                        <div class="advantage">
+                            <i class="fas fa-award"></i>
+                            <h3>Jakość</h3>
+                            <p>Stosujemy tylko sprawdzone materiały</p>
+                        </div>
+                        <div class="advantage">
+                            <i class="fas fa-calendar-check"></i>
+                            <h3>Terminowość</h3>
+                            <p>Dotrzymujemy ustalonych terminów</p>
+                        </div>
+                        <div class="advantage">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Gwarancja</h3>
+                            <p>5-letnia gwarancja na wykonane prace</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="cta-section">
+                    <h2>Zacznijmy współpracę!</h2>
+                    <p>Skontaktuj się z nami, aby omówić szczegóły Twojego projektu</p>
+                    <a href="kontakt.html" class="cta-button">Napisz do nas</a>
+                </section>
             </main>
         </div>
     </div>
