@@ -3,26 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aktualności - Strona z figurą Jezusa</title>
+    <title>Aktualności - Biała Jaskółka</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <div class="image-container">
-            <img src="images/jezus.png" alt="Złota figura Jezusa">
+            <img src="images/jezus.png" alt="Złota figura">
         </div>
         
         <div class="content">
             <header>
+                <div class="logo-mobile">
+                    <img src="images/logo.png" alt="Logo Biała Jaskółka" class="logo">
+                </div>
                 <nav>
-                    <ul>
+                    <button class="hamburger" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-list">
                         <li><a href="index.html">Strona główna</a></li>
                         <li><a class="active" href="aktualnosci.html">Aktualności</a></li>
-                        <li><a href="wsparcie.html">Wsparcie</a></li>
+                        <li><a href="oferta.html">Oferta</a></li>
                         <li><a href="kontakt.html">Kontakt</a></li>
                     </ul>
                 </nav>
-                <img src="images/logo.png" alt="Logo" class="logo">
+                <div class="logo-desktop">
+                    <img src="images/logo.png" alt="Logo Biała Jaskółka" class="logo">
+                </div>
             </header>
             
             <main>
@@ -30,25 +41,59 @@
                 
                 <div class="news-container">
                     <article class="news-item">
-                        <h3>Nowy projekt społeczny</h3>
-                        <time datetime="2023-11-15">15 listopada 2023</time>
-                        <p>Rozpoczynamy nową inicjatywę pomocy lokalnej społeczności. Zapraszamy wszystkich chętnych do współpracy...</p>
-                        <a href="#" class="read-more">Czytaj więcej</a>
+                        <div class="news-image">
+                            <img src="images/news1.jpg" alt="Nowy projekt budowlany">
+                        </div>
+                        <div class="news-content">
+                            <h3>Rozpoczęcie nowej inwestycji</h3>
+                            <time datetime="2024-06-10">10 czerwca 2024</time>
+                            <p>Z przyjemnością informujemy o rozpoczęciu budowy nowego osiedla domów jednorodzinnych w malowniczej okolicy pod Warszawą...</p>
+                            <a href="#" class="read-more">Czytaj więcej <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </article>
                     
                     <article class="news-item">
-                        <h3>Nadchodzące wydarzenie</h3>
-                        <time datetime="2023-12-05">5 grudnia 2023</time>
-                        <p>Zapraszamy na coroczne spotkanie wspólnoty, które odbędzie się w sali parafialnej...</p>
-                        <a href="#" class="read-more">Czytaj więcej</a>
+                        <div class="news-image">
+                            <img src="images/news2.jpg" alt="Promocja wiosenna">
+                        </div>
+                        <div class="news-content">
+                            <h3>Promocja letnia</h3>
+                            <time datetime="2024-05-20">20 maja 2024</time>
+                            <p>Specjalna oferta na budowę domów do 150m² - 7% zniżki przy podpisaniu umowy do 31 sierpnia 2024 roku...</p>
+                            <a href="#" class="read-more">Czytaj więcej <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </article>
                     
                     <article class="news-item">
-                        <h3>Warsztaty biblijne</h3>
-                        <time datetime="2024-01-10">10 stycznia 2024</time>
-                        <p>Serdecznie zapraszamy na cykl warsztatów biblijnych prowadzonych przez ojca Marka...</p>
-                        <a href="#" class="read-more">Czytaj więcej</a>
+                        <div class="news-image">
+                            <img src="images/news3.jpg" alt="Nowe technologie">
+                        </div>
+                        <div class="news-content">
+                            <h3>Nowe standardy budowlane</h3>
+                            <time datetime="2024-04-15">15 kwietnia 2024</time>
+                            <p>Wprowadzamy nowe, energooszczędne rozwiązania w naszych realizacjach. Poznaj najnowsze technologie...</p>
+                            <a href="#" class="read-more">Czytaj więcej <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </article>
+                    
+                    <article class="news-item">
+                        <div class="news-image">
+                            <img src="images/news4.jpg" alt="Szkolenie">
+                        </div>
+                        <div class="news-content">
+                            <h3>Szkolenie zespołu</h3>
+                            <time datetime="2024-03-05">5 marca 2024</time>
+                            <p>Nasz zespół przeszedł specjalistyczne szkolenie z nowoczesnych technik izolacyjnych...</p>
+                            <a href="#" class="read-more">Czytaj więcej <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="pagination">
+                    <a href="#" class="page-active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#"><i class="fas fa-chevron-right"></i></a>
                 </div>
             </main>
         </div>
