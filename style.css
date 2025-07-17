@@ -457,8 +457,8 @@ p {
     .container {
         position: relative;
         background: 
-            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-            url('images/jezus.png') center 30%/150% no-repeat;
+            linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+            url('images/jezus.png') center 25%/300% no-repeat;
         background-attachment: fixed;
     }
 
@@ -478,7 +478,7 @@ p {
     }
     
     h1, h2, h3, h4, h5, h6, p, li, a, span, .cta-button {
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+        text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9);
         color: #fff !important;
     }
 
@@ -518,8 +518,8 @@ p {
 
 @media (max-width: 576px) {
     .container {
-        background-size: 200% auto;
-        background-position: center 25%;
+        background-size: 400% auto;
+        background-position: center 20%;
     }
     
     .content {
