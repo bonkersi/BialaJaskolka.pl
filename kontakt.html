@@ -3,28 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt | Twoja Strona</title>
+    <title>Kontakt - Biała Jaskółka</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <div class="image-container">
-            <img src="images/jezus.png" alt="Figura Jezusa">
+            <img src="images/jezus.png" alt="Złota figura">
         </div>
         
         <div class="content">
             <header>
-                <div class="logo-container">
-                    <img src="images/logo.png" alt="Logo" class="logo">
+                <div class="logo-mobile">
+                    <img src="images/logo.png" alt="Logo Biała Jaskółka" class="logo">
                 </div>
                 <nav>
-                    <ul>
+                    <button class="hamburger" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-list">
                         <li><a href="index.html">Strona główna</a></li>
                         <li><a href="aktualnosci.html">Aktualności</a></li>
-                        <li><a href="wsparcie.html">Wsparcie</a></li>
+                        <li><a href="oferta.html">Oferta</a></li>
                         <li><a class="active" href="kontakt.html">Kontakt</a></li>
                     </ul>
                 </nav>
+                <div class="logo-desktop">
+                    <img src="images/logo.png" alt="Logo Biała Jaskółka" class="logo">
+                </div>
             </header>
             
             <main class="contact-page">
@@ -33,7 +42,7 @@
                 
                 <div class="contact-grid">
                     <section class="contact-form-section">
-                        <h2><i class="icon-envelope"></i> Formularz kontaktowy</h2>
+                        <h2><i class="fas fa-envelope"></i> Formularz kontaktowy</h2>
                         <form id="contactForm">
                             <div class="form-row">
                                 <div class="form-group">
@@ -48,18 +57,18 @@
                             </div>
                             
                             <div class="form-group">
-                                <label for="phone">Telefon</label>
-                                <input type="tel" id="phone" name="phone">
+                                <label for="phone">Telefon *</label>
+                                <input type="tel" id="phone" name="phone" required>
                             </div>
                             
                             <div class="form-group">
                                 <label for="subject">Temat *</label>
                                 <select id="subject" name="subject" required>
                                     <option value="" disabled selected>Wybierz temat</option>
-                                    <option value="general">Zapytanie ogólne</option>
-                                    <option value="support">Wsparcie</option>
-                                    <option value="volunteer">Wolontariat</option>
-                                    <option value="other">Inne</option>
+                                    <option value="budowa">Budowa domu</option>
+                                    <option value="remont">Remont</option>
+                                    <option value="wycena">Wycena</option>
+                                    <option value="inne">Inne</option>
                                 </select>
                             </div>
                             
@@ -69,58 +78,62 @@
                             </div>
                             
                             <button type="submit" class="submit-btn">
-                                <i class="icon-send"></i> Wyślij wiadomość
+                                <i class="fas fa-paper-plane"></i> Wyślij wiadomość
                             </button>
                         </form>
                     </section>
                     
                     <section class="contact-info-section">
-                        <h2><i class="icon-info"></i> Informacje kontaktowe</h2>
+                        <h2><i class="fas fa-info-circle"></i> Informacje kontaktowe</h2>
                         
                         <div class="contact-card">
                             <div class="contact-item">
-                                <i class="icon-map"></i>
+                                <i class="fas fa-map-marker-alt"></i>
                                 <div>
                                     <h3>Adres</h3>
-                                    <p>ul. Przykładowa 123<br>00-000 Warszawa</p>
+                                    <p>ul. Budowlana 15<br>00-001 Warszawa</p>
                                 </div>
                             </div>
                             
                             <div class="contact-item">
-                                <i class="icon-phone"></i>
+                                <i class="fas fa-phone"></i>
                                 <div>
                                     <h3>Telefon</h3>
                                     <p>+48 123 456 789</p>
+                                    <p>+48 987 654 321</p>
                                 </div>
                             </div>
                             
                             <div class="contact-item">
-                                <i class="icon-email"></i>
+                                <i class="fas fa-envelope"></i>
                                 <div>
                                     <h3>Email</h3>
-                                    <p>kontakt@przyklad.pl</p>
+                                    <p>biuro@białajaskółka.pl</p>
                                 </div>
                             </div>
                             
                             <div class="contact-item">
-                                <i class="icon-clock"></i>
+                                <i class="fas fa-clock"></i>
                                 <div>
                                     <h3>Godziny otwarcia</h3>
-                                    <p>Pon-Pt: 8:00-16:00<br>Sob: 9:00-13:00</p>
+                                    <p>Pon-Pt: 7:00-15:00</p>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="social-media">
-                            <h3><i class="icon-share"></i> Social Media</h3>
-                            <a href="#" class="social-link"><i class="icon-facebook"></i> Facebook</a>
-                            <a href="#" class="social-link"><i class="icon-instagram"></i> Instagram</a>
+                            <h3><i class="fas fa-share-alt"></i> Social Media</h3>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i> Facebook</a>
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                            </div>
                         </div>
                     </section>
                 </div>
                 
                 <section class="map-section">
-                    <h2><i class="icon-map-marker"></i> Jak do nas trafić</h2>
+                    <h2><i class="fas fa-map-marked-alt"></i> Jak do nas trafić</h2>
                     <div class="map-container">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.654050566224!2d21.01721531579689!3d52.22990637976084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sCentrum%20Warszawy!5e0!3m2!1spl!2spl!4v1620000000000!5m2!1spl!2spl" 
                                 width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
