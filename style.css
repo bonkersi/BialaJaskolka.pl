@@ -455,11 +455,13 @@ p {
 
 @media (max-width: 768px) {
     .image-container {
-        position: absolute;
+        position: fixed;
         width: 100%;
         height: 100%;
-        opacity: 0.2;
+        background: url('images/jezus.png') center/contain no-repeat;
+        opacity: 0.1;
         z-index: 0;
+        pointer-events: none;
     }
 
     .image-container img {
@@ -469,6 +471,9 @@ p {
     .content {
         margin-left: 0;
         padding: 10px;
+        position: relative;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.7);
     }
 
     .logo-desktop {
