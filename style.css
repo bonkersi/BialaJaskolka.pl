@@ -443,6 +443,7 @@ p {
 }
 
 /* ===== RESPONSYWNOŚĆ ===== */
+/* ===== RESPONSYWNOŚĆ ===== */
 @media (max-width: 992px) {
     .image-container {
         width: 200px;
