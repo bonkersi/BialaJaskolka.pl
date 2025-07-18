@@ -10,14 +10,13 @@
 <body>
     <div class="container">
         <div class="image-container">
-            <img src="images/jezus.png" alt="Złota figura Jezusa">
+            <img src="images/jezus.png" alt="Złota figura">
         </div>
         
         <div class="content">
             <header>
                 <div class="logo-mobile">
-                    <img src="images/logo.png" alt="Logo Biała Jaskółka">
-                    <div class="logo-text">Biała Jaskółka</div>
+                    <img src="images/logo.png" alt="Logo Biała Jaskółka" class="logo">
                 </div>
                 <nav>
                     <ul class="nav-list">
@@ -28,7 +27,7 @@
                     </ul>
                 </nav>
                 <div class="logo-desktop">
-                    <img src="images/logo.png" alt="Logo Biała Jaskółka">
+                    <img src="images/logo.png" alt="Logo Biała Jaskółka" class="logo">
                 </div>
             </header>
             
@@ -136,9 +135,7 @@
     <script>
         document.getElementById('open-cookie-settings').addEventListener('click', function(e) {
             e.preventDefault();
-            if(window.cookieconsent) {
-                window.cookieconsent.openPreferencesCenter();
-            }
+            window.cookieconsent.openPreferencesCenter();
         });
     </script>
 </body>
