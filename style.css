@@ -458,7 +458,7 @@ p {
     .image-container {
         position: fixed;
         width: 100%;
-        height: calc(100vh - 80px);
+        height: calc(100vh - 90px); /* Większy margines pod menu */
         top: 80px;
         left: 0;
         background: rgba(0, 0, 0, 0.6);
@@ -473,19 +473,19 @@ p {
     .image-container img {
         width: auto;
         height: auto;
-        max-height: none;
-        max-width: none;
-        opacity: 0.9;
-        filter: brightness(1.3) contrast(1.2);
+        max-height: 90vh;
+        max-width: 90vw;
+        opacity: 0.8;
+        filter: brightness(1.2);
         object-fit: contain;
         object-position: top center;
-        transform: scale(2.2) translateY(15%);
-        margin-top: -20%;
+        transform: scale(1.3) translateY(10%); /* Mniejsze skalowanie */
+        margin-top: -10%; /* Mniejsze przesunięcie */
     }
 
     .content {
         margin-left: 0;
-        background-color: rgba(0, 0, 0, 0.75);
+        background-color: rgba(0, 0, 0, 0.8);
         position: relative;
         z-index: 1;
         margin-top: 80px;
@@ -496,6 +496,7 @@ p {
         top: 0;
         width: 100%;
         z-index: 1000;
+        padding: 5px 0;
     }
 
     .logo-desktop {
@@ -505,6 +506,10 @@ p {
     .logo-mobile {
         display: block;
         margin-right: auto;
+    }
+
+    .logo {
+        height: 60px;
     }
 
     .about-content {
@@ -530,12 +535,12 @@ p {
 
 @media (max-width: 576px) {
     .image-container {
-        height: calc(100vh - 70px);
+        height: calc(100vh - 85px);
         top: 70px;
     }
     
     .image-container img {
-        transform: scale(2.5) translateY(10%);
+        transform: scale(1.2) translateY(8%);
     }
     
     .content {
@@ -553,12 +558,12 @@ p {
 
 @media (max-width: 480px) {
     .image-container {
-        height: calc(100vh - 60px);
+        height: calc(100vh - 80px);
         top: 60px;
     }
     
     .image-container img {
-        transform: scale(2.8) translateY(5%);
+        transform: scale(1.1) translateY(5%);
     }
     
     .content {
