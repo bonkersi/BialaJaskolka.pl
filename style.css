@@ -48,6 +48,7 @@ body {
     flex: 1;
     position: relative;
     z-index: 2;
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
 /* ===== HEADER I MENU ===== */
@@ -115,13 +116,11 @@ nav {
     border-right: none;
 }
 
-/* Efekt hover */
 .nav-list li a:hover {
     color: #fff;
     background-color: #444;
 }
 
-/* Aktywna strona */
 .nav-list li a.active {
     background-color: #555;
     color: #fff;
@@ -458,36 +457,45 @@ p {
     }
 }
 
-/* ===== WERSJA MOBILNA ===== */
+/* ===== WERSJA MOBILNA - JEZUS JAKO TŁO ===== */
 @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
     .image-container {
         position: fixed;
         width: 100%;
         height: 100%;
-        left: 0;
-        top: 0;
-        background: rgba(0, 0, 0, 0.7);
-        z-index: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        background: none;
+        z-index: -1;
     }
 
     .image-container img {
-        width: auto;
-        height: 75vh;
-        max-width: 90vw;
-        opacity: 0.8;
-        filter: brightness(1.1);
-        object-fit: contain;
-        object-position: center;
-        transform: none;
-        padding: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        opacity: 0.25;
+        filter: brightness(0.7);
     }
 
     .content {
         margin-left: 0;
-        background-color: rgba(0, 0, 0, 0.85);
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        min-height: 100vh;
+    }
+
+    /* Poprawki czytelności tekstu */
+    h1, h2, h3 {
+        color: #f0f0f0;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    }
+
+    p, .lead {
+        color: #d0d0d0;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
     }
 
     .logo-desktop {
@@ -504,7 +512,7 @@ p {
     }
     
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .contact-grid {
@@ -522,9 +530,11 @@ p {
 
 @media (max-width: 576px) {
     .image-container img {
-        height: 70vh;
-        max-width: 85vw;
-        opacity: 0.85;
+        object-position: center 30%;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
     }
 
     .offer-items {
@@ -533,12 +543,5 @@ p {
 
     .advantages {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .image-container img {
-        height: 65vh;
-        max-width: 80vw;
     }
 }
