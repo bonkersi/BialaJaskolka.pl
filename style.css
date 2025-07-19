@@ -463,21 +463,25 @@ p {
         top: 0;
         background: transparent;
         z-index: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .image-container img {
-        width: 100%;
-        height: 100%;
+  .image-container img {
+        width: auto;
+        height: auto;
+        max-width: 90%;
+        max-height: 80vh;
+        opacity: 0.4; /* ZWIĘKSZONA widoczność (40%) */
+        padding: 20px;
+        filter: brightness(1.2);
         object-fit: contain;
-        opacity: 0.15;
-        padding: 30px;
-        filter: brightness(1.1);
     }
-
+    
     .content {
         margin-left: 0;
-        padding: 15px;
-        background-color: rgba(0, 0, 0, 0.85);
+        background-color: rgba(0, 0, 0, 0.8);
     }
 
     .logo-desktop {
@@ -530,5 +534,12 @@ p {
 
     .advantages {
         grid-template-columns: 1fr;
+    }
+}
+/* Dla małych ekranów */
+@media (max-width: 480px) {
+    .image-container img {
+        opacity: 0.35; /* Lekko mniej widoczne na małych ekranach */
+        max-height: 70vh;
     }
 }
