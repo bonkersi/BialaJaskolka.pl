@@ -42,7 +42,6 @@ body {
     filter: sepia(1) hue-rotate(10deg) saturate(4) brightness(0.9);
 }
 
-
 /* ===== GŁÓWNA ZAWARTOŚĆ ===== */
 .content {
     margin-left: 250px;
@@ -60,14 +59,14 @@ header {
     align-items: center;
     padding: 10px 0;
     margin-bottom: 30px;
-    background-color: rgba(51, 51, 51, 0.9);
+    background-color: rgba(51, 51, 51, 0.95);
     border-radius: 5px;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
-
 
 .logo-desktop {
     padding: 0 20px;
@@ -461,14 +460,11 @@ p {
     }
 }
 
-/* ===== WERSJA MOBILNA - ZWIĘKSZONA FIGURA JEZUSA ===== */
+/* ===== WERSJA MOBILNA - ZŁOTA FIGURA JEZUSA ===== */
 @media (max-width: 768px) {
-    body {
-        padding-top: 70px;
-    }
     .container {
         flex-direction: column;
-        padding-top: 0; /* Miejsce na sticky header */
+        padding-top: 70px;
     }
 
     .image-container {
@@ -478,29 +474,26 @@ p {
         width: 100%;
         height: calc(100vh - 70px);
         background: linear-gradient(to bottom, 
-                  rgba(0,0,0,0.2) 0%, 
-                  rgba(0,0,0,0.5) 100%);
+                  rgba(0,0,0,0.3) 0%, 
+                  rgba(0,0,0,0.6) 100%);
         z-index: 0;
-        overflow: hidden; /* Zapobiega przycinaniu powiększonej figury */
+        overflow: hidden;
     }
 
-  
     .image-container img {
         width: auto;
-        height: 120%; /* Zwiększona wysokość */
-        min-width: 100%; /* Gwarantuje pełną szerokość */
-        object-fit: contain;
-        object-position: center top;
-        padding: 0 10% 10% 10%; /*MARGINESY*/
+        height: 120%;
+        min-width: 100%;
+        object-fit: cover;
+        object-position: center;
         opacity: 0.9;
         filter: sepia(1) hue-rotate(5deg) saturate(5) 
                 brightness(0.85) contrast(1.1);
-        transform: scale(1.1); /* Dodatkowe powiększenie */
-        margin-left: -5%; /* Kompensacja dla powiększenia */
+        transform: scale(1.1);
+        margin-left: -5%;
     }
 
     .content {
-        margin-top: 70px;
         margin-left: 0;
         padding: 20px;
         background-color: rgba(0, 0, 0, 0.75);
@@ -509,31 +502,15 @@ p {
         position: relative;
         z-index: 2;
     }
-  /* Poprawki czytelności tekstu */
+
     h1, h2, h3 {
         color: #fff;
         text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
     }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    p, .lead, .nav-list li a {
+    
+    p, .lead {
         color: #e0e0e0;
         text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
-    }
-
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        margin-bottom: 0;
-        border-radius: 0;
-        box-shadow: 0 2px 15px rgba(0,0,0,0.7)
-        background-color: rgba(51, 51, 51, 0.85);
     }
 
     .logo-desktop {
@@ -545,7 +522,6 @@ p {
         margin-right: auto;
         filter: drop-shadow(0 0 5px rgba(255,215,0,0.5));
     }
-
 
     .about-content {
         flex-direction: column;
@@ -569,30 +545,25 @@ p {
 }
 
 @media (max-width: 576px) {
-    body {
-        padding-top: 60px;
-    }
-    
-    .image-container{
+    .image-container {
         top: 60px;
         height: calc(100vh - 60px);
     }
     
     .image-container img {
-        height: 130%; /* Jeszcze większa figura na mniejszych ekranach */
+        height: 130%;
         transform: scale(1.15);
         margin-left: -8%;
-        padding: 0 5% 15% 5%;
+        object-position: center 30%;
     }
     
     .content {
-        top: 60px;
+        margin-top: 60px;
         min-height: calc(100vh - 60px);
     }
-}
-
-    .hero h1 {
-        font-size: 2.2rem;
+    
+    h1 {
+        font-size: 2rem;
     }
 
     .offer-items {
