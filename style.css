@@ -20,7 +20,7 @@ body {
     position: relative;
 }
 
-/* ===== FIGURA JEZUSA - STYL DESKTOPOWY (ORIGINAL) ===== */
+/* ===== FIGURA JEZUSA - STYL DESKTOPOWY ===== */
 .image-container {
     position: fixed;
     left: 0;
@@ -442,18 +442,29 @@ p {
     color: #fff;
 }
 
-/* ===== NOWA FIGURA JEZUSA - WERSJA MOBILNA ===== */
+/* ===== RESPONSYWNOŚĆ ===== */
+@media (max-width: 992px) {
+    .image-container {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 200px;
+    }
+}
+
+/* ===== FIGURA JEZUSA - NOWE STYLE MOBILNE ===== */
 @media (max-width: 768px) {
     .image-container {
         position: fixed;
         width: 100%;
-        height: calc(100vh - 80px);
-        top: 80px;
+        height: calc(100vh - 80px); /* Start pod paskiem menu */
+        top: 80px; /* Wysokość menu */
         left: 0;
         background: rgba(0, 0, 0, 0.6);
         z-index: 0;
         display: flex;
-        align-items: flex-start;
+        align-items: flex-start; /* Wyrównanie do góry */
         justify-content: center;
         overflow: visible;
         pointer-events: none;
@@ -464,28 +475,27 @@ p {
         height: auto;
         max-height: none;
         max-width: none;
-        opacity: 0.85;
-        filter: brightness(1.3) contrast(1.2) sepia(0.3) saturate(1.5);
+        opacity: 0.85; /* Bardziej widoczna */
+        filter: brightness(1.3) contrast(1.2); /* Lepsza czytelność */
         object-fit: contain;
-        object-position: top center;
-        transform: scale(2) translateY(10%);
-        margin-top: -15%;
+        object-position: top center; /* Głowa na górze */
+        transform: scale(2) translateY(10%); /* Większe powiększenie */
+        margin-top: -15%; /* Regulacja położenia głowy */
     }
-
-    .content {
+ .content {
         margin-left: 0;
-        background-color: rgba(0, 0, 0, 0.85);
+        background-color: rgba(0, 0, 0, 0.8);
         position: relative;
         z-index: 1;
-        margin-top: 80px;
+        margin-top: 80px; /* Kompensacja wysokości menu */
     }
-
-    header {
+     header {
         position: fixed;
         top: 0;
         width: 100%;
         z-index: 1000;
         padding: 10px 0;
+        background-color: #333;
     }
 
     .logo-desktop {
@@ -528,7 +538,6 @@ p {
         transform: scale(2.2) translateY(8%);
         opacity: 0.9;
     }
-    
     .content {
         margin-top: 70px;
     }
@@ -541,7 +550,6 @@ p {
         grid-template-columns: 1fr;
     }
 }
-
 @media (max-width: 480px) {
     .image-container {
         height: calc(100vh - 60px);
@@ -551,21 +559,10 @@ p {
     .image-container img {
         transform: scale(2.5) translateY(5%);
         opacity: 0.95;
-        filter: brightness(1.4) contrast(1.3) sepia(0.4) saturate(1.8);
+        filter: brightness(1.4) contrast(1.3);
     }
     
     .content {
         margin-top: 60px;
-    }
-}
-
-/* ===== RESPONSYWNOŚĆ DLA DESKTOP ===== */
-@media (max-width: 992px) {
-    .image-container {
-        width: 200px;
-    }
-
-    .content {
-        margin-left: 200px;
     }
 }
