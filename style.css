@@ -462,8 +462,8 @@ p {
         height: 100%;
         left: 0;
         top: 0;
-        background: transparent;
-        z-index: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: -1;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -474,8 +474,8 @@ p {
         width: auto;
         height: 100vh; /* Pełna wysokość ekranu */
         max-width: none; /* Usuwa ograniczenie szerokości */
-        opacity: 0.5;
-        filter: brightness(1.3);
+        opacity: 0.w;
+        filter: brightness(1.2);
         object-fit: contain;
         object-position: center;
         padding: 0 5%; /* Zapas po bokach */
@@ -484,7 +484,8 @@ p {
 
     .content {
         margin-left: 0;
-        background-color: rgba(0, 0, 0, 0.85);
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 15px;
     }
 }
 
@@ -522,9 +523,9 @@ p {
     .image-container img {
         transform: scale(1.6); /* Lekko mniejsze powiększenie */
         max-height: 85vh;
-        max-width: 85vw; /* Zwiększony margines boczny */
+        max-width: 90vw; /* Zwiększony margines boczny */
         padding: 15px;
-        opacity: 0.55; /* Lekko lepsza widoczność */
+        opacity: 0.35; /* Lekko lepsza widoczność */
     }
 
     .offer-items {
@@ -533,6 +534,9 @@ p {
 
     .advantages {
         grid-template-columns: 1fr;
+    }
+    .content {
+        background-color: rgba(0, 0, 0, 0.8); /* Ciemniejsze tło dla treści */
     }
 }
 
