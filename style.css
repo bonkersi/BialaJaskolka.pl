@@ -461,39 +461,49 @@ p {
     }
 }
 
-/* ===== WERSJA MOBILNA - ZŁOTA FIGURA JEZUSA NA CAŁYM EKRANIE ===== */
+/* ===== WERSJA MOBILNA - ZWIĘKSZONA FIGURA JEZUSA ===== */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        padding-top: 70px; /* Miejsce na sticky header */
     }
 
     .image-container {
         position: fixed;
+        top: 70px;
+        left: 0;
         width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5));
+        height: calc(100vh - 70px);
+        background: linear-gradient(to bottom, 
+                  rgba(0,0,0,0.3) 0%, 
+                  rgba(0,0,0,0.6) 100%);
         z-index: 0;
+        overflow: hidden; /* Zapobiega przycinaniu powiększonej figury */
     }
 
+  
     .image-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
+        width: auto;
+        height: 120%; /* Zwiększona wysokość */
+        min-width: 100%; /* Gwarantuje pełną szerokość */
+        object-fit: cover;
         object-position: center;
         opacity: 0.9;
-        filter: sepia(1) hue-rotate(5deg) saturate(5) brightness(0.85) contrast(1.1);
-        transform: none;
-        padding: 5%;
+        filter: sepia(1) hue-rotate(5deg) saturate(5) 
+                brightness(0.85) contrast(1.1);
+        transform: scale(1.1); /* Dodatkowe powiększenie */
+        margin-left: -5%; /* Kompensacja dla powiększenia */
     }
 
-   .content {
+    .content {
         margin-left: 0;
         padding: 20px;
-        background-color: rgba(0, 0, 0, 0.7);
-        min-height: 100vh;
-        backdrop-filter: blur(2px);
+        background-color: rgba(0, 0, 0, 0.75);
+        min-height: calc(100vh - 70px);
+        margin-top: 70px;
+        position: relative;
+        z-index: 2;
     }
-
   /* Poprawki czytelności tekstu */
     h1, h2, h3 {
         color: #fff;
@@ -546,10 +556,22 @@ p {
 }
 
 @media (max-width: 576px) {
-    .image-container img {
-        object-position: center 20%;
-        padding: 10%;
+    .image-container {
+        top: 60px;
+        height: calc(100vh - 60px);
     }
+    
+    .image-container img {
+        height: 130%; /* Jeszcze większa figura na mniejszych ekranach */
+        transform: scale(1.15);
+        margin-left: -8%;
+    }
+    
+    .content {
+        margin-top: 60px;
+        min-height: calc(100vh - 60px);
+    }
+}
 
     .hero h1 {
         font-size: 2.2rem;
