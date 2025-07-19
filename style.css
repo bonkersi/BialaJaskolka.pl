@@ -463,9 +463,12 @@ p {
 
 /* ===== WERSJA MOBILNA - ZWIĘKSZONA FIGURA JEZUSA ===== */
 @media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
     .container {
         flex-direction: column;
-        padding-top: 70px; /* Miejsce na sticky header */
+        padding-top: 0; /* Miejsce na sticky header */
     }
 
     .image-container {
@@ -475,8 +478,8 @@ p {
         width: 100%;
         height: calc(100vh - 70px);
         background: linear-gradient(to bottom, 
-                  rgba(0,0,0,0.3) 0%, 
-                  rgba(0,0,0,0.6) 100%);
+                  rgba(0,0,0,0.2) 0%, 
+                  rgba(0,0,0,0.5) 100%);
         z-index: 0;
         overflow: hidden; /* Zapobiega przycinaniu powiększonej figury */
     }
@@ -486,8 +489,9 @@ p {
         width: auto;
         height: 120%; /* Zwiększona wysokość */
         min-width: 100%; /* Gwarantuje pełną szerokość */
-        object-fit: cover;
-        object-position: center;
+        object-fit: contain;
+        object-position: center top;
+        padding: 0 10% 10% 10%; /*MARGINESY*/
         opacity: 0.9;
         filter: sepia(1) hue-rotate(5deg) saturate(5) 
                 brightness(0.85) contrast(1.1);
@@ -496,6 +500,7 @@ p {
     }
 
     .content {
+        margin-top: 70px;
         margin-left: 0;
         padding: 20px;
         background-color: rgba(0, 0, 0, 0.75);
@@ -520,6 +525,14 @@ p {
     }
 
     header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        margin-bottom: 0;
+        border-radius: 0;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.7)
         background-color: rgba(51, 51, 51, 0.85);
     }
 
@@ -556,7 +569,11 @@ p {
 }
 
 @media (max-width: 576px) {
-    .image-container {
+    body {
+        padding-top: 60px;
+    }
+    
+    .image-container{
         top: 60px;
         height: calc(100vh - 60px);
     }
@@ -565,10 +582,11 @@ p {
         height: 130%; /* Jeszcze większa figura na mniejszych ekranach */
         transform: scale(1.15);
         margin-left: -8%;
+        padding: 0 5% 15% 5%;
     }
     
     .content {
-        margin-top: 60px;
+        top: 60px;
         min-height: calc(100vh - 60px);
     }
 }
