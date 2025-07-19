@@ -457,9 +457,10 @@ p {
     .container {
         position: relative;
         background: 
-            linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-            url('images/jezus.png') center center/contain no-repeat;
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+            url('images/jezus.png') center right/300% no-repeat;
         background-attachment: fixed;
+        background-position: 80% center;
     }
 
     .image-container {
@@ -499,6 +500,11 @@ p {
         flex-direction: column;
     }
     
+    .hero {
+        margin-top: 40vh; /* Dodatkowe przesunięcie tekstu w dół */
+        padding-bottom: 20vh;
+    }
+    
     .hero h1 {
         font-size: 2rem;
     }
@@ -518,8 +524,8 @@ p {
 
 @media (max-width: 576px) {
     .container {
-        background-size: contain;
-        background-position: center center;
+        background-size: 250%;
+        background-position: 70% center;
     }
     
     .content {
