@@ -462,7 +462,7 @@ p {
         height: 100%;
         left: 0;
         top: 0;
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.4);
         z-index: -1;
         display: flex;
         align-items: center;
@@ -473,18 +473,18 @@ p {
     .image-container img {
         width: auto;
         height: 100vh; /* Pełna wysokość ekranu */
-        max-width: none; /* Usuwa ograniczenie szerokości */
-        opacity: 0.w;
+        max-width: 90%; /* Usuwa ograniczenie szerokości */
+        opacity: 0.7;
         filter: brightness(1.2);
         object-fit: contain;
         object-position: center;
         padding: 0 5%; /* Zapas po bokach */
-        transform: scale(1.8); /* Dostosuj wartość skalowania według potrzeb */
+        transform: scale(1.3); /* Dostosuj wartość skalowania według potrzeb */
     }
 
     .content {
         margin-left: 0;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.6);
         padding: 15px;
     }
 }
@@ -523,9 +523,9 @@ p {
     .image-container img {
         transform: scale(1.6); /* Lekko mniejsze powiększenie */
         max-height: 85vh;
-        max-width: 90vw; /* Zwiększony margines boczny */
+        max-width: 95%; /* Zwiększony margines boczny */
         padding: 15px;
-        opacity: 0.35; /* Lekko lepsza widoczność */
+        opacity: 0.75; /* Lekko lepsza widoczność */
     }
 
     .offer-items {
@@ -536,14 +536,46 @@ p {
         grid-template-columns: 1fr;
     }
     .content {
-        background-color: rgba(0, 0, 0, 0.8); /* Ciemniejsze tło dla treści */
+        background-color: rgba(0, 0, 0, 0.55); /* Ciemniejsze tło dla treści */
+    }
+     h1, h2, h3, p {
+        text-shadow: 0 1px 3px rgba(0,0,0,0.8); /* Lepsza czytelność tekstu */
     }
 }
 
-/* Dla mniejszych ekranów */
 @media (max-width: 480px) {
+    .image-container {
+        background: rgba(0, 0, 0, 0.3); /* Jeszcze jaśniejsze tło kontenera */
+    }
+
     .image-container img {
-        transform: scale(1.5); /* Mniejsze skalowanie na małych ekranach */
-        padding: 0 10%; /* Większy zapas */
+        opacity: 0.8; /* Maksymalna widoczność */
+        max-width: 100%; /* Pełna szerokość ekranu */
+        transform: scale(1.2); /* Optymalne skalowanie */
+        filter: brightness(1.15) contrast(1.15);
+        object-position: center 30%; /* Lekkie przesunięcie ku górze */
+    }
+
+    .content {
+        background-color: rgba(0, 0, 0, 0.5); /* Minimalne tło dla treści */
+        padding: 15px;
+    }
+
+    h1, h2 {
+        text-shadow: 0 1px 4px rgba(0,0,0,0.9); /* Mocniejszy cień dla nagłówków */
+    }
+
+    p, li, .contact-item {
+        text-shadow: 0 1px 3px rgba(0,0,0,0.8); /* Cień dla tekstu */
+    }
+
+    /* Optymalizacja układu dla małych ekranów */
+    .nav-list li a {
+        padding: 12px 15px; /* Mniejsze paddingi */
+        font-size: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem; /* Mniejsze nagłówki */
     }
 }
