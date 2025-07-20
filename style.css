@@ -20,7 +20,7 @@ body {
     position: relative;
 }
 
-/* ===== FIGURA JEZUSA - STYL DESKTOPOWY (BEZ ZMIAN) ===== */
+/* ===== FIGURA JEZUSA - STYL DESKTOPOWY ===== */
 .image-container {
     position: fixed;
     left: 0;
@@ -442,8 +442,10 @@ p {
     color: #fff;
 }
 
-/* ===== RESPONSYWNOŚĆ ===== */
-@media (max-width: 992px) {
+/* ===== MEDIA QUERIES DLA RÓŻNYCH ROZDZIELCZOŚCI ===== */
+
+/* Dla ekranów średnich (tablety itp.) */
+@media screen and (max-width: 991px) {
     .image-container {
         width: 200px;
     }
@@ -453,40 +455,34 @@ p {
     }
 }
 
-/* ===== WERSJA MOBILNA - ZOPTYMALIZOWANA ===== */
-/* ===== FIGURA JEZUSA - WERSJA MOBILNA ===== */
-@media (max-width: 768px) {
-    .image-container {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        background: transparent;
-        z-index: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden; /* Zapobiega przycinaniu */
+/* Dla telefonów i małych urządzeń */
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url('images/jezus.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-attachment: fixed;
+        background-color: #000;
     }
 
-    .image-container img {
-        width: auto;
-        height: 100vh; /* Pełna wysokość ekranu */
-        max-width: none; /* Usuwa ograniczenie szerokości */
-        opacity: 0.5;
-        filter: brightness(1.3);
-        object-fit: contain;
-        object-position: center;
-        padding: 0 5%; /* Zapas po bokach */
-        transform: scale(1.8); /* Dostosuj wartość skalowania według potrzeb */
+    .image-container {
+        display: none;
     }
 
     .content {
         margin-left: 0;
         background-color: rgba(0, 0, 0, 0.85);
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
     }
-}
+
+    .hide-on-mobile {
+        display: none;
+    }
 
     .logo-desktop {
         display: none;
@@ -516,53 +512,15 @@ p {
     .news-image {
         flex: 1;
     }
+}
 
-@media (max-width: 576px) {
-    .image-container img {
-        transform: scale(1.6); /* Lekko mniejsze powiększenie */
-        max-height: 85vh;
-        max-width: 85vw; /* Zwiększony margines boczny */
-        padding: 15px;
-        opacity: 0.55; /* Lekko lepsza widoczność */
-    }
-
+/* Dla bardzo małych ekranów */
+@media screen and (max-width: 576px) {
     .offer-items {
         grid-template-columns: 1fr;
     }
 
     .advantages {
         grid-template-columns: 1fr;
-    }
-}
-
-/* Dla mniejszych ekranów */
-@media (max-width: 480px) {
-    .image-container img {
-        transform: scale(1.5); /* Mniejsze skalowanie na małych ekranach */
-        padding: 0 10%; /* Większy zapas */
-    }
-}
-
-
-/* ===== MOBILNA WERSJA Z TŁEM COVER ===== */
-@media (max-width: 768px) {
-    body {
-        background-image: url('images/jezus.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-attachment: fixed;
-        background-color: #000;
-    }
-
-    .hide-on-mobile {
-        display: none;
-    }
-
-    .content {
-        margin-left: 0;
-        background-color: rgba(0, 0, 0, 0.75);
-        position: relative;
-        z-index: 2;
     }
 }
