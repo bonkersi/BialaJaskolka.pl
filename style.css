@@ -516,7 +516,6 @@ p {
     .news-image {
         flex: 1;
     }
-}
 
 @media (max-width: 576px) {
     .image-container img {
