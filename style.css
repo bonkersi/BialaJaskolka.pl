@@ -20,20 +20,19 @@ body {
     position: relative;
 }
 
-/* ===== FIGURA JEZUSA - PROFESJONALNA WERSJA ===== */
+/* ===== FIGURA JEZUSA - DESKTOP ===== */
 .image-container {
     position: fixed;
     left: 0;
     top: 0;
     height: 100vh;
-    width: 280px;
+    width: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.7);
     overflow: hidden;
-    transition: width 0.3s ease;
 }
 
 .image-container img {
@@ -41,19 +40,18 @@ body {
     width: auto;
     max-width: 100%;
     object-fit: contain;
-    object-position: center;
     opacity: 0.9;
-    transition: all 0.3s ease;
 }
 
 /* ===== GŁÓWNA ZAWARTOŚĆ ===== */
 .content {
-    margin-left: 280px;
+    margin-left: 300px;
     padding: 30px;
     flex: 1;
     position: relative;
     z-index: 2;
     min-width: 0;
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
 /* ===== HEADER I MENU ===== */
@@ -446,40 +444,31 @@ p {
     color: #fff;
 }
 
-/* ===== RESPONSYWNOŚĆ ===== */
-@media (max-width: 992px) {
-    .image-container {
-        width: 220px;
-    }
-    .content {
-        margin-left: 220px;
-        padding: 25px;
-    }
-}
-
+/* ===== WERSJA MOBILNA - FIGURA JAKO DUŻE TŁO ===== */
 @media (max-width: 768px) {
     .image-container {
-        width: 120px;
-        justify-content: flex-start;
+        width: 100%;
+        height: 100vh;
         background: none;
-        pointer-events: none;
+        z-index: 0;
+        justify-content: flex-start;
     }
 
     .image-container img {
+        width: auto;
         height: 100vh;
-        margin-left: -10px;
-        opacity: 0.6;
+        min-width: 150%;
+        object-fit: cover;
         object-position: left center;
+        opacity: 0.5;
+        filter: brightness(0.8);
+        margin-left: 0;
+        transform: none;
     }
 
     .content {
         margin-left: 0;
-        padding: 20px;
-        background-color: rgba(0, 0, 0, 0.85);
-    }
-
-    body {
-        background-image: none !important;
+        background-color: rgba(0, 0, 0, 0.75);
     }
 
     .logo-desktop {
@@ -513,13 +502,9 @@ p {
 }
 
 @media (max-width: 480px) {
-    .image-container {
-        width: 100px;
-    }
-    
     .image-container img {
-        margin-left: -15px;
-        opacity: 0.7;
+        min-width: 180%;
+        opacity: 0.6;
     }
 
     .offer-items, .advantages {
