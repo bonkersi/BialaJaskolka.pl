@@ -545,19 +545,7 @@ p {
 
 
 /* ===== MOBILNA WERSJA Z TŁEM COVER ===== */
-@media (max-width: 768px) {
-    body {
-        background-image: url('images/jezus_light.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-attachment: fixed;
-        background-color: #000;
-    }
 
-    .hide-on-mobile {
-        display: none;
-    }
 
     .content {
         margin-left: 0;
@@ -571,13 +559,12 @@ p {
 
 @media (max-width: 768px) {
   body {
-    background-image: url('images/jezus_light.png');
+    background-image: url('images/jezus.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto 110vh;
     background-position: center top;
     background-attachment: fixed;
     background-color: #000;
-    filter: brightness(1.7) contrast(1.5);
   }
 
   .image-container {
