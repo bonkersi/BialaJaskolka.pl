@@ -547,7 +547,7 @@ p {
 /* ===== MOBILNA WERSJA Z TŁEM COVER ===== */
 @media (max-width: 768px) {
     body {
-        background-image: url('images/jezus.png');
+        background-image: url('images/jezus_light.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -571,7 +571,7 @@ p {
 
 @media (max-width: 768px) {
   body {
-    background-image: url('images/jezus.png');
+    background-image: url('images/jezus_light.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
