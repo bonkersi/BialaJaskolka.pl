@@ -577,7 +577,7 @@ p {
     background-position: center top;
     background-attachment: fixed;
     background-color: #000;
-    filter: brightness(1.4) contrast(1.3);
+    filter: brightness(1.7) contrast(1.5);
   }
 
   .image-container {
