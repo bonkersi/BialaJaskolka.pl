@@ -26,7 +26,7 @@ body {
     left: 0;
     top: 0;
     height: 100vh;
-    width: 280px;
+    width: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +45,7 @@ body {
 
 /* ===== GŁÓWNA ZAWARTOŚĆ ===== */
 .content {
-    margin-left: 280px;
+    margin-left: 300px;
     padding: 30px;
     flex: 1;
     position: relative;
@@ -59,16 +59,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    height: 70px;
+    padding: 10px 0;
+    margin-bottom: 30px;
     background-color: #333;
+    border-radius: 5px;
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
 .logo-desktop {
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 .logo-mobile {
@@ -77,7 +78,7 @@ header {
 }
 
 .logo {
-    height: 50px;
+    height: 70px;
     transition: all 0.3s;
     filter: contrast(120%) brightness(1.2) drop-shadow(0 0 2px rgba(255,255,255,0.3));
 }
@@ -87,6 +88,7 @@ header {
     transform: scale(1.05);
 }
 
+/* Nawigacja główna */
 nav {
     flex-grow: 1;
 }
@@ -96,14 +98,11 @@ nav {
     list-style: none;
     margin: 0;
     padding: 0;
-    height: 100%;
 }
 
 .nav-list li {
     position: relative;
     margin: 0;
-    display: flex;
-    align-items: center;
 }
 
 .nav-list li a {
@@ -111,11 +110,9 @@ nav {
     text-decoration: none;
     font-size: 1.1rem;
     transition: all 0.3s;
-    padding: 0 20px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    border-right: 1px solid rgba(255,255,255,0.1);
+    padding: 15px 20px;
+    display: block;
+    border-right: 1px solid #444;
 }
 
 .nav-list li:last-child a {
@@ -124,13 +121,12 @@ nav {
 
 .nav-list li a:hover {
     color: #fff;
-    background-color: rgba(255,255,255,0.1);
+    background-color: #444;
 }
 
 .nav-list li a.active {
+    background-color: #555;
     color: #fff;
-    font-weight: bold;
-    background-color: rgba(255,255,255,0.05);
 }
 
 /* ===== TYPOGRAFIA ===== */
@@ -448,39 +444,31 @@ p {
     color: #fff;
 }
 
-/* ===== WERSJA MOBILNA ===== */
+/* ===== WERSJA MOBILNA - FIGURA JAKO DUŻE TŁO ===== */
 @media (max-width: 768px) {
     .image-container {
-        position: fixed;
-        left: 0;
-        top: 70px;
-        height: calc(100vh - 70px);
         width: 100%;
-        z-index: 0;
+        height: 100vh;
         background: none;
-        display: flex;
+        z-index: 0;
         justify-content: flex-start;
-        align-items: flex-start;
-        overflow: hidden;
     }
 
     .image-container img {
         width: auto;
-        height: 120%;
-        min-width: 120%;
+        height: 100vh;
+        min-width: 150%;
         object-fit: cover;
-        object-position: left top;
-        opacity: 0.6;
-        filter: brightness(0.85);
-        margin-left: -10%;
-        margin-top: -10%;
+        object-position: left center;
+        opacity: 0.5;
+        filter: brightness(0.8);
+        margin-left: 0;
         transform: none;
     }
 
     .content {
         margin-left: 0;
-        padding: 20px;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.75);
     }
 
     .logo-desktop {
@@ -514,30 +502,9 @@ p {
 }
 
 @media (max-width: 480px) {
-    .image-container {
-        top: 60px;
-        height: calc(100vh - 60px);
-    }
-    
     .image-container img {
-        height: 130%;
-        min-width: 130%;
-        margin-left: -15%;
-        opacity: 0.65;
-    }
-    
-    header {
-        height: 60px;
-        padding: 0 15px;
-    }
-    
-    .logo {
-        height: 40px;
-    }
-    
-    .nav-list li a {
-        padding: 0 15px;
-        font-size: 1rem;
+        min-width: 180%;
+        opacity: 0.6;
     }
 
     .offer-items, .advantages {
@@ -545,12 +512,22 @@ p {
     }
 }
 
-/* ===== RESPONSYWNOŚĆ DLA ŚREDNICH EKRANÓW ===== */
-@media (max-width: 992px) {
-    .image-container {
-        width: 220px;
-    }
-    .content {
-        margin-left: 220px;
+
+/* ===== ZANIKANIE FIGURY PRZY SCROLLOWANIU ===== */
+.image-container img {
+    transition: opacity 0.5s ease-out;
+    will-change: opacity;
+}
+
+body.scrolled .image-container img {
+    opacity: 0.3;
+}
+
+/* ===== DODATKOWA POPRAWKA DLA MOBILNEJ FIGURY ===== */
+@media (max-width: 480px) {
+    .image-container img {
+        min-width: 150%;
+        height: auto;
+        max-height: 100vh;
     }
 }
