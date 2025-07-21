@@ -545,7 +545,19 @@ p {
 
 
 /* ===== MOBILNA WERSJA Z TŁEM COVER ===== */
+@media (max-width: 768px) {
+    body {
+        background-image: url('images/jezus.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-color: #000;
+    }
 
+    .hide-on-mobile {
+        display: none;
+    }
 
     .content {
         margin-left: 0;
@@ -553,57 +565,4 @@ p {
         position: relative;
         z-index: 2;
     }
-}
-
-
-
-@media (max-width: 768px) {
-  body {
-    background-image: url('images/jezus.png');
-    background-repeat: no-repeat;
-    background-size: auto 140vh;
-    background-position: center top;
-    background-attachment: fixed;
-    background-color: #000;
-  }
-
-  .image-container {
-    display: none;
-  }
-
-  .content {
-    margin-left: 0;
-    background-color: rgba(0, 0, 0, 0.82);
-    position: relative;
-    z-index: 2;
-  }
-
-  .logo-desktop {
-    display: none;
-  }
-
-  .logo-mobile {
-    display: block;
-    margin-right: auto;
-  }
-
-  .about-content {
-    flex-direction: column;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .news-item {
-    flex-direction: column;
-  }
-
-  .news-image {
-    flex: 1;
-  }
 }
