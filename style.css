@@ -20,38 +20,43 @@ body {
     position: relative;
 }
 
-/* ===== FIGURA JEZUSA - STYL DESKTOPOWY (ZAKTUALIZOWANY) ===== */
+/* ===== FIGURA JEZUSA - PROFESJONALNA WERSJA ===== */
 .image-container {
     position: fixed;
     left: 0;
     top: 0;
     height: 100vh;
-    width: 350px;
+    width: 280px;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.7);
     overflow: hidden;
+    transition: width 0.3s ease;
 }
 
 .image-container img {
-    height: 95vh;
+    height: 90vh;
     width: auto;
+    max-width: 100%;
     object-fit: contain;
+    object-position: center;
     opacity: 0.9;
+    transition: all 0.3s ease;
 }
 
 /* ===== GŁÓWNA ZAWARTOŚĆ ===== */
 .content {
-    margin-left: 350px;
-    padding: 20px;
+    margin-left: 280px;
+    padding: 30px;
     flex: 1;
     position: relative;
     z-index: 2;
+    min-width: 0;
 }
 
-/* ===== HEADER I MENU - WERSJA 1: ZAWSZE WIDOCZNE ===== */
+/* ===== HEADER I MENU ===== */
 header {
     display: flex;
     justify-content: space-between;
@@ -116,13 +121,11 @@ nav {
     border-right: none;
 }
 
-/* Efekt hover */
 .nav-list li a:hover {
     color: #fff;
     background-color: #444;
 }
 
-/* Aktywna strona */
 .nav-list li a.active {
     background-color: #555;
     color: #fff;
@@ -443,60 +446,40 @@ p {
     color: #fff;
 }
 
-/* ===== WERSJA MOBILNA - ZAKTUALIZOWANA ===== */
+/* ===== RESPONSYWNOŚĆ ===== */
 @media (max-width: 992px) {
     .image-container {
-        width: 200px;
+        width: 220px;
     }
-
     .content {
-        margin-left: 200px;
+        margin-left: 220px;
+        padding: 25px;
     }
 }
 
 @media (max-width: 768px) {
     .image-container {
-        position: fixed;
-        width: 150px;
-        height: 100vh;
-        left: 0;
-        top: 0;
-        background: transparent;
-        z-index: 0;
-        display: flex;
-        align-items: center;
+        width: 120px;
         justify-content: flex-start;
-        overflow: hidden;
+        background: none;
+        pointer-events: none;
     }
 
     .image-container img {
-        width: auto;
         height: 100vh;
-        max-width: none;
+        margin-left: -10px;
         opacity: 0.6;
-        filter: brightness(1.3);
-        object-fit: contain;
         object-position: left center;
-        padding-left: 0;
-        margin-left: -20px;
     }
 
     .content {
         margin-left: 0;
+        padding: 20px;
         background-color: rgba(0, 0, 0, 0.85);
     }
 
     body {
-        background-image: url('images/jezus.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-attachment: fixed;
-        background-color: #000;
-    }
-
-    .hide-on-mobile {
-        display: none;
+        background-image: none !important;
     }
 
     .logo-desktop {
@@ -529,31 +512,17 @@ p {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
     .image-container {
-        width: 120px;
+        width: 100px;
     }
     
     .image-container img {
-        opacity: 0.65;
-        margin-left: -30px;
-        max-height: 85vh;
-        max-width: 85vw;
-        padding: 15px;
+        margin-left: -15px;
+        opacity: 0.7;
     }
 
-    .offer-items {
+    .offer-items, .advantages {
         grid-template-columns: 1fr;
-    }
-
-    .advantages {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .image-container img {
-        transform: scale(1.5);
-        padding: 0 10%;
     }
 }
