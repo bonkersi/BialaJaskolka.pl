@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Obsługa scrollowania
+    // Obsługa scrollowania - usunięte efekty skakania
     window.addEventListener('scroll', function() {
         if (window.innerWidth <= 768) {
             document.body.classList.toggle('scrolled', window.scrollY > 50);
@@ -11,8 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Tutaj można dodać kod wysyłający formularz
             alert('Dziękujemy za wiadomość! Skontaktujemy się z Tobą wkrótce.');
             contactForm.reset();
         });
