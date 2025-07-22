@@ -11,6 +11,8 @@ body {
     color: #a0a0a0;
     overflow-x: hidden;
     line-height: 1.6;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
 /* ===== LAYOUT ===== */
@@ -33,6 +35,7 @@ body {
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.7);
     overflow: hidden;
+    pointer-events: none;
 }
 
 .image-container img {
@@ -41,6 +44,7 @@ body {
     max-width: 100%;
     object-fit: contain;
     opacity: 0.9;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 /* ===== GŁÓWNA ZAWARTOŚĆ ===== */
@@ -50,6 +54,7 @@ body {
     flex: 1;
     position: relative;
     z-index: 2;
+    background-color: #000;
 }
 
 /* ===== HEADER I MENU ===== */
@@ -57,12 +62,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 20px 0 300px;
     height: 80px;
     background-color: #333;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 10;
 }
 
 .logo-desktop {
@@ -447,49 +452,79 @@ p {
     color: #fff;
 }
 
+/* ===== OPTYMALIZACJA DLA MOTOROLA MOTO G84 ===== */
+@media (max-width: 1080px) and (min-height: 2300px) {
+    .image-container {
+        width: 200px;
+    }
+    
+    .content {
+        margin-left: 200px;
+        padding-right: 15px;
+        padding-left: 25px;
+    }
+    
+    header {
+        padding-left: 220px;
+    }
+    
+    .image-container img {
+        height: 85vh;
+        object-position: center 30%;
+    }
+}
+
+/* Poprawki dla trybu poziomego */
+@media (max-height: 1080px) and (orientation: landscape) {
+    .image-container {
+        width: 160px;
+    }
+    
+    .content {
+        margin-left: 160px;
+    }
+    
+    header {
+        padding-left: 180px;
+    }
+}
+
 /* ===== WERSJA MOBILNA - ZMODYFIKOWANA ===== */
 @media (max-width: 768px) {
     .container {
         display: block;
     }
 
-    /* MENU - STAŁE NA GÓRZE */
     header {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 60px;
+        padding: 0 15px;
         background-color: rgba(51, 51, 51, 0.95);
         backdrop-filter: blur(5px);
         z-index: 1000;
-        padding: 0 15px;
-        margin: 0;
     }
 
-    /* UKRYJ LOGO DESKTOP */
     .logo-desktop {
         display: none !important;
     }
 
-    /* POKAŻ LOGO MOBILE */
     .logo-mobile {
         display: block;
         height: 40px;
     }
 
-    /* FIGURA - ZMODYFIKOWANA WERSJA */
     .image-container {
         position: fixed;
         top: 60px;
         left: 0;
         width: 100%;
-        height: 200px;
+        height: 180px;
         z-index: 0;
-        display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
         background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.5));
     }
 
@@ -502,18 +537,15 @@ p {
         filter: brightness(0.7);
     }
 
-    /* GŁÓWNA TREŚĆ */
     .content {
         position: relative;
         z-index: 1;
         margin-left: 0;
-        margin-top: 260px;
+        margin-top: 240px;
         padding: 20px;
-        background-color: rgba(0, 0, 0, 0.9);
-        min-height: calc(100vh - 260px);
+        min-height: calc(100vh - 240px);
     }
 
-    /* DOSTOSOWANIA TEKSTU */
     h1 {
         font-size: 1.8rem;
         margin-top: 0;
@@ -523,7 +555,6 @@ p {
         font-size: 1.5rem;
     }
 
-    /* UKŁAD KOLUMNOWY */
     .about-content {
         flex-direction: column;
         gap: 20px;
@@ -541,7 +572,6 @@ p {
         grid-template-columns: 1fr;
     }
 
-    /* DODATKOWE DOSTOSOWANIA DLA MAŁYCH EKRANÓW */
     @media (max-width: 480px) {
         header {
             height: 55px;
@@ -575,5 +605,15 @@ p {
     }
     .content {
         margin-left: 220px;
+    }
+    header {
+        padding-left: 240px;
+    }
+}
+
+/* Dodatkowe wsparcie dla przeglądarek */
+@supports (-webkit-touch-callout: none) {
+    .image-container {
+        position: -webkit-sticky;
     }
 }
