@@ -20,7 +20,7 @@ body {
     position: relative;
 }
 
-/* ===== FIGURA JEZUSA - STYL DESKTOPOWY ===== */
+/* ===== FIGURA JEZUSA - INTELLIGENTNE PRZYCIMNIENIE DESKTOP ===== */
 .image-container {
     position: fixed;
     left: 0;
@@ -32,6 +32,8 @@ body {
     justify-content: center;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.7);
+    mask-image: linear-gradient(to right, transparent 0%, transparent 75%, black 90%, black 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 75%, black 90%, black 100%);
 }
 
 .image-container img {
@@ -39,15 +41,36 @@ body {
     width: auto;
     object-fit: contain;
     opacity: 0.9;
+    transition: all 0.4s ease;
 }
 
-/* ===== GŁÓWNA ZAWARTOŚĆ ===== */
+/* Interaktywne przyciemnienie */
+.content:hover ~ .image-container img,
+.content:focus-within ~ .image-container img {
+    opacity: 0.65;
+    filter: brightness(0.75) contrast(1.1);
+}
+
+/* Strefa buforowa tekstu */
 .content {
+    position: relative;
     margin-left: 250px;
     padding: 20px;
     flex: 1;
-    position: relative;
     z-index: 2;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 70%, transparent 95%);
+    pointer-events: none;
+    z-index: 3;
+    mix-blend-mode: multiply;
 }
 
 /* ===== HEADER I MENU ===== */
@@ -446,15 +469,62 @@ p {
 @media (max-width: 992px) {
     .image-container {
         width: 200px;
+        mask-image: none;
+        -webkit-mask-image: none;
     }
-
+    
     .content {
         margin-left: 200px;
     }
+    
+    .content::before {
+        left: -200px;
+        width: 200px;
+    }
 }
 
-/* ===== WERSJA MOBILNA (768px) ===== */
+/* ===== WERSJA MOBILNA - ZOPTYMALIZOWANA ===== */
 @media (max-width: 768px) {
+    .image-container {
+        position: fixed;
+        width: 100%;
+        height: calc(100vh - 70px);
+        left: -5px;
+        top: 70px;
+        background: transparent;
+        z-index: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        overflow: visible;
+        pointer-events: none;
+        padding-left: 5px;
+        mask-image: none;
+        -webkit-mask-image: none;
+    }
+
+    .image-container img {
+        width: auto;
+        height: auto;
+        max-height: 75vh;
+        max-width: 90%;
+        opacity: 0.8;
+        filter: brightness(1.2);
+        object-fit: contain;
+        object-position: left top;
+        transform: scale(1.4) translateX(-2px);
+        transform-origin: left top;
+    }
+
+    .content {
+        margin-left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .content::before {
+        display: none;
+    }
+
     header {
         padding: 8px 0;
         height: auto;
@@ -465,11 +535,11 @@ p {
         display: flex;
         align-items: center;
         background-color: #333;
-        margin: 0 -20px;
-        padding: 8px 20px;
-        width: calc(100% + 40px);
+        margin: 0 -10px;
+        padding: 8px 10px;
+        width: calc(100% + 20px);
         position: relative;
-        left: -20px;
+        left: -10px;
     }
 
     .logo-desktop {
@@ -484,25 +554,12 @@ p {
         margin-right: 10px;
     }
 
-    .logo {
-        height: 100%;
-    }
-
-    nav {
-        display: inline-block;
-        width: auto;
-    }
-
     .nav-list {
         display: inline-flex;
         flex-wrap: nowrap;
         padding-left: 10px;
-        height: 100%; /*pelna wysokosc*/
+        height: 100%;
         align-items: center;
-    }
-
-    .nav-list li {
-        display: inline-block;
     }
 
     .nav-list li a {
@@ -512,41 +569,6 @@ p {
         height: 100%;
         display: flex;
         align-items: center;
-    }
-
-    .image-container {
-        position: fixed;
-        width: 100%;
-        height: calc(100vh - 70px);
-        left: -15px;
-        top: 70px;
-        background: transparent;
-        z-index: 0;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        overflow: visible;
-        pointer-events: none;
-        padding-left: 5px;
-    }
-
-    .image-container img {
-        width: auto;
-        height: auto;
-        max-height: 75vh;
-        max-width: 90%;
-        opacity: 0.8;
-        filter: brightness(1.2);
-        object-fit: contain;
-        object-position: left top;
-        transform: scale(1.4) translateX(-5px);
-        transform-origin: left top;
-        transition: none;
-    }
-
-    .content {
-        margin-left: 0;
-        background-color: rgba(0, 0, 0, 0.7);
     }
 
     .about-content {
@@ -570,22 +592,7 @@ p {
     }
 }
 
-/* ===== WĄSKIE TELEFONY (576px) ===== */
 @media (max-width: 576px) {
-    header {
-        margin: 0 -15px;
-        width: calc(100% + 20px);
-        left: -15px;
-    }
-    .nav-list li a {
-        padding: 12px 12px;
-        font-size: 0.95rem;
-    }
-
-    .logo-mobile {
-        height: 40px;
-    }
-
     .image-container {
         top: 65px;
         height: calc(100vh - 65px);
@@ -607,27 +614,10 @@ p {
     }
 }
 
-/* ===== BARDZO WĄSKIE TELEFONY (360px) ===== */
-@media (max-width: 360px) {
-    header {
-        margin: 0 -10px;
-        width: calc(100% + 20px);
-        left: -10px;
-    }
-    .nav-list li a {
-        padding: 10px 8px;
-        font-size: 0.9rem;
-    }
-
-    .logo-mobile {
-        height: 35px;
-        padding: 0 10px;
-    }
-
+@media (max-width: 480px) {
     .image-container {
         top: 60px;
         height: calc(100vh - 60px);
-        padding-left: 10px;
         left: -5px;
     }
     
@@ -635,11 +625,92 @@ p {
         transform: scale(1.2);
         max-width: 80%;
         max-height: 65vh;
-        opacity: 0.85;
+    }
+}
+/* ===== DODATKOWE STYLE DLA BARDZO WĄSKICH EKRANÓW (360px i mniej) ===== */
+@media (max-width: 360px) {
+    /* Menu i nagłówek */
+    header {
+        min-height: 50px;
+        margin: 0 -5px;
+        width: calc(100% + 10px);
+        left: -5px;
+        padding: 5px 5px;
+    }
+
+    .logo-mobile {
+        height: 35px;
+        padding: 0 8px;
+    }
+
+    .nav-list li a {
+        padding: 10px 8px;
+        font-size: 0.85rem;
+    }
+
+    /* Figura Jezusa */
+    .image-container {
+        top: 50px;
+        height: calc(100vh - 50px);
+        left: -3px;
+        padding-left: 3px;
+    }
+    
+    .image-container img {
+        transform: scale(1.1);
+        max-width: 85%;
+        max-height: 65vh;
+        opacity: 0.6;
+    }
+
+    /* Tekst i układ */
+    .content {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
+    /* Kontakt */
+    .contact-form-section, 
+    .contact-info-section {
+        padding: 15px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 8px;
+    }
+
+    /* Aktualności */
+    .news-item {
+        gap: 15px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    .news-image {
+        flex: 0 0 150px;
+    }
+
+    /* Przyciski */
+    .cta-button,
+    .submit-btn {
+        padding: 10px 20px;
     }
 }
 
-/* Usunięcie konfliktującego stylu background-image */
+ /* Usunięto background-image z body */
 @media (max-width: 768px) {
     body {
         background-image: none !important;
