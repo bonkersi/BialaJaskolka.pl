@@ -4,20 +4,23 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
+}
 
 body {
     background-color: #000;
     color: #a0a0a0;
     overflow-x: hidden;
     line-height: 1.6;
+}
 
 /* ===== LAYOUT ===== */
 .container {
     display: flex;
     min-height: 100vh;
     position: relative;
+}
 
-/* ===== FIGURA JEZUSA - STYL DESKTOPOWY (BEZ ZMIAN) ===== */
+/* ===== FIGURA JEZUSA - STYL DESKTOPOWY ===== */
 .image-container {
     position: fixed;
     left: 0;
@@ -30,12 +33,14 @@ body {
     justify-content: center;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.7);
+}
 
 .image-container img {
     max-height: 90vh;
     width: auto;
     object-fit: contain;
     opacity: 0.9;
+}
 
 /* ===== GŁÓWNA ZAWARTOŚĆ ===== */
 .content {
@@ -45,6 +50,7 @@ body {
     flex: 1;
     position: relative;
     z-index: 2;
+}
 
 /* ===== HEADER I MENU ===== */
 header {
@@ -62,36 +68,44 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+}
 
 .logo-desktop {
     padding: 0 20px;
+}
 
 .logo-mobile {
     display: none;
     padding: 10px;
+}
 
 .logo {
     height: 70px;
     transition: all 0.3s;
     filter: contrast(120%) brightness(1.2) drop-shadow(0 0 2px rgba(255,255,255,0.3));
+}
 
 .logo:hover {
     filter: contrast(130%) brightness(1.3) drop-shadow(0 0 4px rgba(255,255,255,0.5));
     transform: scale(1.05);
+}
 
 /* Nawigacja główna */
 nav {
     flex-grow: 1;
+}
 
 .nav-list {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
+}
 
 .nav-list li {
     position: relative;
     margin: 0;
+}
 
 .nav-list li a {
     color: #e0e0e0;
@@ -101,84 +115,103 @@ nav {
     padding: 15px 20px;
     display: block;
     border-right: 1px solid #444;
+}
 
 .nav-list li:last-child a {
     border-right: none;
+}
 
 /* Efekt hover */
 .nav-list li a:hover {
     color: #fff;
     background-color: #444;
+}
 
 /* Aktywna strona */
 .nav-list li a.active {
     background-color: #555;
     color: #fff;
+}
 
 /* ===== TYPOGRAFIA ===== */
 h1, h2, h3 {
     color: #a0a0a0;
     margin-bottom: 20px;
+}
 
 h1 {
     font-size: 2.2rem;
+}
 
 h2 {
     font-size: 1.8rem;
     border-bottom: 1px solid #333;
     padding-bottom: 10px;
     margin-top: 40px;
+}
 
 h3 {
     font-size: 1.4rem;
     margin-bottom: 15px;
+}
 
 p {
     margin-bottom: 15px;
+}
 
 .lead {
     font-size: 1.3rem;
     color: #d0d0d0;
     margin-bottom: 30px;
+}
 
 /* ===== STRONA GŁÓWNA ===== */
 .hero {
     text-align: center;
     padding: 40px 0;
     margin-bottom: 50px;
+}
 
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+}
 
 .about-us {
     margin-bottom: 60px;
+}
 
 .about-content {
     display: flex;
     gap: 40px;
     align-items: center;
     margin-top: 30px;
+}
 
 .about-text {
     flex: 1;
+}
 
 .about-image {
     flex: 1;
+}
 
 .about-image img {
     width: 100%;
     border-radius: 8px;
     border: 1px solid #333;
+}
 
 .why-us {
     margin-bottom: 60px;
+}
 
 .advantages {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     margin-top: 40px;
+}
 
 .advantage {
     background: rgba(255, 255, 255, 0.05);
@@ -186,49 +219,60 @@ p {
     border-radius: 8px;
     border: 1px solid #333;
     text-align: center;
+}
 
 .advantage i {
     font-size: 2rem;
     color: #a0a0a0;
     margin-bottom: 15px;
+}
 
 .advantage h3 {
     color: #d0d0d0;
     margin-bottom: 15px;
+}
 
 /* ===== STRONA OFERTY ===== */
 .offer-categories {
     margin-top: 40px;
+}
 
 .offer-category {
     margin-bottom: 50px;
+}
 
 .offer-category h2 {
     border-bottom: 1px solid #333;
     padding-bottom: 15px;
     margin-bottom: 30px;
+}
 
 .offer-items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+}
 
 .offer-item {
     background: rgba(255, 255, 255, 0.05);
     padding: 25px;
     border-radius: 8px;
     border: 1px solid #333;
+}
 
 .offer-item h3 {
     color: #d0d0d0;
     margin-bottom: 15px;
+}
 
 .offer-item ul {
     padding-left: 20px;
+}
 
 .offer-item li {
     margin-bottom: 8px;
     list-style-type: square;
+}
 
 .offer-cta {
     text-align: center;
@@ -236,6 +280,7 @@ p {
     padding: 40px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
+}
 
 /* ===== KONTAKT ===== */
 .contact-grid {
@@ -243,20 +288,24 @@ p {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     margin-top: 30px;
+}
 
 .contact-form-section, .contact-info-section {
     background: rgba(255, 255, 255, 0.05);
     padding: 25px;
     border-radius: 8px;
     border: 1px solid #333;
+}
 
 .form-group {
     margin-bottom: 20px;
+}
 
 .form-group label {
     display: block;
     margin-bottom: 8px;
     color: #d0d0d0;
+}
 
 .form-group input,
 .form-group select,
@@ -267,6 +316,7 @@ p {
     border: 1px solid #333;
     border-radius: 4px;
     color: #e0e0e0;
+}
 
 .submit-btn {
     background: #555;
@@ -276,25 +326,30 @@ p {
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s;
+}
 
 .submit-btn:hover {
     background: #666;
     color: #fff;
+}
 
 .contact-item {
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
+}
 
 .contact-item i {
     font-size: 1.5rem;
     margin-right: 15px;
     color: #a0a0a0;
+}
 
 .social-links {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
 
 .social-link {
     display: flex;
@@ -302,18 +357,22 @@ p {
     gap: 10px;
     color: #e0e0e0;
     text-decoration: none;
+}
 
 .map-section {
     margin-top: 40px;
+}
 
 .map-container {
     margin-top: 20px;
     border-radius: 8px;
     overflow: hidden;
+}
 
 /* ===== AKTUALNOŚCI ===== */
 .news-container {
     margin-top: 30px;
+}
 
 .news-item {
     display: flex;
@@ -321,21 +380,26 @@ p {
     margin-bottom: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid #333;
+}
 
 .news-image {
     flex: 0 0 300px;
+}
 
 .news-image img {
     width: 100%;
     border-radius: 8px;
+}
 
 .news-content {
     flex: 1;
+}
 
 .news-content time {
     display: block;
     color: #888;
     margin-bottom: 15px;
+}
 
 .read-more {
     display: inline-flex;
@@ -344,12 +408,14 @@ p {
     color: #a0a0a0;
     text-decoration: none;
     margin-top: 15px;
+}
 
 .pagination {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 40px;
+}
 
 .pagination a {
     display: inline-block;
@@ -358,9 +424,11 @@ p {
     color: #e0e0e0;
     text-decoration: none;
     border-radius: 4px;
+}
 
 .pagination .page-active {
     background: #555;
+}
 
 /* ===== PRZYCISKI ===== */
 .cta-button {
@@ -373,85 +441,24 @@ p {
     font-weight: bold;
     transition: all 0.3s;
     margin-top: 20px;
+}
 
 .cta-button:hover {
     background: #666;
     color: #fff;
+}
 
 /* ===== RESPONSYWNOŚĆ ===== */
 @media (max-width: 992px) {
     .image-container {
         width: 200px;
-}
+    }
 
     .content {
         margin-left: 200px;
-
-/* ===== WERSJA MOBILNA - ZOPTYMALIZOWANA ===== */
-/* ===== FIGURA JEZUSA - WERSJA MOBILNA ===== */
-
-
-    .image-container img {
-        width: auto;
-        height: 100vh; /* Pełna wysokość ekranu */
-        max-width: none; /* Usuwa ograniczenie szerokości */
-        opacity: 0.5;
-        filter: brightness(1.3);
-        object-fit: contain;
-        object-position: center;
-        padding: 0 5%; /* Zapas po bokach */
-        transform: scale(1.8); /* Dostosuj wartość skalowania według potrzeb */
-
-    .content {
-        margin-left: 0;
-        background-color: rgba(0, 0, 0, 0.85);
-
-    .logo-desktop {
-        display: none;
-
-    .logo-mobile {
-        display: block;
-        margin-right: auto;
-
-    .about-content {
-        flex-direction: column;
-    
-    .hero h1 {
-        font-size: 2rem;
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-
-    .news-item {
-        flex-direction: column;
-
-    .news-image {
-        flex: 1;
-
-@media (max-width: 576px) {
-    .image-container img {
-        transform: scale(1.6); /* Lekko mniejsze powiększenie */
-        max-height: 85vh;
-        max-width: 85vw; /* Zwiększony margines boczny */
-        padding: 15px;
-        opacity: 0.55; /* Lekko lepsza widoczność */
+    }
 }
 
-    .offer-items {
-        grid-template-columns: 1fr;
-
-    .advantages {
-        grid-template-columns: 1fr;
-
-/* Dla mniejszych ekranów */
-@media (max-width: 480px) {
-    .image-container img {
-        transform: scale(1.5); /* Mniejsze skalowanie na małych ekranach */
-        padding: 0 10%; /* Większy zapas */
-}
-
-
-/* ===== MOBILNA WERSJA Z TŁEM COVER ===== */
 @media (max-width: 768px) {
     body {
         background-image: url('images/jezus.png');
@@ -460,65 +467,19 @@ p {
         background-position: center center;
         background-attachment: fixed;
         background-color: #000;
-}
+    }
 
     .hide-on-mobile {
         display: none;
+    }
 
     .content {
         margin-left: 0;
         background-color: rgba(0, 0, 0, 0.75);
         position: relative;
         z-index: 2;
+    }
 
-
-
-
-
-    .image-container img {
-        height: 50vh;
-        transform: none;
-        max-width: 70vw;
-        object-fit: contain;
-        padding: 0;
-        opacity: 0.6;
-        object-position: top center;
-
-
-
-@media (max-width: 768px) {
-    .nav-list {
-        overflow-x: auto;
-        white-space: nowrap;
-}
-
-    .nav-list li {
-        display: inline-block;
-
-    .nav-list li a {
-        padding: 12px 15px;
-        font-size: 0.95rem;
-
-
-
-
-
-
-
-.image-container::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100px;
-    height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
-    pointer-events: none;
-    opacity: 1;
-
-
-
-@media (max-width: 768px) {
     .image-container {
         position: fixed;
         top: 0;
@@ -530,10 +491,10 @@ p {
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        padding-top: 80px; /* Większy zapas dla głowy */
+        padding-top: 80px;
         overflow: hidden;
         pointer-events: none;
-}
+    }
 
     .image-container img {
         height: 45vh;
@@ -543,15 +504,86 @@ p {
         opacity: 0.6;
         transform: none;
         padding: 0;
+    }
 
     .nav-list {
         overflow-x: auto;
         white-space: nowrap;
-        padding-right: 40px; /* Zapobiega ucięciu ostatniego elementu */
+        padding-right: 40px;
+    }
 
     .nav-list li {
         display: inline-block;
+    }
 
     .nav-list li a {
         font-size: 0.95rem;
         padding: 12px 15px;
+    }
+
+    .logo-desktop {
+        display: none;
+    }
+
+    .logo-mobile {
+        display: block;
+        margin-right: auto;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-item {
+        flex-direction: column;
+    }
+
+    .news-image {
+        flex: 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .image-container img {
+        transform: scale(1.6);
+        max-height: 85vh;
+        max-width: 85vw;
+        padding: 15px;
+        opacity: 0.55;
+    }
+
+    .offer-items {
+        grid-template-columns: 1fr;
+    }
+
+    .advantages {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container img {
+        transform: scale(1.5);
+        padding: 0 10%;
+    }
+}
+
+.image-container::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+    pointer-events: none;
+    opacity: 1;
+}
