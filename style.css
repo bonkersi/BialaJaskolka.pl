@@ -611,7 +611,7 @@ p {
 @media (max-width: 360px) {
     header {
         margin: 0 -10px;
-        width: calc(100% +20px);
+        width: calc(100% + 20px);
         left: -10px;
     }
     .nav-list li a {
