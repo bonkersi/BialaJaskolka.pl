@@ -1,10 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Obsługa scrollowania - usunięte efekty skakania
-    window.addEventListener('scroll', function() {
+    // Stałe menu na mobile
+    const header = document.querySelector('header');
+    
+    function updateHeader() {
         if (window.innerWidth <= 768) {
-            document.body.classList.toggle('scrolled', window.scrollY > 50);
+            header.style.position = 'fixed';
+            header.style.top = '0';
+        } else {
+            header.style.position = 'sticky';
         }
-    });
+    }
+    
+    // Inicjalizacja i nasłuchiwanie zmian rozmiaru
+    updateHeader();
+    window.addEventListener('resize', updateHeader);
 
     // Obsługa formularza kontaktowego
     const contactForm = document.getElementById('contactForm');
@@ -15,12 +24,4 @@ document.addEventListener('DOMContentLoaded', function() {
             contactForm.reset();
         });
     }
-
-    // Zarządzanie cookies
-    function checkCookieConsent() {
-        if (!localStorage.getItem('cookie_consent')) {
-            // Można tutaj zablokować ładowanie skryptów śledzących
-        }
-    }
-    checkCookieConsent();
 });
