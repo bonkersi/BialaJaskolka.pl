@@ -456,14 +456,16 @@ p {
 /* ===== WERSJA MOBILNA (768px) ===== */
 @media (max-width: 768px) {
     header {
-        padding: 5px 0;
+        padding: 8px 0;
         height: auto;
-        min-height: 50px;
+        min-height: 60px;
         overflow-x: auto;
         overflow-y: hidden;
         white-space: nowrap;
         display: flex;
         align-items: center;
+        background-color: #333;
+        
     }
 
     .logo-desktop {
@@ -472,8 +474,8 @@ p {
 
     .logo-mobile {
         display: inline-block;
-        height: 40px;
-        padding: 0 10px;
+        height: 45px;
+        padding: 0 15px;
         flex-shrink: 0;
     }
 
@@ -489,7 +491,9 @@ p {
     .nav-list {
         display: inline-flex;
         flex-wrap: nowrap;
-        padding-left: 10px;
+        padding-left: 15px;
+        height: 100%; /*pelna wysokosc*/
+        align-items: center;
     }
 
     .nav-list li {
@@ -497,17 +501,20 @@ p {
     }
 
     .nav-list li a {
-        padding: 10px 12px;
-        font-size: 0.9rem;
+        padding: 12px 15px;
+        font-size: 1rem;
         border-right: none;
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
 
     .image-container {
         position: fixed;
         width: 100%;
-        height: calc(100vh - 50px);
+        height: calc(100vh - 70px);
         left: 0;
-        top: 50px;
+        top: 70px;
         background: transparent;
         z-index: 0;
         display: flex;
@@ -561,17 +568,17 @@ p {
 /* ===== WĄSKIE TELEFONY (576px) ===== */
 @media (max-width: 576px) {
     .nav-list li a {
-        padding: 10px 10px;
-        font-size: 0.85rem;
+        padding: 12px 12px;
+        font-size: 0.95rem;
     }
 
     .logo-mobile {
-        height: 35px;
+        height: 40px;
     }
 
     .image-container {
-        top: 45px;
-        height: calc(100vh - 45px);
+        top: 65px;
+        height: calc(100vh - 65px);
     }
     
     .image-container img {
@@ -592,18 +599,18 @@ p {
 /* ===== BARDZO WĄSKIE TELEFONY (360px) ===== */
 @media (max-width: 360px) {
     .nav-list li a {
-        padding: 8px 6px;
-        font-size: 0.8rem;
+        padding: 10px 8px;
+        font-size: 0.9rem;
     }
 
     .logo-mobile {
-        height: 30px;
-        padding: 0 5px;
+        height: 35px;
+        padding: 0 10px;
     }
 
     .image-container {
-        top: 40px;
-        height: calc(100vh - 40px);
+        top: 60px;
+        height: calc(100vh - 60px);
         padding-left: 10px;
     }
     
