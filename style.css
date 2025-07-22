@@ -32,6 +32,20 @@ body {
     justify-content: center;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.7);
+    mask-image: linear-gradient(
+        to-right,
+        transparent 0%,
+        transparent 75%,
+        black 90%,
+        black 100%,
+        );
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        transparent 75%,
+        black 90%,
+        black 100%,
+        )
 }
 
 .image-container img {
@@ -39,8 +53,14 @@ body {
     width: auto;
     object-fit: contain;
     opacity: 0.9;
+    transition: all 0.4s ease;
 }
-
+/* Interaktywne przyciemnienie */
+.content:hover ~ .image-container img,
+.content:focus-within ~ .image-container img {
+    opacity: 0.65;
+    filter: brightness(0.75) contrast(1.1);
+}
 /* ===== GŁÓWNA ZAWARTOŚĆ ===== */
 .content {
     margin-left: 250px;
@@ -48,6 +68,23 @@ body {
     flex: 1;
     position: relative;
     z-index: 2;
+}
+.content::before {
+    content: '';
+    position: absolute;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(
+        to right, 
+        rgba(0,0,0,0.6) 0%, 
+        rgba(0,0,0,0.3) 70%, 
+        transparent 95%
+    );
+    pointer-events: none;
+    z-index: 3;
+    mix-blend-mode: multiply;
 }
 
 /* ===== HEADER I MENU ===== */
