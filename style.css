@@ -465,7 +465,11 @@ p {
         display: flex;
         align-items: center;
         background-color: #333;
-        
+        margin: 0 -20px;
+        padding: 8px 20px;
+        width: calc(100% + 40px);
+        position: relative;
+        left: -20px;
     }
 
     .logo-desktop {
@@ -477,6 +481,7 @@ p {
         height: 45px;
         padding: 0 15px;
         flex-shrink: 0;
+        margin-right: 10px;
     }
 
     .logo {
@@ -491,7 +496,7 @@ p {
     .nav-list {
         display: inline-flex;
         flex-wrap: nowrap;
-        padding-left: 15px;
+        padding-left: 10px;
         height: 100%; /*pelna wysokosc*/
         align-items: center;
     }
@@ -513,7 +518,7 @@ p {
         position: fixed;
         width: 100%;
         height: calc(100vh - 70px);
-        left: 0;
+        left: -15px;
         top: 70px;
         background: transparent;
         z-index: 0;
@@ -522,7 +527,7 @@ p {
         justify-content: flex-start;
         overflow: visible;
         pointer-events: none;
-        padding-left: 15px;
+        padding-left: 5px;
     }
 
     .image-container img {
@@ -534,7 +539,7 @@ p {
         filter: brightness(1.2);
         object-fit: contain;
         object-position: left top;
-        transform: scale(1.4);
+        transform: scale(1.4) translateX(-5px);
         transform-origin: left top;
         transition: none;
     }
@@ -567,6 +572,11 @@ p {
 
 /* ===== WĄSKIE TELEFONY (576px) ===== */
 @media (max-width: 576px) {
+    header {
+        margin: 0 -15px;
+        width: calc(100% + 20px);
+        left: -15px;
+    }
     .nav-list li a {
         padding: 12px 12px;
         font-size: 0.95rem;
@@ -579,6 +589,7 @@ p {
     .image-container {
         top: 65px;
         height: calc(100vh - 65px);
+        left: -10px;
     }
     
     .image-container img {
@@ -598,6 +609,11 @@ p {
 
 /* ===== BARDZO WĄSKIE TELEFONY (360px) ===== */
 @media (max-width: 360px) {
+    header {
+        margin: 0 -10px;
+        width: calc(100% +20px);
+        left: -10px;
+    }
     .nav-list li a {
         padding: 10px 8px;
         font-size: 0.9rem;
@@ -612,6 +628,7 @@ p {
         top: 60px;
         height: calc(100vh - 60px);
         padding-left: 10px;
+        left: -5px;
     }
     
     .image-container img {
