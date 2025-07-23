@@ -25,8 +25,8 @@ body {
 .image-container {
     position: fixed;
     left: 0;
-    top: 0;
-    height: 100vh;
+    top: 70px;
+  height: calc(100vh - 70px);
     width: 280px;
     display: flex;
     align-items: flex-end;
@@ -58,7 +58,6 @@ body {
 .content {
     margin-left: 240px;
     padding: 20px;
-    padding-top: 90px;
     flex: 1;
     position: relative;
     z-index: 2;
@@ -71,12 +70,7 @@ body {
     top: 0;
     width: 30px;
     height: 100%;
-    background: linear-gradient(
-        to right, 
-        rgba(0,0,0,0.6) 0%, 
-        rgba(0,0,0,0.3) 70%, 
-        transparent 100%
-    );
+    background-color: #000;
     pointer-events: none;
     z-index: 3;
     mix-blend-mode: multiply;
