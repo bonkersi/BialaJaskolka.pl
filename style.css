@@ -26,12 +26,13 @@ body {
     left: 0;
     top: 0;
     height: 100vh;
-    width: 250px;
+    width: 280px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.7);
+    overflow: visible;
     mask-image: linear-gradient(
         to-right,
         transparent 0%,
@@ -53,6 +54,8 @@ body {
     width: auto;
     object-fit: contain;
     opacity: 0.9;
+    transform: scale(1.15) translateX(10px);
+    transform-origin: left center;
     transition: all 0.4s ease;
 }
 /* Interaktywne przyciemnienie */
@@ -63,7 +66,7 @@ body {
 }
 /* ===== GŁÓWNA ZAWARTOŚĆ ===== */
 .content {
-    margin-left: 250px;
+    margin-left: 240px;
     padding: 20px;
     flex: 1;
     position: relative;
@@ -72,16 +75,15 @@ body {
 .content::before {
     content: '';
     position: absolute;
-    left: -250px;
+    left: -30px;
     top: 0;
-    width: 250px;
+    width: 30px;
     height: 100%;
     background: linear-gradient(
         to right, 
         rgba(0,0,0,0.6) 0%, 
         rgba(0,0,0,0.3) 70%, 
-        transparent 95%
-    );
+        transparent 100%);
     pointer-events: none;
     z-index: 3;
     mix-blend-mode: multiply;
