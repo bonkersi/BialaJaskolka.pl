@@ -577,31 +577,31 @@ p {
         width: 100%;
         height: calc(100vh - 60px);
         left: 0;
-        top: auto;
-        bottom: 0;
+        top: 60px;
+        bottom: auto;
         background: transparent;
         z-index: 0;
         display: flex;
-        align-items: flex-end;
+        align-items: flex-start;
         justify-content: flex-start;
         overflow: visible;
         pointer-events: none;
         padding-left: 15px;
-        padding-top: 60px;
+        padding-top: 0;
         padding-bottom: 0;
     }
 
     .image-container img {
         width: auto;
         height: auto;
-        max-height: 70vh;
+        max-height: calc(100vh - 70px);
         max-width: 95%;
         opacity: 0.8;
         filter: brightness(0.9);
         object-fit: contain;
-        object-position: left bottom;
+        object-position: left top;
         transform: scale(1.3) translateY(0);
-        transform-origin: left bottom;
+        transform-origin: left top;
         transition: none;
         margin-top: 0;
     }
@@ -651,14 +651,14 @@ p {
         top: 60px;
         height: calc(100vh - 60px);
         left: 0;
-        padding-top: 60px;
+        padding-top: 0;
         padding-bottom: 0;
     }
     
     .image-container img {
+        max-height: calc(100vh - 70px);
         transform: scale(1.0);
         max-width: 95%;
-        max-height: 65vh;
     }
 
     .offer-items {
@@ -693,12 +693,12 @@ p {
         padding-left: 10px;
         left: 0;
         padding-bottom: 0;
-        padding-top: 60px;
+        padding-top: 0;
     }
     
     .image-container img {
+        max-height: calc(100vh - 70px);
         transform: scale(0.9) translateY(0);
         max-width: 95%;
-        max-height: 60vh;
     }
 }
