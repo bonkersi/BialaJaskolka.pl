@@ -516,13 +516,15 @@ p {
 
     header {
         flex-direction: row;
-        padding: 8px 0;
+        padding: 8px 20px;
         height: 60px;
         min-height: 60px;
         overflow-x: auto;
         overflow-y: hidden;
         white-space: nowrap;
         background-color: #333;
+         -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Ukrycie scrollbara w Firefox */
         margin: 0;
         padding: 8px 20px;
         width: 100%;
@@ -530,6 +532,10 @@ p {
         left: 0;
         top: 0;
     }
+    header::-webkit-scrollbar {
+        display: none; /* Ukrycie scrollbara w Chrome/Safari */
+    }
+
 
     .logo-desktop {
         display: none;
@@ -557,6 +563,7 @@ p {
         padding-left: 10px;
         height: 100%;
         align-items: center;
+        padding-right: 20px;
     }
 
     .nav-list li {
@@ -565,11 +572,12 @@ p {
 
     .nav-list li a {
         padding: 12px 15px;
-        font-size: 1rem;
+        font-size: 0.95rem;
         border-right: none;
         height: 100%;
         display: flex;
         align-items: center;
+        white-space: nowrap;
     }
 
     .image-container {
@@ -640,7 +648,7 @@ p {
     }
     .nav-list li a {
         padding: 12px 12px;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 
     .logo-mobile {
@@ -679,7 +687,7 @@ p {
     }
     .nav-list li a {
         padding: 10px 8px;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     .logo-mobile {
