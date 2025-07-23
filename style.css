@@ -33,7 +33,7 @@ body {
     z-index: 1;
     background-color: transparent;
     overflow: visible;
-    padding-bottom: 120px; /* Większe obniżenie */
+    padding-bottom: 150px; /* Większe obniżenie */
 }
 
 .image-container img {
@@ -42,7 +42,7 @@ body {
     object-fit: contain;
     object-position: left bottom;
     opacity: 0.9;
-    transform: scale(1.1) translateX(0);
+    transform: scale(1.1) translateX(0) translateY(15%);
     transform-origin: left bottom;
     transition: all 0.4s ease;
 }
@@ -583,7 +583,7 @@ p {
         overflow: visible;
         pointer-events: none;
         padding-left: 15px;
-        padding-bottom: 30vh;
+        padding-bottom: 40vh;
     }
 
     .image-container img {
@@ -595,7 +595,7 @@ p {
         filter: brightness(0.9);
         object-fit: contain;
         object-position: left bottom;
-        transform: scale(1.3) translateY(15%);
+        transform: scale(1.3) translateY(25%);
         transform-origin: left bottom;
         transition: none;
     }
@@ -646,11 +646,11 @@ p {
         top: 60px;
         height: calc(100vh - 60px);
         left: -5px;
-        padding-bottom: 25vh;
+        padding-bottom: 35vh;
     }
     
     .image-container img {
-        transform: scale(1.25) translateY(15%);
+        transform: scale(1.25) translateY(25%);
         max-width: 95%;
         max-height: 75vh;
     }
@@ -686,11 +686,11 @@ p {
         height: calc(100vh - 60px);
         padding-left: 10px;
         left: -5px;
-        padding-bottom: 20vh;
+        padding-bottom: 30vh;
     }
     
     .image-container img {
-        transform: scale(1.2) translateY(15%);
+        transform: scale(1.2) translateY(25%);
         max-width: 95%;
         max-height: 70vh;
     }
