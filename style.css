@@ -49,9 +49,6 @@ body {
 }
 
 /* Interaktywne przyciemnienie */
-.container:hover .image-container img,
-.container:focus-within .image-container img {
-    opacity: 0.8;
 }
 
 /* ===== GŁÓWNA ZAWARTOŚĆ ===== */
