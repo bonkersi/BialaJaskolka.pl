@@ -613,7 +613,13 @@ p {
         margin-left: 0;
         background-color: rgba(0, 0, 0, 0.7);
     }
+main {
+  padding-top: 90px;
+}
 
+:target {
+  scroll-margin-top: 90px;
+}
     .about-content {
         flex-direction: column;
     }
