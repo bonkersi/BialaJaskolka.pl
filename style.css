@@ -34,7 +34,7 @@ body {
     z-index: 1;
     background-color: transparent;
     overflow: visible;
-    padding-bottom: 150px;
+    padding-bottom: o;
 }
 
 .image-container img {
@@ -43,7 +43,7 @@ body {
     object-fit: contain;
     object-position: left bottom;
     opacity: 0.9;
-    transform: scale(1.1) translateX(0) translateY(15%);
+    transform: scale(1.1) translateX(0) translateY(0);
     transform-origin: left bottom;
     transition: all 0.4s ease;
 }
