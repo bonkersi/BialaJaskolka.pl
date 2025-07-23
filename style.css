@@ -28,42 +28,46 @@ body {
     height: 100vh;
     width: 280px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-start;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.7);
-    overflow: visible;
+    overflow: hidden;
+    padding-bottom: 50px;
     mask-image: linear-gradient(
-        to-right,
+        to right,
         transparent 0%,
         transparent 75%,
         black 90%,
-        black 100%,
-        );
+        black 100%
+    );
     -webkit-mask-image: linear-gradient(
         to right,
         transparent 0%,
         transparent 75%,
         black 90%,
-        black 100%,
-        )
+        black 100%
+    );
 }
 
 .image-container img {
-    max-height: 90vh;
+    max-height: 85vh;
     width: auto;
     object-fit: contain;
+    object-position: left bottom;
     opacity: 0.9;
     transform: scale(1.15) translateX(10px);
-    transform-origin: left center;
+    transform-origin: left bottom;
     transition: all 0.4s ease;
 }
+
 /* Interaktywne przyciemnienie */
-.content:hover ~ .image-container img,
-.content:focus-within ~ .image-container img {
+.container:hover .image-container img,
+.container:focus-within .image-container img {
     opacity: 0.65;
     filter: brightness(0.75) contrast(1.1);
 }
+
 /* ===== GŁÓWNA ZAWARTOŚĆ ===== */
 .content {
     margin-left: 240px;
@@ -72,6 +76,7 @@ body {
     position: relative;
     z-index: 2;
 }
+
 .content::before {
     content: '';
     position: absolute;
@@ -83,7 +88,8 @@ body {
         to right, 
         rgba(0,0,0,0.6) 0%, 
         rgba(0,0,0,0.3) 70%, 
-        transparent 100%);
+        transparent 100%
+    );
     pointer-events: none;
     z-index: 3;
     mix-blend-mode: multiply;
@@ -487,11 +493,12 @@ p {
 @media (max-width: 992px) {
     .image-container {
         width: 200px;
-          mask-image: none; /* Wyłączamy maskę na mniejszych ekranach */
+        mask-image: none;
         -webkit-mask-image: none;
     }
-      .content::before {
-        display: none; /* Ukrywamy nakładkę na tabletach */
+    
+    .content::before {
+        display: none;
     }
 
     .content {
@@ -543,7 +550,7 @@ p {
         display: inline-flex;
         flex-wrap: nowrap;
         padding-left: 10px;
-        height: 100%; /*pelna wysokosc*/
+        height: 100%;
         align-items: center;
     }
 
@@ -574,7 +581,7 @@ p {
         overflow: visible;
         pointer-events: none;
         padding-left: 5px;
-          mask-image: none;
+        mask-image: none;
         -webkit-mask-image: none;
     }
 
@@ -638,7 +645,7 @@ p {
         top: 65px;
         height: calc(100vh - 65px);
         left: -10px;
-          mask-image: none;
+        mask-image: none;
         -webkit-mask-image: none;
     }
     
@@ -679,7 +686,7 @@ p {
         height: calc(100vh - 60px);
         padding-left: 10px;
         left: -5px;
-          mask-image: none;
+        mask-image: none;
         -webkit-mask-image: none;
     }
     
