@@ -604,7 +604,7 @@ p {
         height: auto;
         max-height: calc(100vh - 70px);
         max-width: 95%;
-        opacity: 0.6;
+        opacity: 0.4;
         filter: brightness(0.9);
         object-fit: contain;
         object-position: left top;
