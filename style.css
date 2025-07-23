@@ -24,8 +24,8 @@ body {
 .image-container {
     position: fixed;
     left: 0;
-    top: 0;
-    height: 100vh;
+    top: 70px; /* Zawsze pod paskiem menu */
+    height: calc(100vh - 70px);
     width: 280px;
     display: flex;
     align-items: flex-end;
@@ -33,25 +33,24 @@ body {
     z-index: 1;
     background-color: transparent;
     overflow: visible;
-    padding-bottom: 80px;
+    padding-bottom: 120px; /* Większe obniżenie */
 }
 
 .image-container img {
-    max-height: 85vh;
+    max-height: 75vh;
     width: auto;
     object-fit: contain;
+    object-position: left bottom;
     opacity: 0.9;
     transform: scale(1.1) translateX(0);
-    transform-origin: left center;
+    transform-origin: left bottom;
     transition: all 0.4s ease;
-    mask-image: none;
-    -webkit-mask-image: none;
 }
 
 /* Interaktywne przyciemnienie */
 .container:hover .image-container img,
 .container:focus-within .image-container img {
-    opacity: 0.80;
+    opacity: 0.8;
 }
 
 /* ===== GŁÓWNA ZAWARTOŚĆ ===== */
@@ -84,7 +83,7 @@ body {
 /* ===== HEADER I MENU ===== */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 10px 0;
     margin-bottom: 30px;
@@ -93,15 +92,18 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    height: 70px;
 }
 
 .logo-desktop {
     padding: 0 20px;
+    order: 1;
 }
 
 .logo-mobile {
     display: none;
     padding: 10px;
+    order: 1;
 }
 
 .logo {
@@ -118,6 +120,7 @@ header {
 /* Nawigacja główna */
 nav {
     flex-grow: 1;
+    order: 2;
 }
 
 .nav-list {
@@ -512,7 +515,7 @@ p {
     header {
         flex-direction: row;
         padding: 8px 0;
-        height: auto;
+        height: 60px;
         min-height: 60px;
         overflow-x: auto;
         overflow-y: hidden;
@@ -569,9 +572,9 @@ p {
     .image-container {
         position: fixed;
         width: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 60px);
         left: 0;
-        top: 70px;
+        top: 60px;
         background: transparent;
         z-index: 0;
         display: flex;
@@ -580,9 +583,7 @@ p {
         overflow: visible;
         pointer-events: none;
         padding-left: 15px;
-        padding-bottom: 40px;
-        mask-image: none !important;
-        -webkit-mask-image: none !important;
+        padding-bottom: 30vh;
     }
 
     .image-container img {
@@ -594,7 +595,7 @@ p {
         filter: brightness(0.9);
         object-fit: contain;
         object-position: left bottom;
-        transform: scale(1.2) translateY(10%);
+        transform: scale(1.3) translateY(15%);
         transform-origin: left bottom;
         transition: none;
     }
@@ -642,19 +643,16 @@ p {
     }
 
     .image-container {
-        top: 65px;
-        height: calc(100vh - 65px);
+        top: 60px;
+        height: calc(100vh - 60px);
         left: -5px;
-        padding-bottom: 30px;
+        padding-bottom: 25vh;
     }
     
     .image-container img {
-        transform: scale(1.3);
+        transform: scale(1.25) translateY(15%);
         max-width: 95%;
-        max-height: 70vh;
-        opacity: 0.75;
-        transform: scale(1.15) translateY(10%);
-
+        max-height: 75vh;
     }
 
     .offer-items {
@@ -688,14 +686,12 @@ p {
         height: calc(100vh - 60px);
         padding-left: 10px;
         left: -5px;
-        padding-bottom: 20px;
+        padding-bottom: 20vh;
     }
     
     .image-container img {
-        transform: scale(1.2);
+        transform: scale(1.2) translateY(15%);
         max-width: 95%;
-        max-height: 65vh;
-        opacity: 0.7;
-        transform: scale (1.1) translateY(10%)
+        max-height: 70vh;
     }
 }
