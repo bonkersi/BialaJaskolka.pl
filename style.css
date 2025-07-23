@@ -31,8 +31,22 @@ body {
     align-items: center;
     justify-content: flex-start;
     z-index: 1;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.7);
     overflow: visible;
+    mask-image: linear-gradient(
+        to-right,
+        transparent 0%,
+        transparent 75%,
+        black 90%,
+        black 100%,
+        );
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        transparent 75%,
+        black 90%,
+        black 100%,
+        )
 }
 
 .image-container img {
@@ -43,29 +57,21 @@ body {
     transform: scale(1.15) translateX(10px);
     transform-origin: left center;
     transition: all 0.4s ease;
-    mask-image: linear-gradient(
-        to right,
-        transparent 0%,
-        transparent 85%,
-        black 95%,
-        black 100%
-    );
-    -webkit-mask-image: linear-gradient(
-        to right,
-        transparent 0%,
-        transparent 85%,
-        black 95%,
-        black 100%
-    );
 }
-
 /* Interaktywne przyciemnienie */
-.container:hover .image-container img,
-.container:focus-within .image-container img {
-    opacity: 0.8;
+.content:hover ~ .image-container img,
+.content:focus-within ~ .image-container img {
+    opacity: 0.65;
+    filter: brightness(0.75) contrast(1.1);
 }
-
-/* Nakładka na treść */
+/* ===== GŁÓWNA ZAWARTOŚĆ ===== */
+.content {
+    margin-left: 240px;
+    padding: 20px;
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
 .content::before {
     content: '';
     position: absolute;
@@ -75,30 +81,13 @@ body {
     height: 100%;
     background: linear-gradient(
         to right, 
-        rgba(0,0,0,0.4) 0%, 
-        transparent 100%
-    );
+        rgba(0,0,0,0.6) 0%, 
+        rgba(0,0,0,0.3) 70%, 
+        transparent 100%);
     pointer-events: none;
     z-index: 3;
+    mix-blend-mode: multiply;
 }
-}
-
-.content::before {
-    content: '';
-    position: absolute;
-    left: -40px;
-    top: 0;
-    width: 40px;
-    height: 100%;
-    background: linear-gradient(
-        to right, 
-        rgba(0,0,0,0.5) 0%, 
-        transparent 100%
-    );
-    pointer-events: none;
-    z-index: 3;
-}
-
 /* ===== HEADER I MENU ===== */
 header {
     display: flex;
