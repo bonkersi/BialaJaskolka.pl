@@ -391,6 +391,8 @@ p {
     margin-top: 20px;
     border-radius: 8px;
     overflow: hidden;
+    z-index: 5;
+    background-color: #000;
 }
 
 /* ===== AKTUALNOŚCI ===== */
@@ -707,4 +709,22 @@ main {
         transform: scale(0.9) translateY(0);
         max-width: 95%;
     }
+}
+/* ===== EFEKT PRZYCIEMNIENIA POSTACI JEZUSA GDY NACHODZI NA TEKST (DESKTOP) ===== */
+@media (min-width: 769px) {
+  .image-container img {
+    transition: filter 0.4s ease, mask-image 0.4s ease;
+  }
+
+  .image-container img.dimmed {
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 70%,
+      rgba(0, 0, 0, 0.6) 85%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    mask-mode: alpha;
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+  }
 }
