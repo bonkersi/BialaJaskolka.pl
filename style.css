@@ -394,6 +394,14 @@ p {
     z-index: 5;
     background-color: #000;
 }
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  background-color: #fff; /* lub inny kontrastowy kolor */
+  position: relative;
+  z-index: 6;
+  display: block;
+}
 
 /* ===== AKTUALNOŚCI ===== */
 .news-container {
