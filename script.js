@@ -53,3 +53,10 @@ function checkOverlapDesktopOnly() {
 window.addEventListener('scroll', checkOverlapDesktopOnly);
 window.addEventListener('resize', checkOverlapDesktopOnly);
 document.addEventListener('DOMContentLoaded', checkOverlapDesktopOnly);
+document.addEventListener("DOMContentLoaded", () => {
+  const jesusImage = document.querySelector(".image-container img");
+  if (window.innerWidth >= 769 && jesusImage) {
+    jesusImage.classList.add("dimmed");
+  }
+});
+
