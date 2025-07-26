@@ -606,7 +606,7 @@ p {
         height: auto;
         max-height: calc(100vh - 70px);
         max-width: 95%;
-        opacity: 0.4;
+        opacity: 0.6;
         filter: brightness(0.9);
         object-fit: contain;
         object-position: left top;
@@ -617,7 +617,7 @@ p {
     }
     /* SPECJALNE ustawienia TYLKO dla strony kontaktowej */
     body.contact-page .image-container img {
-        opacity: 0.17; /* Mniejsza widoczność */
+        opacity: 0.25; /* Mniejsza widoczność */
         filter: brightness(0.7); /* Dodatkowe przyciemnienie */
         transform: scale(1.1) translateY(0); /* Ta sama skala co wszędzie */
     }
@@ -691,7 +691,7 @@ main {
         grid-template-columns: 1fr;
     }
     body.contact-page .image-container img {
-        opacity: 0.15; /* Jeszcze mniej widoczny na małych ekranach */
+        opacity: 0.25; /* Jeszcze mniej widoczny na małych ekranach */
     }
 }
 
