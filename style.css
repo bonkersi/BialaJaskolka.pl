@@ -729,8 +729,10 @@ main {
 }
 /* ===== EFEKT PRZYCIEMNIENIA POSTACI JEZUSA GDY NACHODZI NA TEKST (DESKTOP) ===== */
 @media (min-width: 769px) {
-  .image-container img {
-    transition: filter 0.4s ease, mask-image 0.4s ease;
+ .image-container img {
+    transform: scale(1.1) translateX(-10px);
+    transform-origin: left bottom;
+    transition: transform 0.4s ease;
   }
 
   .image-container img.dimmed {
