@@ -615,6 +615,12 @@ p {
         transition: none;
         margin-top: 0;
     }
+    /* SPECJALNE ustawienia TYLKO dla strony kontaktowej */
+    body.contact-page .image-container img {
+        opacity: 0.17; /* Mniejsza widoczność */
+        filter: brightness(0.7); /* Dodatkowe przyciemnienie */
+        transform: scale(1.1) translateY(0); /* Ta sama skala co wszędzie */
+    }
 
     .content {
         margin-left: 0;
@@ -683,6 +689,9 @@ main {
 
     .advantages {
         grid-template-columns: 1fr;
+    }
+    body.contact-page .image-container img {
+        opacity: 0.15; /* Jeszcze mniej widoczny na małych ekranach */
     }
 }
 
