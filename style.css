@@ -52,10 +52,11 @@ body {
     filter: brightness(1) contrast(1);
 }
 
-/* SPECJALNE ustawienia DLA STRONY KONTAKTOWEJ - ROZJAŚNIONA FIGURA */
+/* IDENTYCZNA WIDOCZNOŚĆ FIGURY DLA WSZYSTKICH STRON */
+/* Usuwamy specjalne ustawienia dla strony kontaktowej */
 body.contact-page .image-container img {
-    opacity: 0.85; /* ZWIĘKSZONA WIDOCZNOŚĆ */
-    filter: brightness(1.3) contrast(1.1); /* ROZJAŚNIENIE */
+    opacity: 0.9; /* TAKA SAMA JAK WSZĘDZIE */
+    filter: brightness(1) contrast(1); /* TAKIE SAME FILTRY */
 }
 
 /* ===== GŁÓWNA ZAWARTOŚĆ ===== */
@@ -673,8 +674,8 @@ p {
         height: auto;
         max-height: calc(100vh - 70px);
         max-width: 95%;
-        opacity: 0.8;
-        filter: brightness(1);
+        opacity: 0.8; /* TAKA SAMA JAK WSZĘDZIE */
+        filter: brightness(0.9); /* TAKI SAM FILTR */
         object-fit: contain;
         object-position: left top;
         transform: scale(1.3) translateY(0);
@@ -682,12 +683,12 @@ p {
         transition: none;
         margin-top: 0;
     }
-    
-    /* SPECJALNE ustawienia TYLKO dla strony kontaktowej - ROZJAŚNIENIE NA MOBILNYCH */
+
+    /* USUWAMY SPECJALNE USTAWIENIA DLA STRONY KONTAKTOWEJ NA MOBILNYCH */
     body.contact-page .image-container img {
-        opacity: 0.7; /* ZWIĘKSZONA WIDOCZNOŚĆ NA MOBILNYCH */
-        filter: brightness(1.4) contrast(1.2); /* DODATKOWE ROZJAŚNIENIE */
-        transform: scale(1.1) translateY(0);
+        opacity: 0.8; /* TAKA SAMA JAK WSZĘDZIE */
+        filter: brightness(0.9); /* TAKI SAM FILTR */
+        transform: scale(1.3) translateY(0); /* TAKA SAMA SKALA */
     }
 
     .content {
@@ -786,7 +787,7 @@ p {
     
     .image-container img {
         max-height: calc(100vh - 70px);
-        transform: scale(1.0);
+        transform: scale(1.0); /* TAKA SAMA SKALA */
         max-width: 95%;
     }
 
@@ -798,10 +799,11 @@ p {
         grid-template-columns: 1fr;
     }
     
-    /* Jeszcze większe rozjaśnienie na mniejszych ekranach */
+    /* USUWAMY SPECJALNE USTAWIENIA DLA KONTAKTOWEJ */
     body.contact-page .image-container img {
-        opacity: 0.75;
-        filter: brightness(1.5) contrast(1.3);
+        opacity: 0.8; /* TAKA SAMA JAK WSZĘDZIE */
+        filter: brightness(0.9); /* TAKI SAM FILTR */
+        transform: scale(1.0); /* TAKA SAMA SKALA */
     }
     
     .email-container h1 {
@@ -848,14 +850,15 @@ p {
     
     .image-container img {
         max-height: calc(100vh - 70px);
-        transform: scale(0.9) translateY(0);
+        transform: scale(0.9) translateY(0); /* TAKA SAMA SKALA */
         max-width: 95%;
     }
     
-    /* Maksymalne rozjaśnienie na najmniejszych ekranach */
+    /* USUWAMY SPECJALNE USTAWIENIA DLA KONTAKTOWEJ */
     body.contact-page .image-container img {
-        opacity: 0.8;
-        filter: brightness(1.6) contrast(1.4);
+        opacity: 0.8; /* TAKA SAMA JAK WSZĘDZIE */
+        filter: brightness(0.9); /* TAKI SAM FILTR */
+        transform: scale(0.9) translateY(0); /* TAKA SAMA SKALA */
     }
     
     .email-address-link {
