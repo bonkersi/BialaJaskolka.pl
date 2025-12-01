@@ -21,35 +21,35 @@ body {
     position: relative;
 }
 
-/* ===== FIGURA JEZUSA - STYL DESKTOPOWY ===== */
+/* ===== FIGURA JEZUSA - POPRAWIONE USTAWIENIA ===== */
 .image-container {
     position: fixed;
     left: 0;
     top: 70px;
-  height: calc(100vh - 70px);
-    width: auto;
-    min-width: 300px;
+    height: calc(100vh - 70px);
+    width: 280px;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
     z-index: 1;
     background-color: transparent;
-    overflow: visible;
-    padding-bottom: o;
+    overflow: hidden;
+    padding-bottom: 0;
 }
 
 .image-container img {
     max-height: 75vh;
     width: auto;
+    max-width: 280px;
     object-fit: contain;
     object-position: left bottom;
     opacity: 0.9;
-    transform: none;
+    transform: scale(1.0);
     transform-origin: left bottom;
     transition: all 0.4s ease;
+    margin-left: 0;
+    padding-right: 0;
 }
-
-/* Interaktywne przyciemnienie */
 
 /* ===== GŁÓWNA ZAWARTOŚĆ ===== */
 .content {
@@ -189,7 +189,164 @@ p {
     font-weight: 400;
 }
 
-/* ===== STRONA GŁÓWNA ===== */
+/* ===== KONTAKT - MINIMALISTYCZNY STYL ===== */
+.email-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.email-container h1 {
+    color: #d0d0d0;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.email-container h1 i {
+    color: #a0a0a0;
+    margin-right: 15px;
+}
+
+.subtitle {
+    color: #b0b0b0;
+    font-size: 1.2rem;
+    margin-bottom: 60px;
+    max-width: 600px;
+}
+
+.email-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.email-icon {
+    font-size: 5rem;
+    color: #a0a0a0;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}
+
+.email-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 50px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    width: 100%;
+    max-width: 600px;
+}
+
+.email-content h2 {
+    color: #d0d0d0;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    font-weight: 500;
+    border-bottom: none;
+    margin-top: 0;
+    padding-bottom: 0;
+}
+
+.email-address-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: linear-gradient(135deg, rgba(85, 85, 85, 0.8), rgba(102, 102, 102, 0.8));
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 25px 40px;
+    border-radius: 10px;
+    border: 2px solid #555;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    min-width: 400px;
+}
+
+.email-address-link i {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.email-address-link:hover {
+    background: linear-gradient(135deg, rgba(102, 102, 102, 0.9), rgba(119, 119, 119, 0.9));
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-color: #666;
+}
+
+.email-text {
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.email-info {
+    color: #b0b0b0;
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    margin-top: 80px;
+    padding: 30px 0;
+    border-top: 1px solid #333;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-content p {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: #a0a0a0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ===== STRONA GŁÓWNA (dla innych stron) ===== */
 .hero {
     text-align: center;
     padding: 40px 0;
@@ -306,103 +463,6 @@ p {
     border-radius: 8px;
 }
 
-/* ===== KONTAKT ===== */
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.contact-form-section, .contact-info-section {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 25px;
-    border-radius: 8px;
-    border: 1px solid #333;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    color: #d0d0d0;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid #333;
-    border-radius: 4px;
-    color: #e0e0e0;
-}
-
-.submit-btn {
-    background: #555;
-    color: #e0e0e0;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.submit-btn:hover {
-    background: #666;
-    color: #fff;
-}
-
-.contact-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
-
-.contact-item i {
-    font-size: 1.5rem;
-    margin-right: 15px;
-    color: #a0a0a0;
-}
-
-.social-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.social-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #e0e0e0;
-    text-decoration: none;
-}
-
-.map-section {
-    margin-top: 40px;
-}
-
-.map-container {
-    margin-top: 20px;
-    border-radius: 8px;
-    overflow: hidden;
-    z-index: 5;
-    background-color: #000;
-}
-.map-container iframe {
-  width: 100%;
-  height: 100%;
-  background-color: #fff; /* lub inny kontrastowy kolor */
-  position: relative;
-  z-index: 6;
-  display: block;
-}
-
 /* ===== AKTUALNOŚCI ===== */
 .news-container {
     margin-top: 30px;
@@ -504,7 +564,7 @@ p {
         color: #fff !important;
     }
 
-    .lead, p, .about-text, .offer-item, .news-content, .contact-info-section {
+    .lead, p, .about-text, .offer-item, .news-content {
         color: #fff !important;
     }
 
@@ -525,8 +585,8 @@ p {
         overflow-y: hidden;
         white-space: nowrap;
         background-color: #333;
-         -webkit-overflow-scrolling: touch;
-        scrollbar-width: none; /* Ukrycie scrollbara w Firefox */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
         margin: 0;
         padding: 8px 20px;
         width: 100%;
@@ -534,10 +594,10 @@ p {
         left: 0;
         top: 0;
     }
+    
     header::-webkit-scrollbar {
-        display: none; /* Ukrycie scrollbara w Chrome/Safari */
+        display: none;
     }
-
 
     .logo-desktop {
         display: none;
@@ -615,24 +675,27 @@ p {
         transition: none;
         margin-top: 0;
     }
+    
     /* SPECJALNE ustawienia TYLKO dla strony kontaktowej */
     body.contact-page .image-container img {
-        opacity: 0.25; /* Mniejsza widoczność */
-        filter: brightness(0.7); /* Dodatkowe przyciemnienie */
-        transform: scale(1.1) translateY(0); /* Ta sama skala co wszędzie */
+        opacity: 0.25;
+        filter: brightness(0.7);
+        transform: scale(1.1) translateY(0);
     }
 
     .content {
         margin-left: 0;
         background-color: rgba(0, 0, 0, 0.7);
     }
-main {
-  padding-top: 90px;
-}
+    
+    main {
+        padding-top: 90px;
+    }
 
-:target {
-  scroll-margin-top: 90px;
-}
+    :target {
+        scroll-margin-top: 90px;
+    }
+    
     .about-content {
         flex-direction: column;
     }
@@ -641,16 +704,52 @@ main {
         font-size: 2rem;
     }
 
-    .contact-grid {
-        grid-template-columns: 1fr;
+    .email-container {
+        min-height: 60vh;
+        padding: 30px 15px;
     }
-
+    
+    .email-container h1 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+    
+    .email-icon {
+        font-size: 4rem;
+    }
+    
+    .email-content {
+        padding: 30px 20px;
+    }
+    
+    .email-address-link {
+        font-size: 1.4rem;
+        padding: 20px 30px;
+        min-width: 300px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .email-info {
+        font-size: 1rem;
+    }
+    
     .news-item {
         flex-direction: column;
     }
 
     .news-image {
         flex: 1;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
     }
 }
 
@@ -660,6 +759,7 @@ main {
         width: 100%;
         left: 0;
     }
+    
     .nav-list li a {
         padding: 12px 12px;
         font-size: 0.9rem;
@@ -690,8 +790,23 @@ main {
     .advantages {
         grid-template-columns: 1fr;
     }
+    
     body.contact-page .image-container img {
-        opacity: 0.25; /* Jeszcze mniej widoczny na małych ekranach */
+        opacity: 0.25;
+    }
+    
+    .email-container h1 {
+        font-size: 1.8rem;
+    }
+    
+    .email-address-link {
+        font-size: 1.2rem;
+        min-width: 250px;
+        padding: 18px 25px;
+    }
+    
+    .email-content h2 {
+        font-size: 1.5rem;
     }
 }
 
@@ -702,6 +817,7 @@ main {
         width: 100%;
         left: 0;
     }
+    
     .nav-list li a {
         padding: 10px 8px;
         font-size: 0.85rem;
@@ -726,24 +842,31 @@ main {
         transform: scale(0.9) translateY(0);
         max-width: 95%;
     }
+    
+    .email-address-link {
+        font-size: 1rem;
+        min-width: 220px;
+        padding: 15px 20px;
+    }
 }
+
 /* ===== EFEKT PRZYCIEMNIENIA POSTACI JEZUSA GDY NACHODZI NA TEKST (DESKTOP) ===== */
 @media (min-width: 769px) {
- .image-container img {
-    transform: scale(1.1) translateX(-10px);
-    transform-origin: left bottom;
-    transition: transform 0.4s ease;
-  }
+    .image-container img {
+        transform: scale(1.0);
+        transform-origin: left bottom;
+        transition: transform 0.4s ease;
+    }
 
-  .image-container img.dimmed {
-    mask-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 1) 70%,
-      rgba(0, 0, 0, 0.6) 85%,
-      rgba(0, 0, 0, 0) 100%
-    );
-    mask-mode: alpha;
-    mask-repeat: no-repeat;
-    mask-size: 100% 100%;
-  }
+    .image-container img.dimmed {
+        mask-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 1) 70%,
+            rgba(0, 0, 0, 0.6) 85%,
+            rgba(0, 0, 0, 0) 100%
+        );
+        mask-mode: alpha;
+        mask-repeat: no-repeat;
+        mask-size: 100% 100%;
+    }
 }
