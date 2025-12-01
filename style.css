@@ -49,6 +49,13 @@ body {
     transition: all 0.4s ease;
     margin-left: 0;
     padding-right: 0;
+    filter: brightness(1) contrast(1);
+}
+
+/* SPECJALNE ustawienia DLA STRONY KONTAKTOWEJ - ROZJAŚNIONA FIGURA */
+body.contact-page .image-container img {
+    opacity: 0.85; /* ZWIĘKSZONA WIDOCZNOŚĆ */
+    filter: brightness(1.3) contrast(1.1); /* ROZJAŚNIENIE */
 }
 
 /* ===== GŁÓWNA ZAWARTOŚĆ ===== */
@@ -667,7 +674,7 @@ p {
         max-height: calc(100vh - 70px);
         max-width: 95%;
         opacity: 0.8;
-        filter: brightness(0.9);
+        filter: brightness(1);
         object-fit: contain;
         object-position: left top;
         transform: scale(1.3) translateY(0);
@@ -676,10 +683,10 @@ p {
         margin-top: 0;
     }
     
-    /* SPECJALNE ustawienia TYLKO dla strony kontaktowej */
+    /* SPECJALNE ustawienia TYLKO dla strony kontaktowej - ROZJAŚNIENIE NA MOBILNYCH */
     body.contact-page .image-container img {
-        opacity: 0.25;
-        filter: brightness(0.7);
+        opacity: 0.7; /* ZWIĘKSZONA WIDOCZNOŚĆ NA MOBILNYCH */
+        filter: brightness(1.4) contrast(1.2); /* DODATKOWE ROZJAŚNIENIE */
         transform: scale(1.1) translateY(0);
     }
 
@@ -791,8 +798,10 @@ p {
         grid-template-columns: 1fr;
     }
     
+    /* Jeszcze większe rozjaśnienie na mniejszych ekranach */
     body.contact-page .image-container img {
-        opacity: 0.25;
+        opacity: 0.75;
+        filter: brightness(1.5) contrast(1.3);
     }
     
     .email-container h1 {
@@ -841,6 +850,12 @@ p {
         max-height: calc(100vh - 70px);
         transform: scale(0.9) translateY(0);
         max-width: 95%;
+    }
+    
+    /* Maksymalne rozjaśnienie na najmniejszych ekranach */
+    body.contact-page .image-container img {
+        opacity: 0.8;
+        filter: brightness(1.6) contrast(1.4);
     }
     
     .email-address-link {
