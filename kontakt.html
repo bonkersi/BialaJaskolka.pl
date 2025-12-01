@@ -7,6 +7,7 @@
 <link href="style.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 </head>
 <body class="contact-page">
 <div class="container">
@@ -31,100 +32,23 @@
 </div>
 </header>
 <main class="contact-page">
-<h1>Skontaktuj się z nami</h1>
-<p class="subtitle">Masz pytania? Chętnie na nie odpowiemy.</p>
-<div class="contact-grid">
-<section class="contact-form-section">
-<h2><i class="fas fa-envelope"></i> Formularz kontaktowy</h2>
-<form action="#" id="contactForm" method="POST">
-<div class="form-row">
-<div class="form-group">
-<label for="name">Imię i nazwisko *</label>
-<input id="name" name="name" required type="text"/>
+<div class="email-container">
+<h1><i class="fas fa-envelope"></i> Kontakt</h1>
+<p class="subtitle">Skontaktuj się z nami przez email</p>
+<div class="email-main">
+<div class="email-icon">
+<i class="fas fa-envelope-open-text"></i>
 </div>
-<div class="form-group">
-<label for="email">Email *</label>
-<input id="email" name="email" required type="email"/>
-</div>
-</div>
-<div class="form-group">
-<label for="phone">Telefon *</label>
-<input id="phone" name="phone" required type="tel"/>
-</div>
-<div class="form-group">
-<label for="subject">Temat *</label>
-<select id="subject" name="subject" required>
-<option disabled selected value="">Wybierz temat</option>
-<option value="budowa">Budowa domu</option>
-<option value="remont">Remont</option>
-<option value="wycena">Wycena</option>
-<option value="inne">Inne</option>
-</select>
-</div>
-<div class="form-group">
-<label for="message">Wiadomość *</label>
-<textarea id="message" name="message" required rows="6"></textarea>
-</div>
-<div class="form-group">
-<label class="checkbox-label">
-<input name="rodo_consent" required type="checkbox"/>
-Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z <a href="polityka-prywatnosci.html">Polityką Prywatności</a> *
-</label>
-</div>
-<button class="submit-btn" type="submit">
-<i class="fas fa-paper-plane"></i> Wyślij wiadomość
-</button>
-</form>
-</section>
-<section class="contact-info-section">
-<h2><i class="fas fa-info-circle"></i> Informacje kontaktowe</h2>
-<div class="contact-card">
-<div class="contact-item">
-<i class="fas fa-map-marker-alt"></i>
-<div>
-<h3>Adres</h3>
-<p>ul. Budowlana 15<br/>00-001 Warszawa</p>
-</div>
-</div>
-<div class="contact-item">
-<i class="fas fa-phone"></i>
-<div>
-<h3>Telefon</h3>
-<p>+48 123 456 789</p>
-<p>+48 987 654 321</p>
-</div>
-</div>
-<div class="contact-item">
-<i class="fas fa-envelope"></i>
-<div>
-<h3>Email</h3>
-<p>biuro@białajaskółka.pl</p>
-</div>
-</div>
-<div class="contact-item">
-<i class="fas fa-clock"></i>
-<div>
-<h3>Godziny otwarcia</h3>
-<p>Pon-Pt: 7:00-15:00</p>
+<div class="email-content">
+<h2>Napisz do nas</h2>
+<a href="mailto:biuro@białajaskółka.pl" class="email-address-link">
+<i class="fas fa-paper-plane"></i>
+<span class="email-text">biuro@białajaskółka.pl</span>
+</a>
+<p class="email-info">Odpowiadamy w ciągu 24 godzin w dni robocze</p>
 </div>
 </div>
 </div>
-<div class="social-media">
-<h3><i class="fas fa-share-alt"></i> Social Media</h3>
-<div class="social-links">
-<a class="social-link" href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
-<a class="social-link" href="#"><i class="fab fa-instagram"></i> Instagram</a>
-<a class="social-link" href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-</div>
-</div>
-</section>
-</div>
-<section class="map-section">
-<h2><i class="fas fa-map-marked-alt"></i> Jak do nas trafić</h2>
-<div class="map-container">
-<iframe allowfullscreen height="400" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.654050566224!2d21.01721531579689!3d52.22990637976084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sCentrum%20Warszawy!5e0!3m2!1spl!2spl!4v1620000000000!5m2!1spl!2spl" style="border:0;" width="100%"></iframe>
-</div>
-</section>
 </main>
 <footer class="footer">
 <div class="footer-content">
