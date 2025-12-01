@@ -224,6 +224,7 @@ p {
     font-size: 1.2rem;
     margin-bottom: 60px;
     max-width: 600px;
+    text-align: center;
 }
 
 .email-main {
@@ -329,7 +330,7 @@ p {
 .donation-container h1 {
     color: #d0d0d0;
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-weight: 600;
     text-align: center;
 }
@@ -349,99 +350,114 @@ p {
 
 .donation-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 40px;
-    max-width: 1200px;
+    max-width: 1000px;
     width: 100%;
 }
 
-.bank-transfer-section {
+.bank-info-card {
     background: rgba(255, 255, 255, 0.05);
-    padding: 35px;
+    padding: 40px;
     border-radius: 12px;
     border: 1px solid #333;
 }
 
-.bank-transfer-section h2 {
-    color: #d0d0d0;
-    font-size: 1.8rem;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #444;
-    padding-bottom: 15px;
+.bank-header {
+    text-align: center;
+    margin-bottom: 35px;
 }
 
-.bank-transfer-section h2 i {
+.bank-header h2 {
+    color: #d0d0d0;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-top: 0;
+}
+
+.bank-header h2 i {
     color: #a0a0a0;
     margin-right: 10px;
 }
 
-.bank-card {
+.header-note {
+    color: #fff;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 20px;
+    border-radius: 8px;
+    border-left: 4px solid #555;
+}
+
+.header-note strong {
+    color: #fff;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.bank-details {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #333;
     margin-bottom: 30px;
 }
 
-.info-item {
+.detail-row {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 25px;
     padding-bottom: 25px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.info-item:last-child {
+.detail-row:last-child {
     border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
 }
 
-.info-item i {
-    font-size: 1.5rem;
-    color: #a0a0a0;
-    margin-right: 20px;
-    margin-top: 5px;
-    min-width: 30px;
+.detail-label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 150px;
 }
 
-.info-item h3 {
+.detail-label i {
+    font-size: 1.4rem;
+    color: #a0a0a0;
+    width: 25px;
+}
+
+.detail-label span {
     color: #d0d0d0;
-    font-size: 1.3rem;
-    margin-bottom: 10px;
+    font-size: 1.1rem;
     font-weight: 500;
 }
 
-.required {
-    color: #ff6b6b;
-    font-size: 1.2rem;
-}
-
-.important-text {
-    font-size: 1.6rem;
-    color: #fff;
-    font-weight: 700;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 12px 20px;
-    border-radius: 8px;
-    border-left: 4px solid #555;
-    margin: 10px 0;
-    letter-spacing: 1px;
-}
-
-.info-note {
-    color: #b0b0b0;
-    font-size: 0.95rem;
-    font-style: italic;
-    margin-top: 5px;
+.detail-value {
+    flex: 1;
 }
 
 .account-number {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: #fff;
     font-weight: 600;
     font-family: 'Courier New', monospace;
     background: rgba(255, 255, 255, 0.08);
-    padding: 15px;
+    padding: 15px 20px;
     border-radius: 8px;
-    margin: 10px 0;
     letter-spacing: 1.5px;
+    margin: 0;
+}
+
+.detail-value p {
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    margin: 0;
 }
 
 .swift-code {
@@ -455,123 +471,87 @@ p {
     display: inline-block;
 }
 
-.transfer-instructions {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 25px;
+.important-notice {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(255, 86, 86, 0.15));
+    padding: 20px;
     border-radius: 8px;
-    border: 1px solid #333;
-    margin-top: 20px;
+    border: 1px solid rgba(255, 107, 107, 0.3);
 }
 
-.transfer-instructions h3 {
-    color: #d0d0d0;
-    font-size: 1.4rem;
-    margin-bottom: 20px;
+.important-notice i {
+    font-size: 1.8rem;
+    color: #ff6b6b;
 }
 
-.transfer-instructions h3 i {
-    color: #a0a0a0;
-    margin-right: 10px;
-}
-
-.transfer-instructions ol {
-    padding-left: 25px;
-    margin-top: 15px;
-}
-
-.transfer-instructions li {
-    margin-bottom: 12px;
-    color: #c0c0c0;
-    line-height: 1.5;
-}
-
-.transfer-instructions strong {
+.important-notice p {
     color: #fff;
-    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0;
 }
 
-.donation-details {
+.important-notice strong {
+    color: #ff6b6b;
+}
+
+.support-info {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.details-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid #333;
-}
-
-.details-card h3 {
-    color: #d0d0d0;
-    font-size: 1.6rem;
-    margin-bottom: 25px;
-    border-bottom: 1px solid #444;
-    padding-bottom: 15px;
-}
-
-.details-card h3 i {
-    color: #a0a0a0;
-    margin-right: 10px;
-}
-
-.details-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
-
-.details-item:last-child {
-    margin-bottom: 0;
-}
-
-.details-item i {
-    font-size: 1.4rem;
-    color: #a0a0a0;
-    margin-right: 15px;
-    margin-top: 5px;
-    min-width: 30px;
-}
-
-.details-item h4 {
-    color: #d0d0d0;
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-    font-weight: 500;
-}
-
-.details-item p {
-    color: #b0b0b0;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-.thank-you {
+.thank-you-box {
     background: linear-gradient(135deg, rgba(85, 85, 85, 0.2), rgba(102, 102, 102, 0.2));
-    padding: 35px;
+    padding: 35px 30px;
     border-radius: 12px;
     border: 1px solid #555;
     text-align: center;
 }
 
-.thank-you i {
-    font-size: 3rem;
+.thank-you-box i {
+    font-size: 2.5rem;
     color: #a0a0a0;
     margin-bottom: 20px;
     display: block;
 }
 
-.thank-you h3 {
+.thank-you-box h3 {
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 15px;
 }
 
-.thank-you p {
+.thank-you-box p {
     color: #b0b0b0;
     font-size: 1.1rem;
     font-style: italic;
+}
+
+.contact-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+.contact-box h3 {
+    color: #d0d0d0;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.contact-box h3 i {
+    color: #a0a0a0;
+    margin-right: 10px;
+}
+
+.contact-box p {
+    color: #b0b0b0;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 /* ===== FOOTER ===== */
@@ -819,10 +799,11 @@ p {
     .donation-content {
         grid-template-columns: 1fr;
         gap: 30px;
+        max-width: 600px;
     }
     
-    .bank-transfer-section, .details-card {
-        padding: 30px 25px;
+    .bank-info-card {
+        padding: 30px;
     }
 }
 
@@ -1024,19 +1005,31 @@ p {
         align-items: center;
     }
     
-    .account-number {
-        font-size: 1.2rem;
-        padding: 12px;
-        letter-spacing: 1px;
+    .bank-header h2 {
+        font-size: 1.6rem;
     }
     
-    .important-text {
-        font-size: 1.4rem;
+    .header-note {
+        font-size: 1rem;
         padding: 10px 15px;
     }
     
-    .info-item i, .details-item i {
+    .detail-label {
+        min-width: 130px;
+    }
+    
+    .account-number {
         font-size: 1.3rem;
+        padding: 12px 15px;
+        letter-spacing: 1px;
+    }
+    
+    .detail-value p {
+        font-size: 1.1rem;
+    }
+    
+    .thank-you-box, .contact-box {
+        padding: 25px 20px;
     }
 }
 
@@ -1098,27 +1091,40 @@ p {
         font-size: 1.5rem;
     }
     
-    .bank-transfer-section, .details-card, .thank-you {
+    .bank-info-card {
         padding: 25px 20px;
     }
     
+    .bank-details {
+        padding: 20px;
+    }
+    
+    .detail-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .detail-label {
+        min-width: auto;
+        margin-bottom: 5px;
+    }
+    
     .account-number {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        width: 100%;
         word-break: break-all;
         letter-spacing: 0.5px;
     }
     
-    .important-text {
-        font-size: 1.2rem;
-        padding: 8px 12px;
+    .important-notice {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
     }
     
-    .info-item h3 {
-        font-size: 1.2rem;
-    }
-    
-    .details-item h4 {
-        font-size: 1.1rem;
+    .important-notice i {
+        font-size: 1.5rem;
     }
 }
 
@@ -1168,15 +1174,16 @@ p {
     }
     
     .account-number {
-        font-size: 1rem;
-    }
-    
-    .important-text {
         font-size: 1.1rem;
+        padding: 10px;
     }
     
-    .bank-transfer-section h2, .details-card h3 {
+    .bank-header h2 {
         font-size: 1.5rem;
+    }
+    
+    .header-note {
+        font-size: 0.95rem;
     }
 }
 
