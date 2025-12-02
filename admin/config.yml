@@ -1,0 +1,14 @@
+backend:
+  name: github
+  repo: bonkersi/BialaJaskolka.pl # Zmień na swoje
+media_folder: "images/uploads"
+collections:
+  - name: "pages"
+    label: "Strony"
+    files:
+      - name: "index"
+        label: "Strona główna"
+        file: "index.html"
+        fields:
+          - { name: "title", label: "Tytuł", widget: "string" }
+          - { name: "body", label: "Treść", widget: "markdown" }
