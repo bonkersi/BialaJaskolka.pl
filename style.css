@@ -1,9 +1,0 @@
-/* ===== GŁÓWNY PLIK CSS - IMPORTOWANIE ===== */
-@import url('styles/base.css');
-@import url('styles/layout.css');
-@import url('styles/components.css');
-@import url('styles/typography.css');
-@import url('styles/responsive.css');
-
-/* ===== IMPORTY SPECJALNE DLA STRON ===== */
-/* Te importy będą dodawane dynamicznie w HTML */
