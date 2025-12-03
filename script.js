@@ -24,39 +24,3 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     window.addEventListener('resize', initMobileMenu);
 });
-function checkOverlapDesktopOnly() {
-  if (window.innerWidth <= 768) return; // tylko desktop
-
-  const jesusImg = document.querySelector('.image-container img');
-  const content = document.querySelector('.content');
-
-  if (!jesusImg || !content) return;
-
-  const imgRect = jesusImg.getBoundingClientRect();
-  const contentRect = content.getBoundingClientRect();
-
-  const horizontallyOverlapping =
-    imgRect.right > contentRect.left &&
-    imgRect.left < contentRect.right;
-
-  const verticallyOverlapping =
-    imgRect.bottom > contentRect.top &&
-    imgRect.top < contentRect.bottom;
-
-  const isOverlapping = horizontallyOverlapping && verticallyOverlapping;
-
-  // Dodaj lub usuń klasę w zależności od kolizji
-  jesusImg.classList.toggle('dimmed', isOverlapping);
-}
-
-// Uruchamiaj sprawdzanie:
-window.addEventListener('scroll', checkOverlapDesktopOnly);
-window.addEventListener('resize', checkOverlapDesktopOnly);
-document.addEventListener('DOMContentLoaded', checkOverlapDesktopOnly);
-document.addEventListener("DOMContentLoaded", () => {
-  const jesusImage = document.querySelector(".image-container img");
-  if (window.innerWidth >= 769 && jesusImage) {
-    jesusImage.classList.add("dimmed");
-  }
-});
-
