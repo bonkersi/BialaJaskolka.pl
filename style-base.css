@@ -21,7 +21,7 @@ body {
     position: relative;
 }
 
-/* ===== FIGURA JEZUSA - POPRAWIONE USTAWIENIA (BEZ ZANIKANIA) ===== */
+/* ===== FIGURA JEZUSA - BEZ ZANIKANIA PRAWEJ STRONY ===== */
 .image-container {
     position: fixed;
     left: 0;
@@ -50,6 +50,7 @@ body {
     margin-left: 0;
     padding-right: 0;
     filter: brightness(1) contrast(1);
+    /* USUNIĘTE ZANIKANIE: -webkit-mask-image i mask-image */
 }
 
 /* IDENTYCZNA WIDOCZNOŚĆ FIGURY DLA WSZYSTKICH STRON */
@@ -254,12 +255,16 @@ p {
         color: #fff !important;
     }
 
-    .lead, p, .about-text {
+    .lead, p, .about-text, .offer-item, .news-content {
         color: #fff !important;
     }
 
     .nav-list li a {
         color: #fff !important;
+    }
+
+    .read-more, .news-content time {
+        color: #ccc !important;
     }
 
     header {
@@ -360,6 +365,7 @@ p {
         transform-origin: left top;
         transition: none;
         margin-top: 0;
+        /* NA MOBILU TEŻ BEZ ZANIKANIA */
     }
 
     body.contact-page .image-container img {
@@ -379,6 +385,89 @@ p {
 
     :target {
         scroll-margin-top: 90px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .email-container, .donation-container {
+        min-height: 60vh;
+        padding: 30px 15px;
+    }
+    
+    .email-container h1, .donation-container h1 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+    
+    .email-icon {
+        font-size: 4rem;
+    }
+    
+    .email-content {
+        padding: 30px 20px;
+    }
+    
+    .email-address-link {
+        font-size: 1.4rem;
+        padding: 20px 30px;
+        min-width: 300px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .email-info {
+        font-size: 1rem;
+    }
+    
+    .news-item {
+        flex-direction: column;
+    }
+
+    .news-image {
+        flex: 1;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .bank-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .header-note {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+    
+    .detail-label {
+        min-width: 130px;
+    }
+    
+    .account-number {
+        font-size: 1.3rem;
+        padding: 12px 15px;
+        letter-spacing: 1px;
+    }
+    
+    .detail-value p {
+        font-size: 1.1rem;
+    }
+    
+    .thank-you-box, .contact-box {
+        padding: 25px 20px;
     }
 }
 
@@ -411,11 +500,69 @@ p {
         transform: scale(1.0);
         max-width: 95%;
     }
+
+    .offer-items {
+        grid-template-columns: 1fr;
+    }
+
+    .advantages {
+        grid-template-columns: 1fr;
+    }
     
     body.contact-page .image-container img {
         opacity: 0.8;
         filter: brightness(0.9);
         transform: scale(1.0);
+    }
+    
+    .email-container h1, .donation-container h1 {
+        font-size: 1.8rem;
+    }
+    
+    .email-address-link {
+        font-size: 1.2rem;
+        min-width: 250px;
+        padding: 18px 25px;
+    }
+    
+    .email-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .bank-info-card {
+        padding: 25px 20px;
+    }
+    
+    .bank-details {
+        padding: 20px;
+    }
+    
+    .detail-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .detail-label {
+        min-width: auto;
+        margin-bottom: 5px;
+    }
+    
+    .account-number {
+        font-size: 1.2rem;
+        width: 100%;
+        word-break: break-all;
+        letter-spacing: 0.5px;
+    }
+    
+    .important-notice {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .important-notice i {
+        font-size: 1.5rem;
     }
 }
 
@@ -457,4 +604,26 @@ p {
         filter: brightness(0.9);
         transform: scale(0.9) translateY(0);
     }
+    
+    .email-address-link {
+        font-size: 1rem;
+        min-width: 220px;
+        padding: 15px 20px;
+    }
+    
+    .account-number {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+    
+    .bank-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .header-note {
+        font-size: 0.95rem;
+    }
 }
+
+/* ===== USUNIĘTE WSZYSTKIE EFEKTY ZANIKANIA/DIMMED ===== */
+/* Usunięte: .image-container img.dimmed i wszystkie mask-image */
