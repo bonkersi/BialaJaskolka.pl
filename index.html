@@ -1,114 +1,190 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" dir="ltr">
 <head>
     <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+    <meta name="description" content="Stowarzyszenie 'Biała Jaskółka' - Pomagamy Nieść Dobro. Działamy na rzecz potrzebujących od 2010 roku."/>
+    <meta name="keywords" content="charytatywność, pomoc społeczna, dobroczynność, darowizny, wsparcie, stowarzyszenie"/>
+    <meta name="author" content="Stowarzyszenie Biała Jaskółka"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="theme-color" content="#000000"/>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://bialajaskolka.pl/"/>
+    <meta property="og:title" content="Biała Jaskółka - Pomagamy Nieść Dobro"/>
+    <meta property="og:description" content="Stowarzyszenie działające na rzecz potrzebujących od 2010 roku"/>
+    <meta property="og:image" content="https://bialajaskolka.pl/images/og-image.jpg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:locale" content="pl_PL"/>
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@BialaJaskolka"/>
+    <meta name="twitter:creator" content="@BialaJaskolka"/>
+    <meta name="twitter:title" content="Biała Jaskółka - Pomagamy Nieść Dobro"/>
+    <meta name="twitter:description" content="Stowarzyszenie działające na rzecz potrzebujących od 2010 roku"/>
+    <meta name="twitter:image" content="https://bialajaskolka.pl/images/twitter-image.jpg"/>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bialajaskolka.pl/"/>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="style-base.css" as="style"/>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" as="style"/>
+    <link rel="preload" href="script.js" as="script"/>
+    
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin/>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="style-base.css"/>
+    <link rel="stylesheet" href="style-index.css"/>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"/>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+    
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json"/>
+    
+    <!-- Title -->
     <title>Biała Jaskółka - Pomagamy Nieść Dobro</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-    <link href="style-base.css" rel="stylesheet"/>
-    <link href="style-index.css" rel="stylesheet"/>
 </head>
 <body>
-<div class="container">
-    <div class="image-container hide-on-mobile">
-        <img alt="Złota figura" src="images/jezus.png"/>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link visually-hidden focusable">Przejdź do głównej treści</a>
+    
+    <div class="container">
+        <div class="image-container hide-on-mobile">
+            <img src="images/jezus.png" 
+                 alt="Złota figura Chrystusa" 
+                 width="280" 
+                 height="500"
+                 loading="eager"
+                 decoding="async"/>
+        </div>
+        
+        <div class="content">
+            <header role="banner">
+                <div class="logo-mobile">
+                    <img src="images/logo.png" 
+                         alt="Logo Biała Jaskółka" 
+                         class="logo"
+                         width="150"
+                         height="50"
+                         loading="eager"/>
+                </div>
+                
+                <nav role="navigation" aria-label="Główne menu">
+                    <ul class="nav-list">
+                        <li><a class="active" href="index.html" aria-current="page">Cel</a></li>
+                        <li><a href="aktualnosci.html">Aktualności</a></li>
+                        <li><a href="wsparcie.html">Wsparcie</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="logo-desktop">
+                    <img src="images/logo.png" 
+                         alt="Logo Biała Jaskółka" 
+                         class="logo"
+                         width="200"
+                         height="70"
+                         loading="eager"/>
+                </div>
+            </header>
+            
+            <main id="main-content" role="main">
+                <section class="hero">
+                    <h1>Biała Jaskółka - Nieśmy Dobro Razem</h1>
+                    <p class="lead">Stowarzyszenie działające na rzecz potrzebujących od 2010 roku</p>
+                </section>
+                
+                <section class="about-us">
+                    <h2>O Naszej Misji</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>Stowarzyszenie "Biała Jaskółka" powstało z myślą o niesieniu pomocy osobom znajdującym się w trudnej sytuacji życiowej. Nasza działalność koncentruje się na wspieraniu rodzin w kryzysie, osób samotnych, chorych i wykluczonych społecznie.</p>
+                            <p>Wierzymy, że każda pomoc ma znaczenie - czy to materialna, czy duchowa. Działamy w duchu chrześcijańskiej miłości bliźniego, niosąc nadzieję tam, gdzie jej brakuje.</p>
+                            <p>Działamy transparentnie - wszystkie informacje o naszej działalności są publicznie dostępne. Przestrzegamy <a href="polityka-prywatnosci.html">Polityki Prywatności</a> i zasad RODO.</p>
+                        </div>
+                        <div class="about-image">
+                            <img src="images/pomoc.jpg" 
+                                 alt="Pomoc potrzebującym" 
+                                 loading="lazy"
+                                 width="600"
+                                 height="400"/>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="why-us">
+                    <h2>Dlaczego Warto Nas Wspierać?</h2>
+                    <div class="advantages">
+                        <div class="advantage">
+                            <i class="fas fa-hand-holding-heart"></i>
+                            <h3>100% na cele</h3>
+                            <p>Cała darowizna idzie bezpośrednio na pomoc potrzebującym</p>
+                        </div>
+                        <div class="advantage">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Pełna przejrzystość</h3>
+                            <p>Regularne sprawozdania z wykorzystania środków</p>
+                        </div>
+                        <div class="advantage">
+                            <i class="fas fa-users"></i>
+                            <h3>Doświadczenie</h3>
+                            <p>14 lat skutecznej pomocy potrzebującym</p>
+                        </div>
+                        <div class="advantage">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            <h3>Potwierdzenia</h3>
+                            <p>Wydajemy potwierdzenia darowizn do odliczenia podatkowego</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="cta-section">
+                    <h2>Dołącz do Naszych Darczyńców!</h2>
+                    <p>Twoja darowizna może zmienić czyjeś życie na lepsze. Każda złotówka ma znaczenie.</p>
+                    <a class="cta-button" href="wsparcie.html">Wesprzyj naszą misję</a>
+                </section>
+            </main>
+            
+            <footer class="footer" role="contentinfo">
+                <div class="footer-content">
+                    <p>© 2024 Stowarzyszenie "Biała Jaskółka". Wszelkie prawa zastrzeżone.</p>
+                    <div class="footer-links">
+                        <a href="polityka-prywatnosci.html">Polityka Prywatności</a>
+                        <a href="polityka-cookies.html">Polityka Cookies</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </div>
-    <div class="content">
-        <header>
-            <div class="logo-mobile">
-                <img alt="Logo Biała Jaskółka" class="logo" src="images/logo.png"/>
-            </div>
-            <nav>
-                <ul class="nav-list">
-                    <li><a class="active" href="index.html">Cel</a></li>
-                    <li><a href="aktualnosci.html">Aktualności</a></li>
-                    <li><a href="wsparcie.html">Wsparcie</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
-                </ul>
-            </nav>
-            <div class="logo-desktop">
-                <img alt="Logo Biała Jaskółka" class="logo" src="images/logo.png"/>
-            </div>
-        </header>
-        <main>
-            <section class="hero">
-                <h1>Biała Jaskółka - Nieśmy Dobro Razem</h1>
-                <p class="lead">Stowarzyszenie działające na rzecz potrzebujących od 2010 roku</p>
-            </section>
-            <section class="about-us">
-                <h2>O Naszej Misji</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>Stowarzyszenie "Biała Jaskółka" powstało z myślą o niesieniu pomocy osobom znajdującym się w trudnej sytuacji życiowej. Nasza działalność koncentruje się na wspieraniu rodzin w kryzysie, osób samotnych, chorych i wykluczonych społecznie.</p>
-                        <p>Wierzymy, że każda pomoc ma znaczenie - czy to materialna, czy duchowa. Działamy w duchu chrześcijańskiej miłości bliźniego, niosąc nadzieję tam, gdzie jej brakuje.</p>
-                        <p>Działamy transparentnie - wszystkie informacje o naszej działalności są publicznie dostępne. Przestrzegamy <a href="polityka-prywatnosci.html">Polityki Prywatności</a> i zasad RODO.</p>
-                    </div>
-                    <div class="about-image">
-                        <img alt="Pomoc potrzebującym" src="images/pomoc.jpg"/>
-                    </div>
-                </div>
-            </section>
-            <section class="why-us">
-                <h2>Dlaczego Warto Nas Wspierać?</h2>
-                <div class="advantages">
-                    <div class="advantage">
-                        <i class="fas fa-hand-holding-heart"></i>
-                        <h3>100% na cele</h3>
-                        <p>Cała darowizna idzie bezpośrednio na pomoc potrzebującym</p>
-                    </div>
-                    <div class="advantage">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Pełna przejrzystość</h3>
-                        <p>Regularne sprawozdania z wykorzystania środków</p>
-                    </div>
-                    <div class="advantage">
-                        <i class="fas fa-users"></i>
-                        <h3>Doświadczenie</h3>
-                        <p>14 lat skutecznej pomocy potrzebującym</p>
-                    </div>
-                    <div class="advantage">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                        <h3>Potwierdzenia</h3>
-                        <p>Wydajemy potwierdzenia darowizn do odliczenia podatkowego</p>
-                    </div>
-                </div>
-            </section>
-            <section class="cta-section">
-                <h2>Dołącz do Naszych Darczyńców!</h2>
-                <p>Twoja darowizna może zmienić czyjeś życie na lepsze. Każda złotówka ma znaczenie.</p>
-                <a class="cta-button" href="wsparcie.html">Wesprzyj naszą misję</a>
-            </section>
-        </main>
-        <footer class="footer">
-            <div class="footer-content">
-                <p>© 2024 Stowarzyszenie "Biała Jaskółka". Wszelkie prawa zastrzeżone.</p>
-                <div class="footer-links">
-                    <a href="polityka-prywatnosci.html">Polityka Prywatności</a>
-                    <a href="polityka-cookies.html">Polityka Cookies</a>
-                </div>
-            </div>
-        </footer>
-    </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-<script src="script.js"></script>
-<script>
-    window.cookieconsent.initialise({
-        palette: {
-            popup: { background: "#333", text: "#fff" },
-            button: { background: "#555", text: "#fff" }
-        },
-        theme: "classic",
-        position: "bottom",
-        content: {
-            message: "Ta strona używa plików cookies w celu poprawnego działania i analizy ruchu.",
-            dismiss: "Rozumiem",
-            link: "Dowiedz się więcej",
-            href: "polityka-cookies.html"
+    
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+    
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" defer></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('sw.js');
+            });
         }
-    });
-</script>
+    </script>
 </body>
 </html>
