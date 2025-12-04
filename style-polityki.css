@@ -3,10 +3,12 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
+    position: relative;
+    z-index: 3;
 }
 
 .effective-date {
-    color: #888;
+    color: rgba(255, 255, 255, 0.7);
     font-style: italic;
     margin-bottom: 40px;
     font-size: 1rem;
@@ -14,23 +16,26 @@
 
 section {
     margin-bottom: 40px;
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(255, 255, 255, 0.03);
     padding: 25px;
     border-radius: 8px;
-    border: 1px solid #333;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 section h2 {
-    color: #d0d0d0;
-    border-bottom: 2px solid #444;
+    color: #fff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 10px;
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 1.6rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 section p {
-    color: #b0b0b0;
+    color: #d0d0d0;
     line-height: 1.7;
     margin-bottom: 15px;
 }
@@ -43,11 +48,11 @@ section ul {
 section li {
     margin-bottom: 10px;
     line-height: 1.6;
-    color: #b0b0b0;
+    color: #d0d0d0;
 }
 
 section strong {
-    color: #d0d0d0;
+    color: #fff;
     font-weight: 600;
 }
 
@@ -57,30 +62,41 @@ section strong {
     border-collapse: collapse;
     margin: 20px 0;
     font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .cookies-table th {
-    background: rgba(255, 255, 255, 0.05);
-    color: #d0d0d0;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
     padding: 15px;
     text-align: left;
-    border: 1px solid #333;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     font-weight: 600;
 }
 
 .cookies-table td {
     padding: 12px 15px;
-    border: 1px solid #333;
-    color: #b0b0b0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #d0d0d0;
     vertical-align: top;
 }
 
 .cookies-table tr:nth-child(even) {
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(255, 255, 255, 0.03);
 }
 
 .cookies-table tr:hover {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.cookies-table code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
 }
 
 /* Linki w polityce */
@@ -97,9 +113,13 @@ section a:hover {
 /* Adres w polityce prywatności */
 section address {
     font-style: normal;
-    color: #b0b0b0;
+    color: #d0d0d0;
     margin-top: 10px;
     line-height: 1.6;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 3px solid #555;
 }
 
 /* Responsywność tabeli */
@@ -122,5 +142,29 @@ section address {
     
     section h2 {
         font-size: 1.4rem;
+    }
+    
+    .privacy-policy, .cookies-policy {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    section {
+        padding: 15px 12px;
+    }
+    
+    section h2 {
+        font-size: 1.3rem;
+    }
+    
+    section p, section li {
+        font-size: 0.95rem;
+    }
+    
+    .cookies-table th,
+    .cookies-table td {
+        padding: 8px 10px;
+        font-size: 0.85rem;
     }
 }
