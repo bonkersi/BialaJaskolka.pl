@@ -1,0 +1,21 @@
+.cta-button{display:inline-block;background:#555;color:#e0e0e0;text-decoration:none;padding:15px 30px;border-radius:5px;font-weight:bold;transition:all .3s;margin-top:20px;border:1px solid #666}
+.cta-button:hover{background:#666;color:#fff;transform:translateY(-2px);box-shadow:0 5px 15px rgba(0,0,0,.2)}
+.card{background:rgba(255,255,255,.05);padding:25px;border-radius:8px;border:1px solid #333;transition:transform .3s ease}
+.card:hover{transform:translateY(-5px);background:rgba(255,255,255,.08)}
+.section{margin-bottom:60px}
+.section-header{text-align:center;margin-bottom:40px}
+.alert{padding:15px 20px;border-radius:8px;margin-bottom:20px;border:1px solid}
+.alert-info{background:rgba(85,85,85,.2);border-color:#555;color:#b0b0b0}
+.alert-warning{background:linear-gradient(135deg,rgba(255,107,107,.1),rgba(255,86,86,.15));border-color:rgba(255,107,107,.3);color:#fff}
+.alert-success{background:rgba(76,175,80,.1);border-color:rgba(76,175,80,.3);color:#b0b0b0}
+.form-group{margin-bottom:20px}
+.form-label{display:block;color:#d0d0d0;margin-bottom:8px;font-weight:500}
+.form-input{width:100%;padding:12px 15px;background:rgba(255,255,255,.05);border:1px solid #333;border-radius:5px;color:#e0e0e0;font-size:1rem}
+.form-input:focus{outline:none;border-color:#555;background:rgba(255,255,255,.08)}
+.grid{display:grid;gap:30px}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:992px){.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:768px){.grid-3,.grid-4{grid-template-columns:1fr}}
+@media (max-width:576px){.grid-2{grid-template-columns:1fr}}
