@@ -4,174 +4,306 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Polityka Cookies - Biała Jaskółka</title>
+    
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet"/>
-    <link href="style-base.css" rel="stylesheet"/>
-    <link href="style-polityki.css" rel="stylesheet"/>
+    
+    <!-- Styles -->
+    <link href="style/base.css" rel="stylesheet"/>
+    
+    <style>
+        .cookies-policy {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .effective-date {
+            color: #888;
+            font-style: italic;
+            margin-bottom: 40px;
+            font-size: 1rem;
+        }
+        
+        .cookies-section {
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+        
+        .cookies-section h2 {
+            color: #d0d0d0;
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+        }
+        
+        .cookies-section p {
+            color: #b0b0b0;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        .cookies-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+        
+        .cookies-table th {
+            background: rgba(255, 255, 255, 0.05);
+            color: #d0d0d0;
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #333;
+            font-weight: 600;
+        }
+        
+        .cookies-table td {
+            padding: 12px 15px;
+            border: 1px solid #333;
+            color: #b0b0b0;
+            vertical-align: top;
+        }
+        
+        .cookies-table tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        
+        .cookies-table tr:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+        
+        .cookies-section ul {
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .cookies-section li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            color: #b0b0b0;
+        }
+        
+        .cookies-section strong {
+            color: #d0d0d0;
+            font-weight: 600;
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #333;
+            color: white;
+            padding: 8px;
+            z-index: 1001;
+            text-decoration: none;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .cookies-table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            
+            .cookies-table th,
+            .cookies-table td {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+            
+            .cookies-policy {
+                padding: 15px;
+            }
+            
+            .cookies-section {
+                padding: 20px 15px;
+            }
+            
+            .cookies-section h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-    <div class="image-container hide-on-mobile">
-        <img alt="Złota figura" src="images/jezus.png"/>
-    </div>
-    <div class="content">
-        <header>
-            <div class="logo-mobile">
-                <img alt="Logo Biała Jaskółka" class="logo" src="images/logo.png"/>
-            </div>
-            <nav>
-                <ul class="nav-list">
-                    <li><a href="index.html">Cel</a></li>
-                    <li><a href="aktualnosci.html">Aktualności</a></li>
-                    <li><a href="wsparcie.html">Wsparcie</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
-                </ul>
-            </nav>
-            <div class="logo-desktop">
-                <img alt="Logo Biała Jaskółka" class="logo" src="images/logo.png"/>
-            </div>
-        </header>
-        <main class="cookies-policy">
-            <h1>Polityka Cookies</h1>
-            <p class="effective-date">Obowiązuje od: 1 stycznia 2024 r.</p>
-            
-            <section>
-                <h2>1. Czym są pliki cookies?</h2>
-                <p>Cookies (ciasteczka) to małe pliki tekstowe zapisywane na urządzeniu użytkownika (komputerze, smartfonie, tablecie) podczas przeglądania stron internetowych. Zawierają informacje niezbędne do podstawowego funkcjonowania strony oraz umożliwiające analizę ruchu na stronie.</p>
-                <p>Cookies nie służą do identyfikacji konkretnych osób - analizujemy jedynie ogólne statystyki dotyczące korzystania z naszej strony.</p>
-            </section>
-            
-            <section>
-                <h2>2. Rodzaje używanych cookies</h2>
-                <table class="cookies-table">
-                    <thead>
-                        <tr>
-                            <th>Nazwa ciasteczka</th>
-                            <th>Cel używania</th>
-                            <th>Okres ważności</th>
-                            <th>Wymóg zgody</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>cookie_consent</code></td>
-                            <td>Zapisanie Twojej decyzji dotyczącej zgody na cookies</td>
-                            <td>1 rok</td>
-                            <td>Nie (niezbędne)</td>
-                        </tr>
-                        <tr>
-                            <td><code>_ga</code></td>
-                            <td>Analiza ruchu na stronie (Google Analytics)</td>
-                            <td>2 lata</td>
-                            <td>Tak (analityczne)</td>
-                        </tr>
-                        <tr>
-                            <td><code>_gid</code></td>
-                            <td>Rozróżnianie użytkowników (Google Analytics)</td>
-                            <td>24 godziny</td>
-                            <td>Tak (analityczne)</td>
-                        </tr>
-                        <tr>
-                            <td><code>_gat</code></td>
-                            <td>Ograniczenie liczby żądań (Google Analytics)</td>
-                            <td>1 minuta</td>
-                            <td>Tak (analityczne)</td>
-                        </tr>
-                        <tr>
-                            <td><code>PHPSESSID</code></td>
-                            <td>Utrzymanie sesji użytkownika podczas wizyty</td>
-                            <td>Do zamknięcia przeglądarki</td>
-                            <td>Nie (niezbędne)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            
-            <section>
-                <h2>3. Cele stosowania cookies</h2>
-                <p>Używamy cookies w następujących celach:</p>
-                <ul>
-                    <li><strong>Niezbędne (techniczne):</strong> Zapewnienie poprawnego działania strony, zapamiętanie Twoich preferencji dotyczących cookies.</li>
-                    <li><strong>Analityczne:</strong> Zbieranie anonimowych statystyk o ruchu na stronie, co pomaga nam zrozumieć, jak użytkownicy korzystają z serwisu i jak możemy go ulepszyć.</li>
-                </ul>
-                <p><strong>WAŻNE:</strong> Nie używamy cookies do:</p>
-                <ul>
-                    <li>Śledzenia użytkowników w celach marketingowych</li>
-                    <li>Tworzenia profili behawioralnych</li>
-                    <li>Wyświetlania spersonalizowanych reklam</li>
-                    <li>Udostępniania danych osobom trzecim</li>
-                </ul>
-            </section>
-            
-            <section>
-                <h2>4. Zarządzanie cookies</h2>
-                <p>Możesz zmienić ustawienia cookies w swojej przeglądarce internetowej. Poniżej znajdziesz linki do instrukcji dla najpopularniejszych przeglądarek:</p>
-                <ul>
-                    <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
-                    <li><a href="https://support.mozilla.org/pl/kb/ciasteczka" target="_blank" rel="noopener">Mozilla Firefox</a></li>
-                    <li><a href="https://support.microsoft.com/pl-pl/help/17442/windows-internet-explorer-delete-manage-cookies" target="_blank" rel="noopener">Microsoft Edge</a></li>
-                    <li><a href="https://support.apple.com/pl-pl/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Apple Safari</a></li>
-                    <li><a href="https://help.opera.com/pl/latest/web-preferences/#cookies" target="_blank" rel="noopener">Opera</a></li>
-                </ul>
-                <p>Możesz też zarządzać cookies bezpośrednio poprzez nasz <a href="#" id="open-cookie-settings">panel ustawień cookies</a> (dostępny po zaakceptowaniu banneru cookies).</p>
-                <p><strong>Uwaga:</strong> Wyłączenie cookies może wpłynąć na niektóre funkcjonalności strony.</p>
-            </section>
-            
-            <section>
-                <h2>5. Narzędzia analityczne</h2>
-                <p>Korzystamy z Google Analytics w trybie zgodnym z RODO:</p>
-                <ul>
-                    <li><strong>Anonimizacja adresów IP:</strong> Ostatnie 3 oktety adresu IP są usuwane</li>
-                    <li><strong>Brak udostępniania danych:</strong> Nie udostępniamy danych z Google Analytics innym podmiotom</li>
-                    <li><strong>Data Retention:</strong> Dane przechowujemy przez 14 miesięcy</li>
-                    <li><strong>Możliwość wyłączenia:</strong> Możesz zablokować Google Analytics instalując <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">oficjalne rozszerzenie przeglądarki</a></li>
-                </ul>
-                <p>Używamy Google Analytics wyłącznie do analizy ogólnych trendów (liczba odwiedzin, najpopularniejsze strony, źródła ruchu).</p>
-            </section>
-            
-            <section>
-                <h2>6. Cookies stron trzecich</h2>
-                <p>Nasza strona może zawierać linki do innych stron internetowych (np. Facebook, YouTube). Po przejściu na te strony, mogą one używać własnych cookies. Nie mamy kontroli nad cookies używanymi przez strony trzecie i zalecamy zapoznanie się z ich politykami prywatności.</p>
-            </section>
-            
-            <section>
-                <h2>7. Zmiany w polityce cookies</h2>
-                <p>Zastrzegamy sobie prawo do zmiany niniejszej polityki cookies w celu jej dostosowania do zmian prawnych lub zmian w funkcjonowaniu strony. O wszelkich istotnych zmianach poinformujemy z wyprzedzeniem poprzez banner na stronie głównej. Aktualna wersja polityki zawsze dostępna jest pod powyższym adresem.</p>
-            </section>
-            
-            <section>
-                <h2>8. Kontakt w sprawie cookies</h2>
-                <p>Jeśli masz jakiekolwiek pytania dotyczące naszej polityki cookies, skontaktuj się z nami:<br/>
-                    Email: <a href="mailto:kontakt@białajaskółka.pl">kontakt@białajaskółka.pl</a><br/>
-                    Telefon: +48 123 456 789<br/>
-                    Adres: ul. Dobroczynna 8, 00-001 Warszawa</p>
-            </section>
-        </main>
-        <footer class="footer">
-            <div class="footer-content">
-                <p>© 2024 Stowarzyszenie "Biała Jaskółka". Wszelkie prawa zastrzeżone.</p>
-                <div class="footer-links">
-                    <a href="polityka-prywatnosci.html">Polityka Prywatności</a>
-                    <a href="polityka-cookies.html">Polityka Cookies</a>
+    <a href="#main-content" class="skip-link">Przejdź do treści</a>
+    
+    <div class="container">
+        <div class="image-container hide-on-mobile">
+            <img alt="Złota figura" src="images/jezus.png"/>
+        </div>
+        <div class="content">
+            <header>
+                <div class="logo-mobile">
+                    <img alt="Logo Biała Jaskółka" class="logo" src="images/logo.png"/>
                 </div>
-            </div>
-        </footer>
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="index.html">Cel</a></li>
+                        <li><a href="aktualnosci.html">Aktualności</a></li>
+                        <li><a href="wsparcie.html">Wsparcie</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <div class="logo-desktop">
+                    <img alt="Logo Biała Jaskółka" class="logo" src="images/logo.png"/>
+                </div>
+            </header>
+            <main id="main-content" class="cookies-policy">
+                <h1>Polityka Cookies</h1>
+                <p class="effective-date">Obowiązuje od: 1 stycznia 2024 r.</p>
+                
+                <section class="cookies-section">
+                    <h2>1. Czym są pliki cookies?</h2>
+                    <p>Cookies (ciasteczka) to małe pliki tekstowe zapisywane na urządzeniu użytkownika (komputerze, smartfonie, tablecie) podczas przeglądania stron internetowych. Zawierają informacje niezbędne do podstawowego funkcjonowania strony oraz umożliwiające analizę ruchu na stronie.</p>
+                    <p>Cookies nie służą do identyfikacji konkretnych osób - analizujemy jedynie ogólne statystyki dotyczące korzystania z naszej strony.</p>
+                </section>
+                
+                <section class="cookies-section">
+                    <h2>2. Rodzaje używanych cookies</h2>
+                    <table class="cookies-table">
+                        <thead>
+                            <tr>
+                                <th>Nazwa ciasteczka</th>
+                                <th>Cel używania</th>
+                                <th>Okres ważności</th>
+                                <th>Wymóg zgody</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>cookie_consent</code></td>
+                                <td>Zapisanie Twojej decyzji dotyczącej zgody na cookies</td>
+                                <td>1 rok</td>
+                                <td>Nie (niezbędne)</td>
+                            </tr>
+                            <tr>
+                                <td><code>_ga</code></td>
+                                <td>Analiza ruchu na stronie (Google Analytics)</td>
+                                <td>2 lata</td>
+                                <td>Tak (analityczne)</td>
+                            </tr>
+                            <tr>
+                                <td><code>_gid</code></td>
+                                <td>Rozróżnianie użytkowników (Google Analytics)</td>
+                                <td>24 godziny</td>
+                                <td>Tak (analityczne)</td>
+                            </tr>
+                            <tr>
+                                <td><code>_gat</code></td>
+                                <td>Ograniczenie liczby żądań (Google Analytics)</td>
+                                <td>1 minuta</td>
+                                <td>Tak (analityczne)</td>
+                            </tr>
+                            <tr>
+                                <td><code>PHPSESSID</code></td>
+                                <td>Utrzymanie sesji użytkownika podczas wizyty</td>
+                                <td>Do zamknięcia przeglądarki</td>
+                                <td>Nie (niezbędne)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                
+                <section class="cookies-section">
+                    <h2>3. Cele stosowania cookies</h2>
+                    <p>Używamy cookies w następujących celach:</p>
+                    <ul>
+                        <li><strong>Niezbędne (techniczne):</strong> Zapewnienie poprawnego działania strony, zapamiętanie Twoich preferencji dotyczących cookies.</li>
+                        <li><strong>Analityczne:</strong> Zbieranie anonimowych statystyk o ruchu na stronie, co pomaga nam zrozumieć, jak użytkownicy korzystają z serwisu i jak możemy go ulepszyć.</li>
+                    </ul>
+                    <p><strong>WAŻNE:</strong> Nie używamy cookies do:</p>
+                    <ul>
+                        <li>Śledzenia użytkowników w celach marketingowych</li>
+                        <li>Tworzenia profili behawioralnych</li>
+                        <li>Wyświetlania spersonalizowanych reklam</li>
+                        <li>Udostępniania danych osobom trzecim</li>
+                    </ul>
+                </section>
+                
+                <section class="cookies-section">
+                    <h2>4. Zarządzanie cookies</h2>
+                    <p>Możesz zmienić ustawienia cookies w swojej przeglądarce internetowej. Poniżej znajdziesz linki do instrukcji dla najpopularniejszych przeglądarek:</p>
+                    <ul>
+                        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+                        <li><a href="https://support.mozilla.org/pl/kb/ciasteczka" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+                        <li><a href="https://support.microsoft.com/pl-pl/help/17442/windows-internet-explorer-delete-manage-cookies" target="_blank" rel="noopener">Microsoft Edge</a></li>
+                        <li><a href="https://support.apple.com/pl-pl/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Apple Safari</a></li>
+                        <li><a href="https://help.opera.com/pl/latest/web-preferences/#cookies" target="_blank" rel="noopener">Opera</a></li>
+                    </ul>
+                    <p>Możesz też zarządzać cookies bezpośrednio poprzez nasz <a href="#" id="open-cookie-settings">panel ustawień cookies</a> (dostępny po zaakceptowaniu banneru cookies).</p>
+                    <p><strong>Uwaga:</strong> Wyłączenie cookies może wpłynąć na niektóre funkcjonalności strony.</p>
+                </section>
+                
+                <section class="cookies-section">
+                    <h2>5. Narzędzia analityczne</h2>
+                    <p>Korzystamy z Google Analytics w trybie zgodnym z RODO:</p>
+                    <ul>
+                        <li><strong>Anonimizacja adresów IP:</strong> Ostatnie 3 oktety adresu IP są usuwane</li>
+                        <li><strong>Brak udostępniania danych:</strong> Nie udostępniamy danych z Google Analytics innym podmiotom</li>
+                        <li><strong>Data Retention:</strong> Dane przechowujemy przez 14 miesięcy</li>
+                        <li><strong>Możliwość wyłączenia:</strong> Możesz zablokować Google Analytics instalując <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">oficjalne rozszerzenie przeglądarki</a></li>
+                    </ul>
+                    <p>Używamy Google Analytics wyłącznie do analizy ogólnych trendów (liczba odwiedzin, najpopularniejsze strony, źródła ruchu).</p>
+                </section>
+                
+                <section class="cookies-section">
+                    <h2>6. Cookies stron trzecich</h2>
+                    <p>Nasza strona może zawierać linki do innych stron internetowych (np. Facebook, YouTube). Po przejściu na te strony, mogą one używać własnych cookies. Nie mamy kontroli nad cookies używanymi przez strony trzecie i zalecamy zapoznanie się z ich politykami prywatności.</p>
+                </section>
+                
+                <section class="cookies-section">
+                    <h2>7. Zmiany w polityce cookies</h2>
+                    <p>Zastrzegamy sobie prawo do zmiany niniejszej polityki cookies w celu jej dostosowania do zmian prawnych lub zmian w funkcjonowaniu strony. O wszelkich istotnych zmianach poinformujemy z wyprzedzeniem poprzez banner na stronie głównej. Aktualna wersja polityki zawsze dostępna jest pod powyższym adresem.</p>
+                </section>
+                
+                <section class="cookies-section">
+                    <h2>8. Kontakt w sprawie cookies</h2>
+                    <p>Jeśli masz jakiekolwiek pytania dotyczące naszej polityki cookies, skontaktuj się z nami:<br/>
+                        Email: <a href="mailto:kontakt@białajaskółka.pl">kontakt@białajaskółka.pl</a><br/>
+                        Telefon: +48 123 456 789<br/>
+                        Adres: ul. Dobroczynna 8, 00-001 Warszawa</p>
+                </section>
+            </main>
+            <footer class="footer">
+                <div class="footer-content">
+                    <p>© <span data-current-year>2024</span> Stowarzyszenie "Biała Jaskółka". Wszelkie prawa zastrzeżone.</p>
+                    <div class="footer-links">
+                        <a href="polityka-prywatnosci.html">Polityka Prywatności</a>
+                        <a href="polityka-cookies.html">Polityka Cookies</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </div>
-</div>
-<script src="script.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const cookieSettingsLink = document.getElementById('open-cookie-settings');
-        if (cookieSettingsLink) {
-            cookieSettingsLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                if (window.cookieconsent && window.cookieconsent.openPreferencesCenter) {
-                    window.cookieconsent.openPreferencesCenter();
-                } else {
-                    alert('Panel ustawień cookies jest dostępny po zaakceptowaniu banneru cookies na stronie głównej.');
-                }
-            });
-        }
-    });
-</script>
+    
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieSettingsLink = document.getElementById('open-cookie-settings');
+            if (cookieSettingsLink) {
+                cookieSettingsLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (typeof window.openCookiePreferences === 'function') {
+                        window.openCookiePreferences();
+                    } else {
+                        alert('Panel ustawień cookies jest dostępny po zaakceptowaniu banneru cookies na stronie głównej.');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
