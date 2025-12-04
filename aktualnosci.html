@@ -4,125 +4,99 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Aktualności - Biała Jaskółka</title>
-    <meta name="description" content="Najnowsze aktualności i wydarzenia Stowarzyszenia Biała Jaskółka"/>
-    
-    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-    
-    <!-- Styles -->
-    <link href="style/base.css" rel="stylesheet"/>
-    <link href="style/components.css" rel="stylesheet"/>
-    <link href="style/pages/news.css" rel="stylesheet"/>
-    
-    <style>
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: #333;
-            color: white;
-            padding: 8px;
-            z-index: 1001;
-            text-decoration: none;
-        }
-        .skip-link:focus {
-            top: 0;
-        }
-    </style>
+    <link href="style-base.css" rel="stylesheet"/>
+    <link href="style-aktualnosci.css" rel="stylesheet"/>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Przejdź do treści</a>
-    
-    <div class="container">
-        <div class="image-container hide-on-mobile">
-            <img alt="Złota figura" src="images/jezus.png"/>
-        </div>
-        <div class="content">
-            <header>
-                <div class="logo-mobile">
-                    <img alt="Logo Biała Jaskółka" class="logo" src="images/logo.png"/>
-                </div>
-                <nav>
-                    <ul class="nav-list">
-                        <li><a href="index.html">Cel</a></li>
-                        <li><a class="active" href="aktualnosci.html">Aktualności</a></li>
-                        <li><a href="wsparcie.html">Wsparcie</a></li>
-                        <li><a href="kontakt.html">Kontakt</a></li>
-                    </ul>
-                </nav>
-                <div class="logo-desktop">
-                    <img alt="Logo Biała Jaskółka" class="logo" src="images/logo.png"/>
-                </div>
-            </header>
-            <main id="main-content">
-                <h1>Aktualności</h1>
-                <div class="news-container">
-                    <article class="news-item">
-                        <div class="news-image">
-                            <img alt="Wigilijna pomoc" src="images/news1.jpg"/>
-                        </div>
-                        <div class="news-content">
-                            <h3>Wigilijna Paczka dla Samotnych</h3>
-                            <time datetime="2024-12-10">10 grudnia 2024</time>
-                            <p>Dzięki hojności naszych darczyńców przygotowaliśmy 50 wigilijnych paczek dla osób samotnych i starszych. W każdym pakiecie znalazły się artykuły spożywcze, ciepłe koce oraz życzenia świąteczne...</p>
-                            <a class="read-more" href="#">Czytaj więcej <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="news-item">
-                        <div class="news-image">
-                            <img alt="Wakacje dla dzieci" src="images/news2.jpg"/>
-                        </div>
-                        <div class="news-content">
-                            <h3>Wakacyjny Wyjazd dla Dzieci z Ubogich Rodzin</h3>
-                            <time datetime="2024-08-20">20 sierpnia 2024</time>
-                            <p>Zorganizowaliśmy tygodniowy wyjazd wakacyjny dla 30 dzieci z rodzin w trudnej sytuacji materialnej. Dzieci miały okazję wypocząć nad jeziorem, uczestniczyć w zajęciach sportowych i warsztatach artystycznych...</p>
-                            <a class="read-more" href="#">Czytaj więcej <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="news-item">
-                        <div class="news-image">
-                            <img alt="Pomoc medyczna" src="images/news3.jpg"/>
-                        </div>
-                        <div class="news-content">
-                            <h3>Zakup Sprzętu Rehabilitacyjnego</h3>
-                            <time datetime="2024-06-15">15 czerwca 2024</time>
-                            <p>Dzięki zebranym funduszom udało się zakupić specjalistyczny sprzęt rehabilitacyjny dla lokalnego domu pomocy społecznej. Sprzęt pomoże w codziennej rehabilitacji osób niepełnosprawnych...</p>
-                            <a class="read-more" href="#">Czytaj więcej <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="news-item">
-                        <div class="news-image">
-                            <img alt="Wolontariusze" src="images/news4.jpg"/>
-                        </div>
-                        <div class="news-content">
-                            <h3>Nowa Grupa Wolontariuszy</h3>
-                            <time datetime="2024-04-05">5 kwietnia 2024</time>
-                            <p>Rozpoczęliśmy szkolenie nowej grupy wolontariuszy, którzy będą pomagać w naszych codziennych działaniach. Szkolenie obejmuje m.in. pierwsza pomoc, komunikację z osobami w kryzysie i zasady pracy wolontariackiej...</p>
-                            <a class="read-more" href="#">Czytaj więcej <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                </div>
-                <div class="pagination">
-                    <a class="page-active" href="#">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#"><i class="fas fa-chevron-right"></i></a>
-                </div>
-            </main>
-            <footer class="footer">
-                <div class="footer-content">
-                    <p>© <span data-current-year>2024</span> Stowarzyszenie "Biała Jaskółka". Wszelkie prawa zastrzeżone.</p>
-                    <div class="footer-links">
-                        <a href="polityka-prywatnosci.html">Polityka Prywatności</a>
-                        <a href="polityka-cookies.html">Polityka Cookies</a>
-                    </div>
-                </div>
-            </footer>
-        </div>
+<div class="container">
+    <div class="image-container hide-on-mobile">
+        <img alt="Złota figura" src="images/jezus.png"/>
     </div>
-    
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
+    <div class="content">
+        <header>
+            <div class="logo-mobile">
+                <img alt="Logo Biała Jaskółka" class="logo" src="images/logo.png"/>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Cel</a></li>
+                    <li><a class="active" href="aktualnosci.html">Aktualności</a></li>
+                    <li><a href="wsparcie.html">Wsparcie</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="logo-desktop">
+                <img alt="Logo Biała Jaskółka" class="logo" src="images/logo.png"/>
+            </div>
+        </header>
+        <main>
+            <h1>Aktualności</h1>
+            <div class="news-container">
+                <article class="news-item">
+                    <div class="news-image">
+                        <img alt="Wigilijna pomoc" src="images/news1.jpg"/>
+                    </div>
+                    <div class="news-content">
+                        <h3>Wigilijna Paczka dla Samotnych</h3>
+                        <time datetime="2024-12-10">10 grudnia 2024</time>
+                        <p>Dzięki hojności naszych darczyńców przygotowaliśmy 50 wigilijnych paczek dla osób samotnych i starszych. W każdym pakiecie znalazły się artykuły spożywcze, ciepłe koce oraz życzenia świąteczne...</p>
+                        <a class="read-more" href="#">Czytaj więcej <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <div class="news-image">
+                        <img alt="Wakacje dla dzieci" src="images/news2.jpg"/>
+                    </div>
+                    <div class="news-content">
+                        <h3>Wakacyjny Wyjazd dla Dzieci z Ubogich Rodzin</h3>
+                        <time datetime="2024-08-20">20 sierpnia 2024</time>
+                        <p>Zorganizowaliśmy tygodniowy wyjazd wakacyjny dla 30 dzieci z rodzin w trudnej sytuacji materialnej. Dzieci miały okazję wypocząć nad jeziorem, uczestniczyć w zajęciach sportowych i warsztatach artystycznych...</p>
+                        <a class="read-more" href="#">Czytaj więcej <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <div class="news-image">
+                        <img alt="Pomoc medyczna" src="images/news3.jpg"/>
+                    </div>
+                    <div class="news-content">
+                        <h3>Zakup Sprzętu Rehabilitacyjnego</h3>
+                        <time datetime="2024-06-15">15 czerwca 2024</time>
+                        <p>Dzięki zebranym funduszom udało się zakupić specjalistyczny sprzęt rehabilitacyjny dla lokalnego domu pomocy społecznej. Sprzęt pomoże w codziennej rehabilitacji osób niepełnosprawnych...</p>
+                        <a class="read-more" href="#">Czytaj więcej <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <div class="news-image">
+                        <img alt="Wolontariusze" src="images/news4.jpg"/>
+                    </div>
+                    <div class="news-content">
+                        <h3>Nowa Grupa Wolontariuszy</h3>
+                        <time datetime="2024-04-05">5 kwietnia 2024</time>
+                        <p>Rozpoczęliśmy szkolenie nowej grupy wolontariuszy, którzy będą pomagać w naszych codziennych działaniach. Szkolenie obejmuje m.in. pierwsza pomoc, komunikację z osobami w kryzysie i zasady pracy wolontariackiej...</p>
+                        <a class="read-more" href="#">Czytaj więcej <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            <div class="pagination">
+                <a class="page-active" href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© 2024 Stowarzyszenie "Biała Jaskółka". Wszelkie prawa zastrzeżone.</p>
+                <div class="footer-links">
+                    <a href="polityka-prywatnosci.html">Polityka Prywatności</a>
+                    <a href="polityka-cookies.html">Polityka Cookies</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
