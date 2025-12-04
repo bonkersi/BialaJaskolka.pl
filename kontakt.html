@@ -4,97 +4,88 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Kontakt - Biała Jaskółka</title>
-    <meta name="description" content="Skontaktuj się z Stowarzyszeniem Biała Jaskółka"/>
-    
-    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-    
-    <!-- Styles -->
-    <link href="style/base.css" rel="stylesheet"/>
-    <link href="style/components.css" rel="stylesheet"/>
-    <link href="style/pages/contact.css" rel="stylesheet"/>
-    
-    <style>
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: #333;
-            color: white;
-            padding: 8px;
-            z-index: 1001;
-            text-decoration: none;
-        }
-        .skip-link:focus {
-            top: 0;
-        }
-    </style>
+    <link href="style-base.css" rel="stylesheet"/>
+    <link href="style-kontakt.css" rel="stylesheet"/>
 </head>
 <body class="contact-page">
-    <a href="#main-content" class="skip-link">Przejdź do treści</a>
-    
-    <div class="container">
-        <div class="image-container hide-on-mobile">
-            <img alt="Złota figura" src="images/jezus.png"/>
-        </div>
-        <div class="content">
-            <header>
-                <div class="logo-mobile">
-                    <img alt="Logo Biała Jaskółka" class="logo" src="images/logo.png"/>
-                </div>
-                <nav>
-                    <ul class="nav-list">
-                        <li><a href="index.html">Cel</a></li>
-                        <li><a href="aktualnosci.html">Aktualności</a></li>
-                        <li><a href="wsparcie.html">Wsparcie</a></li>
-                        <li><a class="active" href="kontakt.html">Kontakt</a></li>
-                    </ul>
-                </nav>
-                <div class="logo-desktop">
-                    <img alt="Logo Biała Jaskółka" class="logo" src="images/logo.png"/>
-                </div>
-            </header>
-            <main class="contact-page" id="main-content">
-                <div class="email-container">
-                    <h1><i class="fas fa-envelope"></i> Kontakt</h1>
-                    <p class="subtitle">Skontaktuj się z nami przez email</p>
-                    <div class="email-main">
-                        <div class="email-icon">
-                            <i class="fas fa-envelope-open-text"></i>
-                        </div>
-                        <div class="email-content">
-                            <h2>Napisz do nas</h2>
-                            <a href="mailto:biuro@białajaskółka.pl" class="email-address-link">
-                                <i class="fas fa-paper-plane"></i>
-                                <span class="email-text">biuro@białajaskółka.pl</span>
-                            </a>
-                            <p class="email-info">Odpowiadamy w ciągu 24 godzin w dni robocze</p>
-                            
-                            <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid #333;">
-                                <h3 style="font-size: 1.4rem; margin-bottom: 20px;">Inne sposoby kontaktu:</h3>
-                                <p><i class="fas fa-phone" style="margin-right: 10px; color: #a0a0a0;"></i> Telefon: +48 123 456 789</p>
-                                <p><i class="fas fa-map-marker-alt" style="margin-right: 10px; color: #a0a0a0;"></i> Adres: ul. Dobroczynna 8, 00-001 Warszawa</p>
-                                <p><i class="fas fa-clock" style="margin-right: 10px; color: #a0a0a0;"></i> Godziny pracy: poniedziałek-piątek 9:00-17:00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-            <footer class="footer">
-                <div class="footer-content">
-                    <p>© <span data-current-year>2024</span> Stowarzyszenie "Biała Jaskółka". Wszelkie prawa zastrzeżone.</p>
-                    <div class="footer-links">
-                        <a href="polityka-prywatnosci.html">Polityka Prywatności</a>
-                        <a href="polityka-cookies.html">Polityka Cookies</a>
-                    </div>
-                </div>
-            </footer>
-        </div>
+<div class="container">
+    <div class="image-container hide-on-mobile">
+        <img alt="Złota figura" src="images/jezus.png"/>
     </div>
-    
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
-    <script src="js/cookie-consent.js"></script>
+    <div class="content">
+        <header>
+            <div class="logo-mobile">
+                <img alt="Logo Biała Jaskółka" class="logo" src="images/logo.png"/>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Cel</a></li>
+                    <li><a href="aktualnosci.html">Aktualności</a></li>
+                    <li><a href="wsparcie.html">Wsparcie</a></li>
+                    <li><a class="active" href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="logo-desktop">
+                <img alt="Logo Biała Jaskółka" class="logo" src="images/logo.png"/>
+            </div>
+        </header>
+        <main class="contact-page">
+            <div class="email-container">
+                <h1><i class="fas fa-envelope"></i> Kontakt</h1>
+                <p class="subtitle">Skontaktuj się z nami przez email</p>
+                <div class="email-main">
+                    <div class="email-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <div class="email-content">
+                        <h2>Napisz do nas</h2>
+                        <a href="mailto:biuro@białajaskółka.pl" class="email-address-link">
+                            <i class="fas fa-paper-plane"></i>
+                            <span class="email-text">biuro@białajaskółka.pl</span>
+                        </a>
+                        <p class="email-info">Odpowiadamy w ciągu 24 godzin w dni robocze</p>
+                        
+                        <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid #333;">
+                            <h3 style="font-size: 1.4rem; margin-bottom: 20px;">Inne sposoby kontaktu:</h3>
+                            <p><i class="fas fa-phone" style="margin-right: 10px; color: #a0a0a0;"></i> Telefon: +48 123 456 789</p>
+                            <p><i class="fas fa-map-marker-alt" style="margin-right: 10px; color: #a0a0a0;"></i> Adres: ul. Dobroczynna 8, 00-001 Warszawa</p>
+                            <p><i class="fas fa-clock" style="margin-right: 10px; color: #a0a0a0;"></i> Godziny pracy: poniedziałek-piątek 9:00-17:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© 2024 Stowarzyszenie "Biała Jaskółka". Wszelkie prawa zastrzeżone.</p>
+                <div class="footer-links">
+                    <a href="polityka-prywatnosci.html">Polityka Prywatności</a>
+                    <a href="polityka-cookies.html">Polityka Cookies</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script src="script.js"></script>
+<script>
+    window.cookieconsent.initialise({
+        palette: {
+            popup: { background: "#333", text: "#fff" },
+            button: { background: "#555", text: "#fff" }
+        },
+        theme: "classic",
+        position: "bottom",
+        content: {
+            message: "Ta strona używa plików cookies w celu poprawnego działania i analizy ruchu.",
+            dismiss: "Rozumiem",
+            link: "Dowiedz się więcej",
+            href: "polityka-cookies.html"
+        }
+    });
+</script>
 </body>
 </html>
