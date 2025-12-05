@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Wsparcie - Biała Jaskółka</title>
+    <meta name="description" content="Wesprzyj działalność charytatywną Stowarzyszenia Biała Jaskółka"/>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    
+    <!-- Styles -->
+    <link href="style/base.css" rel="stylesheet"/>
+    <link href="style/components.css" rel="stylesheet"/>
+    <link href="style/pages/support.css" rel="stylesheet"/>
+    
+    <style>
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #333;
+            color: white;
+            padding: 8px;
+            z-index: 1001;
+            text-decoration: none;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Przejdź do treści</a>
+    
+    <div class="container">
+        <div class="image-container hide-on-mobile">
+            <img alt="Złota figura" src="images/jezus.png"/>
+        </div>
+        <div class="content">
+            <header>
+                <div class="logo-mobile">
+                    <img alt="Logo Biała Jaskółka" class="logo" src="images/logo.png"/>
+                </div>
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="index.html">Cel</a></li>
+                        <li><a href="aktualnosci.html">Aktualności</a></li>
+                        <li><a class="active" href="wsparcie.html">Wsparcie</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <div class="logo-desktop">
+                    <img alt="Logo Biała Jaskółka" class="logo" src="images/logo.png"/>
+                </div>
+            </header>
+            <main id="main-content">
+                <div class="donation-container">
+                    <h1><i class="fas fa-hand-holding-heart"></i> Wsparcie</h1>
+                    <p class="subtitle">Wesprzyj naszą działalność charytatywną</p>
+                    <div class="donation-content">
+                        <div class="bank-info-card">
+                            <div class="bank-header">
+                                <h2><i class="fas fa-university"></i> Przelew Bankowy</h2>
+                                <p class="header-note">W tytule przelewu koniecznie wpisz: <strong>DAROWIZNA</strong></p>
+                            </div>
+                            <div class="bank-details">
+                                <div class="detail-row">
+                                    <div class="detail-label">
+                                        <i class="fas fa-credit-card"></i>
+                                        <span>Numer konta:</span>
+                                    </div>
+                                    <div class="detail-value">
+                                        <p class="account-number">PL 36 1020 3541 0000 5102 0389 0639</p>
+                                    </div>
+                                </div>
+                                <div class="detail-row">
+                                    <div class="detail-label">
+                                        <i class="fas fa-building-columns"></i>
+                                        <span>Bank:</span>
+                                    </div>
+                                    <div class="detail-value">
+                                        <p>PKO Bank Polski</p>
+                                    </div>
+                                </div>
+                                <div class="detail-row">
+                                    <div class="detail-label">
+                                        <i class="fas fa-code"></i>
+                                        <span>SWIFT/BIC:</span>
+                                    </div>
+                                    <div class="detail-value">
+                                        <p class="swift-code">BPKOPLPW</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="important-notice">
+                                <i class="fas fa-exclamation-circle"></i>
+                                <p><strong>WAŻNE:</strong> W tytule przelewu wpisz <strong>DAROWIZNA</strong> - to umożliwi nam wydanie potwierdzenia darowizny</p>
+                            </div>
+                        </div>
+                        <div class="support-info">
+                            <div class="thank-you-box">
+                                <i class="fas fa-heart"></i>
+                                <h3>Dziękujemy!</h3>
+                                <p>Każda darowizna pomaga w realizacji naszej misji pomocy potrzebującym.</p>
+                            </div>
+                            <div class="contact-box">
+                                <h3><i class="fas fa-question-circle"></i> Potrzebujesz pomocy?</h3>
+                                <p>Jeśli Ty lub ktoś z Twoich bliskich potrzebuje wsparcia, skontaktuj się z nami.</p>
+                                <a href="kontakt.html" style="color: #a0a0a0; text-decoration: underline; margin-top: 10px; display: inline-block;">Skontaktuj się</a>
+                            </div>
+                            <div class="contact-box">
+                                <h3><i class="fas fa-file-invoice-dollar"></i> Potwierdzenie darowizny</h3>
+                                <p>Wydajemy potwierdzenia darowizn do odliczenia podatkowego. Wyślij do nas dane potrzebne do wystawienia potwierdzenia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="footer-content">
+                    <p>© <span data-current-year>2024</span> Stowarzyszenie "Biała Jaskółka". Wszelkie prawa zastrzeżone.</p>
+                    <div class="footer-links">
+                        <a href="polityka-prywatnosci.html">Polityka Prywatności</a>
+                        <a href="polityka-cookies.html">Polityka Cookies</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
