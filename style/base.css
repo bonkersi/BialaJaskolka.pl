@@ -240,3 +240,110 @@ p{margin-bottom:15px}
         transform:scale(.9);
     }
 }
+/* DODAJ TYLKO TEN FRAGMENT do istniejącego base.css */
+
+/* MOBILE MENU - FULL WIDTH, NO SCROLL */
+@media (max-width: 768px) {
+    header {
+        width: 100vw;
+        left: 0;
+        right: 0;
+        padding: 0;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        background: #333;
+        z-index: 1000;
+    }
+    
+    .logo-mobile {
+        display: block;
+        height: 50px;
+        padding: 5px 10px;
+        flex-shrink: 0;
+    }
+    
+    .logo-mobile .logo {
+        height: 40px;
+        width: auto;
+    }
+    
+    nav {
+        flex-grow: 1;
+        overflow: hidden;
+    }
+    
+    .nav-list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    .nav-list li {
+        flex: 1;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .nav-list li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.8rem;
+        padding: 12px 5px;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border-right: 1px solid #444;
+        transition: all 0.3s;
+    }
+    
+    .nav-list li:last-child a {
+        border-right: none;
+    }
+    
+    .nav-list li a:hover {
+        background: #444;
+        color: #fff;
+    }
+    
+    .nav-list li a.active {
+        background: #555;
+        color: #fff;
+    }
+    
+    .logo-desktop {
+        display: none;
+    }
+    
+    /* Hide logo on very small screens to make space */
+    @media (max-width: 480px) {
+        .logo-mobile {
+            display: none;
+        }
+        
+        .nav-list li a {
+            font-size: 0.75rem;
+            padding: 14px 3px;
+        }
+        
+        header {
+            padding: 0;
+        }
+    }
+    
+    /* Even smaller screens */
+    @media (max-width: 360px) {
+        .nav-list li a {
+            font-size: 0.7rem;
+            padding: 14px 2px;
+        }
+    }
+}
