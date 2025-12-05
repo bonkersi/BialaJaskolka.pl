@@ -12,6 +12,70 @@
 .email-address-link:hover{background:linear-gradient(135deg,rgba(102,102,102,.9),rgba(119,119,119,.9));transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,.3);border-color:#666}
 .email-text{letter-spacing:1px;text-shadow:0 2px 4px rgba(0,0,0,.3)}
 .email-info{color:#b0b0b0;font-size:1.1rem;font-style:italic;margin-top:20px}
-@media (max-width:768px){.email-container,.donation-container{min-height:60vh;padding:30px 15px}.email-container h1,.donation-container h1{font-size:2rem}.subtitle{font-size:1rem;margin-bottom:40px}.email-icon{font-size:4rem}.email-content{padding:30px 20px}.email-address-link{font-size:1.4rem;padding:20px 30px;min-width:300px;flex-direction:column;gap:10px}.email-info{font-size:1rem}}
-@media (max-width:576px){.email-container h1{font-size:1.8rem}.email-address-link{font-size:1.2rem;min-width:250px;padding:18px 25px}.email-content h2{font-size:1.5rem}}
-@media (max-width:360px){.email-address-link{font-size:1rem;min-width:220px;padding:15px 20px}}
+
+/* MOBILE STYLES - DODANE */
+@media (max-width:768px){
+    .email-container{
+        min-height: 60vh;
+        padding: 30px 15px;
+        padding-top: 100px;
+    }
+    
+    .email-container h1{
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+    
+    .subtitle{
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+    
+    .email-icon{
+        font-size: 4rem;
+    }
+    
+    .email-content{
+        padding: 30px 20px;
+    }
+    
+    .email-address-link{
+        font-size: 1.4rem;
+        padding: 20px 30px;
+        min-width: 300px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .email-info{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:576px){
+    .email-container h1{
+        font-size: 1.8rem;
+    }
+    
+    .email-address-link{
+        font-size: 1.2rem;
+        min-width: 250px;
+        padding: 18px 25px;
+    }
+    
+    .email-content h2{
+        font-size: 1.5rem;
+    }
+    
+    .email-container{
+        padding-top: 60px;
+    }
+}
+
+@media (max-width:360px){
+    .email-address-link{
+        font-size: 1rem;
+        min-width: 220px;
+        padding: 15px 20px;
+    }
+}
