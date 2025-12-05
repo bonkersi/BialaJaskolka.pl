@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Przekierowanie - Biała Jaskółka</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Redirect all 404 to main site
+        const correctBase = 'https://bonkersi.github.io/BialaJaskolka.pl/';
+        const currentPath = window.location.pathname;
+        
+        // Extract page name from path
+        let pageName = currentPath.split('/').pop();
+        if (!pageName || pageName === '' || pageName === 'BialaJaskolka.pl') {
+            pageName = 'index.html';
+        }
+        
+        // Redirect to correct URL
+        window.location.href = correctBase + pageName;
+    </script>
+</head>
+<body>
+    <p style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+        Przekierowywanie do właściwej strony...
+        <br><br>
+        <a href="https://bonkersi.github.io/BialaJaskolka.pl/">Kliknij tutaj jeśli przekierowanie nie działa</a>
+    </p>
+</body>
+</html>
