@@ -2,10 +2,12 @@
 <html lang="pl">
 <head>
     <meta charset="utf-8"/>
-    <base href="https://bonkersi.github.io/BialaJaskolka.pl/">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Kontakt - Biała Jaskółka</title>
     <meta name="description" content="Skontaktuj się z Stowarzyszeniem Biała Jaskółka"/>
+    
+    <!-- BASE HREF - TO JEST NAJWAŻNIEJSZE -->
+    <base href="https://bonkersi.github.io/BialaJaskolka.pl/">
     
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -16,7 +18,9 @@
     <link href="style/components.css" rel="stylesheet"/>
     <link href="style/pages/contact.css" rel="stylesheet"/>
     
+    <!-- CRITICAL FIX FOR MOBILE -->
     <style>
+        /* Skip link */
         .skip-link {
             position: absolute;
             top: -40px;
@@ -31,30 +35,94 @@
             top: 0;
         }
         
+        /* Force correct URL */
+        body::before {
+            content: "";
+            display: none;
+        }
+        
+        /* Mobile menu full width */
         @media (max-width: 768px) {
+            header {
+                width: 100vw;
+                left: 0;
+                right: 0;
+                padding: 8px 5px;
+                overflow-x: hidden;
+                position: fixed;
+                top: 0;
+            }
+            
+            .nav-list {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                padding: 0 5px;
+            }
+            
+            .nav-list li {
+                flex: 1;
+                text-align: center;
+            }
+            
+            .nav-list li a {
+                padding: 12px 5px;
+                font-size: 0.85rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                border-right: 1px solid #444;
+            }
+            
+            .nav-list li:last-child a {
+                border-right: none;
+            }
+            
+            .logo-mobile {
+                display: none; /* Ukryj logo w menu na bardzo małych ekranach */
+            }
+            
+            /* Contact page specific */
             .contact-page .email-container {
-                padding-top: 100px;
+                padding-top: 80px;
             }
             
             .contact-page .email-container h1 {
-                font-size: 2rem;
-                margin-top: 20px;
+                font-size: 1.8rem;
+                margin-top: 10px;
             }
         }
         
+        /* Very small screens */
         @media (max-width: 480px) {
-            .contact-page .email-container h1 {
-                font-size: 1.8rem;
+            .nav-list li a {
+                font-size: 0.75rem;
+                padding: 10px 3px;
             }
             
-            .contact-page .email-container {
-                padding-top: 60px;
+            .logo-mobile {
+                display: none;
+            }
+            
+            header {
+                padding: 8px 0;
             }
         }
     </style>
 </head>
 <body class="contact-page">
+    <!-- Skip link for accessibility -->
     <a href="#main-content" class="skip-link">Przejdź do treści</a>
+    
+    <!-- JavaScript to force correct URL -->
+    <script>
+        // FORCE CORRECT URL - THIS IS THE FIX!
+        if (window.location.href !== 'https://bonkersi.github.io/BialaJaskolka.pl/kontakt.html' && 
+            window.location.href !== 'https://bonkersi.github.io/BialaJaskolka.pl/kontakt' &&
+            !window.location.href.includes('localhost')) {
+            window.location.replace('https://bonkersi.github.io/BialaJaskolka.pl/kontakt.html');
+        }
+    </script>
     
     <div class="container">
         <div class="image-container hide-on-mobile">
@@ -118,5 +186,19 @@
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="js/cookie-consent.js"></script>
+    
+    <!-- Final URL check -->
+    <script>
+        // Final check and redirect if needed
+        setTimeout(function() {
+            const currentUrl = window.location.href;
+            const correctUrl = 'https://bonkersi.github.io/BialaJaskolka.pl/kontakt.html';
+            
+            if (!currentUrl.includes('bonkersi.github.io/BialaJaskolka.pl')) {
+                console.log('Redirecting to correct URL...');
+                window.location.href = correctUrl;
+            }
+        }, 100);
+    </script>
 </body>
 </html>
