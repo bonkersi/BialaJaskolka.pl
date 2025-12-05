@@ -2,6 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="utf-8"/>
+    <base href="https://bonkersi.github.io/BialaJaskolka.pl/">
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Kontakt - Biała Jaskółka</title>
     <meta name="description" content="Skontaktuj się z Stowarzyszeniem Biała Jaskółka"/>
@@ -28,6 +29,27 @@
         }
         .skip-link:focus {
             top: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-page .email-container {
+                padding-top: 100px;
+            }
+            
+            .contact-page .email-container h1 {
+                font-size: 2rem;
+                margin-top: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-page .email-container h1 {
+                font-size: 1.8rem;
+            }
+            
+            .contact-page .email-container {
+                padding-top: 60px;
+            }
         }
     </style>
 </head>
