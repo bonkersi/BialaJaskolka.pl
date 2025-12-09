@@ -6,7 +6,7 @@
     <title>Kontakt - Biała Jaskółka</title>
     <meta name="description" content="Skontaktuj się z Stowarzyszeniem Biała Jaskółka"/>
     
-    <!-- BASE HREF - TO JEST NAJWAŻNIEJSZE -->
+    <!-- BASE HREF -->
     <base href="https://bonkersi.github.io/BialaJaskolka.pl/">
     
     <!-- Fonts & Icons -->
@@ -18,29 +18,8 @@
     <link href="style/components.css" rel="stylesheet"/>
     <link href="style/pages/contact.css" rel="stylesheet"/>
     
-    <!-- CRITICAL FIX FOR MOBILE -->
+    <!-- MOBILE FIX -->
     <style>
-        /* Skip link */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: #333;
-            color: white;
-            padding: 8px;
-            z-index: 1001;
-            text-decoration: none;
-        }
-        .skip-link:focus {
-            top: 0;
-        }
-        
-        /* Force correct URL */
-        body::before {
-            content: "";
-            display: none;
-        }
-        
         /* Mobile menu full width */
         @media (max-width: 768px) {
             header {
@@ -79,7 +58,7 @@
             }
             
             .logo-mobile {
-                display: none; /* Ukryj logo w menu na bardzo małych ekranach */
+                display: none;
             }
             
             /* Contact page specific */
@@ -111,12 +90,8 @@
     </style>
 </head>
 <body class="contact-page">
-    <!-- Skip link for accessibility -->
-    <a href="#main-content" class="skip-link">Przejdź do treści</a>
-    
-    <!-- JavaScript to force correct URL -->
     <script>
-        // FORCE CORRECT URL - THIS IS THE FIX!
+        // Redirect to correct URL
         if (window.location.href !== 'https://bonkersi.github.io/BialaJaskolka.pl/kontakt.html' && 
             window.location.href !== 'https://bonkersi.github.io/BialaJaskolka.pl/kontakt' &&
             !window.location.href.includes('localhost')) {
@@ -148,7 +123,6 @@
             <main class="contact-page" id="main-content">
                 <div class="email-container">
                     <h1><i class="fas fa-envelope"></i> Kontakt</h1>
-                    <p class="subtitle">Skontaktuj się z nami przez email</p>
                     <div class="email-main">
                         <div class="email-icon">
                             <i class="fas fa-envelope-open-text"></i>
@@ -160,13 +134,6 @@
                                 <span class="email-text">biuro@białajaskółka.pl</span>
                             </a>
                             <p class="email-info">Odpowiadamy w ciągu 24 godzin w dni robocze</p>
-                            
-                            <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid #333;">
-                                <h3 style="font-size: 1.4rem; margin-bottom: 20px;">Inne sposoby kontaktu:</h3>
-                                <p><i class="fas fa-phone" style="margin-right: 10px; color: #a0a0a0;"></i> Telefon: +48 123 456 789</p>
-                                <p><i class="fas fa-map-marker-alt" style="margin-right: 10px; color: #a0a0a0;"></i> Adres: ul. Dobroczynna 8, 00-001 Warszawa</p>
-                                <p><i class="fas fa-clock" style="margin-right: 10px; color: #a0a0a0;"></i> Godziny pracy: poniedziałek-piątek 9:00-17:00</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -189,13 +156,11 @@
     
     <!-- Final URL check -->
     <script>
-        // Final check and redirect if needed
         setTimeout(function() {
             const currentUrl = window.location.href;
             const correctUrl = 'https://bonkersi.github.io/BialaJaskolka.pl/kontakt.html';
             
             if (!currentUrl.includes('bonkersi.github.io/BialaJaskolka.pl')) {
-                console.log('Redirecting to correct URL...');
                 window.location.href = correctUrl;
             }
         }, 100);
