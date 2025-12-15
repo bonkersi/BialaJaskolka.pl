@@ -2,13 +2,11 @@
 .donation-container h1{color:#d0d0d0;font-size:2.5rem;margin-bottom:15px;font-weight:600;text-align:center}
 .donation-container h1 i{color:#a0a0a0;margin-right:15px}
 .subtitle{color:#b0b0b0;font-size:1.2rem;margin-bottom:50px;max-width:600px;text-align:center}
-.donation-content{display:grid;grid-template-columns:2fr 1fr;gap:40px;max-width:1000px;width:100%}
+.donation-content{display:block;max-width:800px;margin:0 auto}
 .bank-info-card{background:rgba(255,255,255,.05);padding:40px;border-radius:12px;border:1px solid #333}
 .bank-header{text-align:center;margin-bottom:35px}
 .bank-header h2{color:#d0d0d0;font-size:1.8rem;margin-bottom:15px;border-bottom:none;padding-bottom:0;margin-top:0}
 .bank-header h2 i{color:#a0a0a0;margin-right:10px}
-.header-note{color:#fff;font-size:1.1rem;background:rgba(255,255,255,.1);padding:12px 20px;border-radius:8px;border-left:4px solid #555}
-.header-note strong{color:#fff;font-size:1.2rem;letter-spacing:1px}
 .bank-details{background:rgba(255,255,255,.03);padding:30px;border-radius:8px;border:1px solid #333;margin-bottom:30px}
 .detail-row{display:flex;align-items:center;margin-bottom:25px;padding-bottom:25px;border-bottom:1px solid rgba(255,255,255,.1)}
 .detail-row:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
@@ -23,16 +21,7 @@
 .important-notice i{font-size:1.8rem;color:#ff6b6b}
 .important-notice p{color:#fff;font-size:1.1rem;margin:0}
 .important-notice strong{color:#ff6b6b}
-.support-info{display:flex;flex-direction:column;gap:30px}
-.thank-you-box{background:linear-gradient(135deg,rgba(85,85,85,.2),rgba(102,102,102,.2));padding:35px 30px;border-radius:12px;border:1px solid #555;text-align:center}
-.thank-you-box i{font-size:2.5rem;color:#a0a0a0;margin-bottom:20px;display:block}
-.thank-you-box h3{color:#fff;font-size:1.6rem;margin-bottom:15px}
-.thank-you-box p{color:#b0b0b0;font-size:1.1rem;font-style:italic}
-.contact-box{background:rgba(255,255,255,.05);padding:30px;border-radius:12px;border:1px solid #333;text-align:center}
-.contact-box h3{color:#d0d0d0;font-size:1.4rem;margin-bottom:15px}
-.contact-box h3 i{color:#a0a0a0;margin-right:10px}
-.contact-box p{color:#b0b0b0;font-size:1rem;line-height:1.5}
-@media (max-width:992px){.donation-content{grid-template-columns:1fr;gap:30px;max-width:600px}.bank-info-card{padding:30px}}
-@media (max-width:768px){.donation-container h1{font-size:2rem}.subtitle{font-size:1rem;margin-bottom:40px}.bank-header h2{font-size:1.6rem}.header-note{font-size:1rem;padding:10px 15px}.detail-label{min-width:130px}.account-number{font-size:1.3rem;padding:12px 15px;letter-spacing:1px}.detail-value p{font-size:1.1rem}.thank-you-box,.contact-box{padding:25px 20px}}
+@media (max-width:992px){.bank-info-card{padding:30px}}
+@media (max-width:768px){.donation-container h1{font-size:2rem}.subtitle{font-size:1rem;margin-bottom:40px}.bank-header h2{font-size:1.6rem}.detail-label{min-width:130px}.account-number{font-size:1.3rem;padding:12px 15px;letter-spacing:1px}.detail-value p{font-size:1.1rem}}
 @media (max-width:576px){.donation-container h1{font-size:1.8rem}.bank-info-card{padding:25px 20px}.bank-details{padding:20px}.detail-row{flex-direction:column;align-items:flex-start;gap:10px}.detail-label{min-width:auto;margin-bottom:5px}.account-number{font-size:1.2rem;width:100%;word-break:break-all;letter-spacing:.5px}.important-notice{flex-direction:column;text-align:center;gap:10px}.important-notice i{font-size:1.5rem}}
-@media (max-width:360px){.bank-header h2{font-size:1.5rem}.header-note{font-size:.95rem}}
+@media (max-width:360px){.bank-header h2{font-size:1.5rem}}
