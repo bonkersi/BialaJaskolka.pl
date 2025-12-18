@@ -4,9 +4,9 @@ body{background:#000;color:#a0a0a0;overflow-x:hidden;line-height:1.6}
 @font-face{font-family:'Montserrat';src:url('https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Hw0aXpsog.woff2') format('woff2');font-weight:500;font-display:swap}
 @font-face{font-family:'Montserrat';src:url('https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu173w0aXpsog.woff2') format('woff2');font-weight:600;font-display:swap}
 .container{display:flex;min-height:100vh;position:relative}
-.image-container{position:fixed;left:0;top:70px;height:calc(100vh - 70px);width:280px;display:flex;align-items:flex-end;justify-content:flex-start;z-index:1;overflow:hidden;background:linear-gradient(to right,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%);backdrop-filter:blur(1px)}
+.image-container{position:fixed;left:0;top:70px;height:calc(100vh - 70px);width:280px;display:flex;align-items:flex-end;justify-content:flex-start;z-index:1;overflow:hidden;background:linear-gradient(to right,rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.5) 60%,rgba(0,0,0,0.3) 80%,rgba(0,0,0,0) 100%);backdrop-filter:blur(2px)}
 .image-container img{height:auto;max-height:90vh;width:auto;max-width:260px;object-fit:contain;object-position:center bottom;opacity:.9;transform:scale(1);transform-origin:center bottom;transition:all .4s ease;filter:brightness(1) contrast(1)}
-.content{margin-left:280px;padding:20px;flex:1;position:relative;z-index:2}
+.content{margin-left:280px;padding:20px 20px 20px 40px;flex:1;position:relative;z-index:2;background:rgba(0,0,0,0.85);min-height:100vh}
 .content::before{content:'';position:absolute;left:-40px;top:0;width:40px;height:100%;background:#000;pointer-events:none;z-index:3;mix-blend-mode:multiply}
 
 /* ====== HEADER - DESKTOP VERSION ====== */
@@ -37,13 +37,14 @@ p{margin-bottom:15px}
 .footer-links a:hover{color:#fff;text-decoration:underline}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
-/* ====== MOBILE VERSION (768px and below) ====== */
+/* ====== LARGE TABLETS (992px and below) ====== */
 @media (max-width:992px){
     .image-container{width:180px}
-    .content{margin-left:180px}
+    .content{margin-left:180px;padding:20px 20px 20px 35px}
     .image-container img{max-height:85vh;max-width:170px}
 }
 
+/* ====== TABLETS (768px and below) ====== */
 @media (max-width:768px){
     body{color:#fff!important}
     h1,h2,h3,h4,h5,h6{color:#fff!important}
@@ -181,9 +182,8 @@ p{margin-bottom:15px}
     /* CONTENT ADJUSTMENTS FOR FIXED HEADER */
     .content{
         margin-left: 0;
-        background: rgba(0,0,0,.7);
-        padding-top: 70px;
-        padding-bottom: 20px;
+        padding: 70px 20px 20px 20px;
+        background: rgba(0,0,0,.85);
         min-height: 100vh;
     }
     
@@ -203,35 +203,52 @@ p{margin-bottom:15px}
     }
 }
 
-/* ====== LARGE SCREENS ====== */
-@media (min-width: 1200px) {
+/* ====== MEDIUM PHONES (667px and below) - DODANY ====== */
+@media (max-width: 667px) {
+    header{
+        height: 58px;
+        padding: 0 12px;
+    }
+    
+    .logo-mobile{
+        height: 48px;
+        padding: 5px 0;
+    }
+    
+    .logo-mobile .logo{
+        height: 38px;
+    }
+    
+    nav{
+        margin-left: 8px;
+        max-width: calc(100% - 58px);
+    }
+    
+    .nav-list li a{
+        font-size: 0.82rem;
+        padding: 19px 4px;
+    }
+    
+    .content{
+        padding-top: 68px;
+        padding-left: 20px;
+    }
+    
+    .image-container{
+        top: 58px;
+        height: calc(100vh - 58px);
+    }
+    
     .image-container img{
-        max-height: 85vh;
-        max-width: 240px;
-        object-position: center center;
+        transform: scale(1.25);
     }
 }
 
-@media (min-width: 1400px) {
-    .image-container img{
-        max-height: 80vh;
-        max-width: 220px;
-    }
-    .image-container {
-        background: linear-gradient(
-            to right,
-            rgba(0, 0, 0, 0.7) 0%,
-            rgba(0, 0, 0, 0.4) 70%,
-            rgba(0, 0, 0, 0) 100%
-        );
-    }
-}
-
-/* ====== SMALLER MOBILE SCREENS (576px and below) ====== */
+/* ====== SMALL PHONES (576px and below) ====== */
 @media (max-width: 576px){
     header{
         height: 55px;
-        padding: 0 12px;
+        padding: 0 10px;
     }
     
     .logo-mobile{
@@ -243,7 +260,7 @@ p{margin-bottom:15px}
     }
     
     nav{
-        margin-left: 8px;
+        margin-left: 6px;
         max-width: calc(100% - 55px);
     }
     
@@ -254,6 +271,7 @@ p{margin-bottom:15px}
     
     .content{
         padding-top: 65px;
+        padding-left: 20px;
     }
     
     .image-container{
@@ -262,53 +280,14 @@ p{margin-bottom:15px}
     }
     
     .image-container img{
-        transform: scale(1.1);
+        transform: scale(1.2);
     }
 }
 
-/* ====== VERY SMALL MOBILE SCREENS (480px and below) ====== */
+/* ====== IPHONE SE/375px (480px and below) ====== */
 @media (max-width: 480px){
     header{
-        height: 50px;
-        padding: 0 10px;
-    }
-    
-    .logo-mobile{
-        padding: 5px 0;
-    }
-    
-    .logo-mobile .logo{
-        height: 30px;
-    }
-    
-    nav{
-        margin-left: 5px;
-        max-width: calc(100% - 50px);
-    }
-    
-    .nav-list li a{
-        font-size: 0.75rem;
-        padding: 16px 2px;
-    }
-    
-    .content{
-        padding-top: 60px;
-    }
-    
-    .image-container{
-        top: 50px;
-        height: calc(100vh - 50px);
-    }
-    
-    .image-container img{
-        transform: scale(1);
-    }
-}
-
-/* ====== EXTRA SMALL SCREENS (360px and below) ====== */
-@media (max-width: 360px){
-    header{
-        height: 45px;
+        height: 52px;
         padding: 0 8px;
     }
     
@@ -317,31 +296,229 @@ p{margin-bottom:15px}
     }
     
     .logo-mobile .logo{
-        height: 25px;
+        height: 32px;
+    }
+    
+    nav{
+        margin-left: 4px;
+        max-width: calc(100% - 52px);
+    }
+    
+    .nav-list li a{
+        font-size: 0.75rem;
+        padding: 16px 2px;
+    }
+    
+    .content{
+        padding-top: 62px;
+        padding-left: 15px;
+    }
+    
+    .image-container{
+        top: 52px;
+        height: calc(100vh - 52px);
+    }
+    
+    .image-container img{
+        transform: scale(1.1);
+    }
+}
+
+/* ====== SMALLER PHONES (414px and below) - DODANY ====== */
+@media (max-width: 414px) {
+    header{
+        height: 50px;
+        padding: 0 6px;
+    }
+    
+    .logo-mobile .logo{
+        height: 30px;
     }
     
     nav{
         margin-left: 3px;
-        max-width: calc(100% - 40px);
+        max-width: calc(100% - 50px);
+    }
+    
+    .nav-list li a{
+        font-size: 0.72rem;
+        padding: 15px 1.5px;
+    }
+    
+    .content{
+        padding-top: 60px;
+        padding-left: 15px;
+    }
+    
+    .image-container{
+        top: 50px;
+        height: calc(100vh - 50px);
+    }
+    
+    .image-container img{
+        transform: scale(1.05);
+    }
+}
+
+/* ====== VERY SMALL PHONES (375px and below) - DODANY ====== */
+@media (max-width: 375px) {
+    header{
+        height: 48px;
+        padding: 0 5px;
+    }
+    
+    .logo-mobile .logo{
+        height: 28px;
+    }
+    
+    nav{
+        margin-left: 2px;
+        max-width: calc(100% - 48px);
     }
     
     .nav-list li a{
         font-size: 0.7rem;
         padding: 14px 1px;
+        letter-spacing: -0.3px;
+    }
+    
+    .content{
+        padding-top: 58px;
+        padding-left: 12px;
+    }
+    
+    .image-container{
+        top: 48px;
+        height: calc(100vh - 48px);
+        padding-left: 10px;
+    }
+    
+    .image-container img{
+        transform: scale(1);
+        max-width: 90%;
+    }
+}
+
+/* ====== EXTRA SMALL PHONES (320px and below) ====== */
+@media (max-width: 320px){
+    header{
+        height: 45px;
+        padding: 0 4px;
+    }
+    
+    .logo-mobile .logo{
+        height: 25px;
+    }
+    
+    nav{
+        margin-left: 1px;
+        max-width: calc(100% - 45px);
+    }
+    
+    .nav-list li a{
+        font-size: 0.65rem;
+        padding: 13px 0.5px;
+        letter-spacing: -0.5px;
     }
     
     .content{
         padding-top: 55px;
+        padding-left: 10px;
     }
     
     .image-container{
         top: 45px;
         height: calc(100vh - 45px);
-        padding-left: 10px;
+        padding-left: 8px;
     }
     
     .image-container img{
-        max-height: calc(100vh - 55px);
         transform: scale(0.9);
+        max-width: 85%;
+    }
+}
+
+/* ====== LARGE SCREENS ====== */
+@media (min-width: 1200px) {
+    .image-container{
+        width: 300px;
+        background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.8) 40%,
+            rgba(0, 0, 0, 0.6) 60%,
+            rgba(0, 0, 0, 0.4) 80%,
+            rgba(0, 0, 0, 0) 100%
+        );
+    }
+    
+    .image-container img{
+        max-height: 85vh;
+        max-width: 280px;
+        object-position: center 70%;
+    }
+    
+    .content{
+        margin-left: 300px;
+        padding: 30px 40px 30px 50px;
+        background: rgba(0, 0, 0, 0.9);
+    }
+}
+
+@media (min-width: 1400px) {
+    .image-container{
+        width: 320px;
+    }
+    
+    .image-container img{
+        max-width: 300px;
+        object-position: center 65%;
+    }
+    
+    .content{
+        margin-left: 320px;
+        padding: 40px 50px 40px 60px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .image-container{
+        width: 350px;
+    }
+    
+    .image-container img{
+        max-width: 320px;
+        object-position: center 60%;
+    }
+    
+    .content{
+        margin-left: 350px;
+        padding: 50px 60px 50px 70px;
+    }
+}
+
+/* ====== SPECJALNY BREAKPOINT DLA KONTAKTU ====== */
+body.contact-page .email-container {
+    padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+    body.contact-page .email-container {
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    body.contact-page .email-container {
+        padding-top: 70px;
+    }
+}
+
+@media (max-width: 375px) {
+    body.contact-page .email-container {
+        padding-top: 65px;
+    }
+    body.contact-page .email-container h1 {
+        font-size: 1.6rem;
     }
 }
