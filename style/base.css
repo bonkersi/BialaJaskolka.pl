@@ -192,38 +192,48 @@ p{margin-bottom:15px}
         padding-top: 10px;
     }
     
-    /* TYLKO NA STRONIE GŁÓWNEJ - PRZEZROCZYSTE TŁO HERO */
+    /* CAŁKOWICIE PRZEZROCZYSTE TŁO DLA HERO NA STRONIE GŁÓWNEJ */
     body.home-page .container .content .hero {
-        background: rgba(0, 0, 0, 0.3) !important;
-        backdrop-filter: blur(2px);
-        padding: 15px 20px !important;
-        border-radius: 8px;
-        margin-bottom: 20px !important;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: transparent !important;
+        backdrop-filter: none !important;
+        padding: 10px 0 20px 0 !important;
+        margin-bottom: 10px !important;
+        border: none !important;
+        text-align: left !important;
     }
     
     body.home-page .container .content .hero h1 {
         color: rgba(255, 255, 255, 0.95) !important;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-        font-size: 1.6rem !important;
-        margin-bottom: 10px !important;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+        font-size: 1.8rem !important;
+        margin-bottom: 8px !important;
+        font-weight: 600;
+        background: rgba(0, 0, 0, 0.2);
+        padding: 8px 12px;
+        border-radius: 4px;
+        display: inline-block;
     }
     
     body.home-page .container .content .hero .lead {
-        color: rgba(255, 255, 255, 0.8) !important;
+        color: rgba(255, 255, 255, 0.85) !important;
         font-size: 1rem !important;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.15);
+        padding: 6px 10px;
+        border-radius: 4px;
+        display: inline-block;
     }
     
-    /* Dla jeszcze mniejszych ekranów dostosuj rozmiary */
-    @media (max-width: 576px) {
-        body.home-page .container .content .hero h1 {
-            font-size: 1.4rem !important;
-        }
-        
-        body.home-page .container .content .hero .lead {
-            font-size: 0.9rem !important;
-        }
+    /* Również dla sekcji about-us nagłówki */
+    body.home-page .container .content .about-us h2 {
+        color: rgba(255, 255, 255, 0.95) !important;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.2);
+        padding: 8px 12px;
+        border-radius: 4px;
+        display: inline-block;
+        border-bottom: none !important;
+        margin-top: 20px !important;
     }
     
     /* SCROLL MARGIN FOR ANCHOR LINKS */
@@ -278,7 +288,7 @@ p{margin-bottom:15px}
     }
     
     body.home-page .container .content .hero h1 {
-        font-size: 1.4rem !important;
+        font-size: 1.6rem !important;
     }
 }
 
@@ -321,7 +331,18 @@ p{margin-bottom:15px}
     }
     
     body.home-page .container .content .hero h1 {
-        font-size: 1.3rem !important;
+        font-size: 1.4rem !important;
+        padding: 6px 10px;
+    }
+    
+    body.home-page .container .content .hero .lead {
+        font-size: 0.9rem !important;
+        padding: 5px 8px;
+    }
+    
+    body.home-page .container .content .about-us h2 {
+        font-size: 1.5rem !important;
+        padding: 6px 10px;
     }
 }
 
@@ -361,6 +382,10 @@ p{margin-bottom:15px}
     
     .image-container img{
         transform: scale(1.1);
+    }
+    
+    body.home-page .container .content .hero h1 {
+        font-size: 1.3rem !important;
     }
 }
 
@@ -435,6 +460,11 @@ p{margin-bottom:15px}
         transform: scale(1);
         max-width: 90%;
     }
+    
+    body.home-page .container .content .hero h1 {
+        font-size: 1.2rem !important;
+        padding: 5px 8px;
+    }
 }
 
 /* ====== EXTRA SMALL PHONES (320px and below) ====== */
@@ -472,6 +502,16 @@ p{margin-bottom:15px}
     .image-container img{
         max-height: calc(100vh - 55px);
         transform: scale(0.9);
+    }
+    
+    body.home-page .container .content .hero h1 {
+        font-size: 1.1rem !important;
+        padding: 4px 6px;
+    }
+    
+    body.home-page .container .content .hero .lead {
+        font-size: 0.8rem !important;
+        padding: 3px 6px;
     }
 }
 
